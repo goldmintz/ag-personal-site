@@ -1,0 +1,139 @@
+@font-face {
+	font-family: pangramRegular;
+	src: url(./fonts/Pangram-Regular.woff);
+}
+
+* {
+	box-sizing: border-box;
+	/* outline: 1px solid red; */
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: pangramRegular;
+	background-color: #f1efef;
+}
+
+.page-wrapper {
+	display: flex;
+	flex-direction: row;
+	padding: 5%;
+	height: 100vh;
+	width: 100vw;
+}
+
+.left-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 5%;
+}
+
+.site-heading {
+	display: flex;
+	justify-content: space-between;
+}
+.title-text {
+	font-size: 80px;
+	line-height: 0.75;
+	margin-bottom: 2%;
+	text-transform: capitalize;
+}
+
+.small-screen-links {
+	display: none;
+	gap: 10px;
+}
+
+#last-name {
+	margin: 1%;
+}
+
+/* TODO: Add clip to this to cut off ends */
+.underline {
+	height: 2%;
+	background-color: grey;
+	width: 30%;
+}
+
+.main-content {
+	display: flex;
+	gap: 40px;
+	margin: 5% 0%;
+}
+
+.main-content > div {
+	flex: 1;
+	font-size: large;
+	line-height: 1.6;
+}
+
+.tagline {
+	display: flex;
+	justify-content: flex-end;
+	margin: 3% 0%;
+	font-size: large;
+}
+
+.tagline-text {
+	font-weight: bold;
+}
+
+.closing-line {
+	margin-top: auto;
+}
+
+.right-column {
+	writing-mode: vertical-lr;
+	display: flex;
+	padding: 3% 0%;
+	align-items: center;
+}
+
+/* #link-header::after {
+	content: '';
+	position: absolute;
+	background-color: black;
+	width: 5px;
+	height: 100%;
+	bottom: 0;
+	right: 0;
+} */
+
+#link-header {
+	flex: 1;
+	font-size: 20px;
+	position: relative;
+}
+.link-list {
+	display: flex;
+	flex-direction: row;
+	flex: 2;
+	font-size: 30px;
+	padding: 1%;
+	gap: 30px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 786px) {
+	.page-wrapper {
+		height: auto;
+	}
+	.small-screen-links {
+		display: flex;
+	}
+	.main-content {
+		flex-direction: column;
+	}
+
+	.right-column {
+		display: none;
+	}
+
+	.main-content {
+		gap: 20px;
+	}
+}
