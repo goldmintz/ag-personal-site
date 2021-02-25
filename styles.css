@@ -5,7 +5,7 @@
 
 * {
 	box-sizing: border-box;
-	outline: 1px solid red;
+	/* outline: 1px solid red; */
 }
 
 html,
@@ -13,31 +13,41 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: pangramRegular;
-	background-color: #f1efef;
+	background-color: #4e5b41;
+	/* color: #231f20; */
+	color: #fef6e2;
+}
+
+header {
+	padding: 2.5% 5%;
+	width: 100%;
+}
+
+header i {
+	font-size: 30px;
 }
 
 .page-wrapper {
 	display: flex;
 	flex-direction: row;
-	padding: 5%;
-	height: 100vh;
-	width: 100vw;
+	padding: 2.5% 5%;
+	height: calc(100vh - 50px);
+	justify-content: center;
 }
 
 .main-column {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	height: 100%;
-	padding: 5% 5% 5% 10%;
+	justify-content: flex-start;
+	padding: 2.5% 5% 5% 10%;
 }
 
 .site-heading {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 }
 .title-text {
 	font-size: 80px;
@@ -49,16 +59,26 @@ body {
 	display: flex;
 	font-size: medium;
 	/* background-color: aqua; */
-	gap: 20px;
+	gap: 5%;
+	margin-top: 1%;
+}
+
+.site-heading::after {
+	content: '';
+	background-color: #fef6e2;
+	width: 30%;
+	left: 0;
+	border-radius: 3px;
+	height: 3px;
+	margin-top: 1%;
+	opacity: 50%;
 }
 
 .small-screen-links {
 	display: none;
 	gap: 10px;
-}
-
-#last-name {
-	margin: 1%;
+	align-self: flex-end;
+	margin-bottom: 2%;
 }
 
 /* TODO: Add clip to this to cut off ends */
@@ -89,10 +109,11 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	margin: 1% 0%;
-	font-size: 50px;
+	font-size: 30px;
 }
 
 .tagline-text {
+	text-align: right;
 	font-weight: bold;
 }
 
@@ -113,36 +134,43 @@ body {
 	font-size: 20px;
 	position: relative;
 }
-/* 
+
 #link-header::after {
 	content: '';
 	position: absolute;
-	background-color: black;
+	background-color: #fef6e2;
 	width: 2px;
 	border-radius: 3px;
 	height: 10%;
-	top: 40%;
+	top: 60%;
 	right: 50%;
 	transform: translate(50%, 50%);
-} */
+	opacity: 50%;
+}
 
 .link-list {
 	display: flex;
-	justify-content: center;
-	flex: 1;
-	font-size: 30px;
+	justify-content: flex-start;
+	flex: 2;
+	font-size: 25px;
 	padding: 1%;
-	gap: 30px;
+	gap: 2rem;
 }
 
 /* MEDIA QUERIES */
 @media (max-width: 786px) {
 	.page-wrapper {
-		height: auto;
+		height: 100%;
 	}
 	.site-heading {
 		display: flex;
 		flex-direction: column;
+	}
+	.title-text {
+		font-size: 60px;
+		line-height: 0.75;
+		margin-bottom: 2%;
+		text-transform: capitalize;
 	}
 	.small-screen-links {
 		display: flex;
@@ -151,11 +179,15 @@ body {
 		flex-direction: column;
 	}
 
-	.right-column {
+	.links-column {
 		display: none;
 	}
 
 	.main-content {
 		gap: 20px;
+	}
+	.tagline {
+		line-height: 1;
+		font-size: 30px;
 	}
 }
