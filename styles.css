@@ -13,9 +13,6 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: pangramRegular;
-	/* background-color: #4e5b41; */
-	/* color: #231f20; */
-	/* color: #fef6e2; */
 }
 
 a {
@@ -37,6 +34,7 @@ header i {
 #page-wrapper {
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 3%;
 }
 
 .landing-wrapper {
@@ -210,6 +208,7 @@ header i {
 }
 
 /* Modal Styling  */
+
 .modal,
 .modal > a {
 	position: fixed;
@@ -221,7 +220,7 @@ header i {
 .modal {
 	left: -100vw;
 	opacity: 0;
-	transition: left 0s 0.5s, opacity 0.5s;
+	transition: left 0s 1s, opacity 1s;
 	display: flex;
 	justify-content: center;
 	/* align-items: center; */
@@ -231,7 +230,7 @@ header i {
 .modal:target {
 	left: 0;
 	opacity: 1;
-	transition: left 0s, opacity 0.5s;
+	transition: left 0s, opacity 1s;
 }
 
 .modal > a {
@@ -239,22 +238,62 @@ header i {
 	left: 0;
 }
 
+/* Content inside div */
 .modal > div {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	width: 100vw;
-	height: 100vh;
+	/* height: 100vh; */
 	max-width: 100%;
-	padding: 5%;
+	padding: 3% 5%;
 	background: #fff;
-	transition: top 0.5s;
+	transition: center 1s;
 }
 
 .modal-controls {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.modal-main-content {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	padding: 5% 3%;
+}
+
+.modal-headers {
+	margin-bottom: 1.5%;
+}
+
+.modal-title {
+	font-size: 50px;
+}
+
+.modal-project-summary {
+	margin: 1.5% 0%;
+}
+
+.summary {
+	font-size: 24px;
+}
+
+.modal-comments {
+	margin: 3% 0%;
+	display: flex;
+	flex-direction: row;
+	gap: 5%;
+}
+
+.comment-subheading {
+	margin-bottom: 1.5%;
+}
+
+.modal-project-images {
+	margin-top: auto;
+	height: 100%;
 }
 
 .modal:target > div {
@@ -293,5 +332,11 @@ header i {
 	.tagline {
 		line-height: 1;
 		font-size: 30px;
+	}
+
+	/* Modal Smaller Viewports  */
+
+	.modal-comments {
+		flex-direction: column;
 	}
 }
