@@ -5,7 +5,7 @@
 
 * {
 	box-sizing: border-box;
-	outline: 1px solid red;
+	/* outline: 1px solid red; */
 }
 
 html,
@@ -22,6 +22,7 @@ header {
 	display: block;
 	padding: 1.5% 3%;
 	width: 100%;
+	position: fixed;
 }
 
 header i {
@@ -31,13 +32,13 @@ header i {
 #page-wrapper {
 	display: flex;
 	flex-direction: column;
-	background-color: blanchedalmond;
+	/* background-color: blanchedalmond; */
 }
 
 .landing-wrapper {
 	display: flex;
 	flex-direction: row;
-	padding: 1% 5%;
+	padding: 8% 5% 5% 5%;
 	/* height: calc(100vh - 50px); */
 }
 
@@ -121,9 +122,9 @@ header i {
 	font-weight: bold;
 }
 
-.closing-line {
+/* .closing-line {
 	margin-top: auto;
-}
+} */
 
 .links-column {
 	writing-mode: vertical-lr;
@@ -175,16 +176,33 @@ header i {
 .projects {
 	display: flex;
 	flex-direction: column;
-	padding: 3% 5% 14% 14%;
+	padding: 0% 6% 14% 14%;
+}
+
+.project {
+	margin-bottom: 5%;
 }
 
 .projects-header {
-	font-size: 30px;
+	font-size: 50px;
 	width: 100%;
+	margin-bottom: 1.5%;
 }
 
 .project-title {
-	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 1.5%;
+}
+
+.project-stack {
+	display: flex;
+	gap: 20px;
+}
+
+.project-summary {
+	margin-top: 1.5%;
+	padding-right: 5%;
+	font-size: 30px;
 }
 
 /* MEDIA QUERIES */
