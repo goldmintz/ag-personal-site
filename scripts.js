@@ -1,5 +1,4 @@
 //Toggle between professional and party mode
-
 const introText = document.querySelector('.intro');
 const landing = document.querySelector('.landing');
 
@@ -22,28 +21,28 @@ const toggleIntroText = () => {
 	console.log(landing.classList);
 };
 
-// const navLinks = document.querySelector('.nav-links');
+//////////////////////////////
+// Reveal nav links when page is scrolled
+const navLinks = document.querySelector('.nav-links');
 
-// var myScrollFunc = function () {
-// 	var y = window.pageYOffset;
-// 	if (y >= 600) {
-// 		console.log(navLinks.classList);
-// 		navLinks.classList.add('flex');
-// 	} else {
-// 		navLinks.classList.add('hide');
-// 	}
-// };
+var revealNav = () => {
+	var y = window.pageYOffset;
+	if (y >= 480) {
+		navLinks.classList.add('flex');
+	}
+	if (y < 480) {
+		navLinks.classList.remove('flex');
+	}
+};
 
-// window.addEventListener('scroll', myScrollFunc);
+window.addEventListener('scroll', revealNav);
 
-// window.onscroll = function () {
-// 	console.log(
-// 		'top: ' + (window.pageYOffset || document.documentElement.scrollTop),
-// 	);
-// };
+window.onscroll = () => {
+	console.log('top: ' + window.pageYOffset);
+};
 
+//////////////////////////////
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
-
 const modalLink = document.querySelectorAll('.modal-link');
 
 const hideBodyScroll = () => {

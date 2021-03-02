@@ -44,9 +44,15 @@ header .logo {
 	justify-content: space-between;
 }
 
+/* use to 'toggle' nav links into view */
+.flex {
+	transition: ease-in 2s;
+	display: flex;
+}
+
 .nav-links > div {
 	margin-right: 1.5em;
-	font-size: smaller;
+	font-size: 20px;
 }
 
 #page-wrapper {
@@ -99,7 +105,7 @@ header .logo {
 
 .social-links > div {
 	margin-right: 1.5em;
-	font-size: smaller;
+	font-size: 20px;
 }
 
 .pro-hr {
