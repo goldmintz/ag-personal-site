@@ -27,10 +27,10 @@ const navLinks = document.querySelector('.nav-links');
 
 var revealNav = () => {
 	var y = window.pageYOffset;
-	if (y >= 480) {
+	if (y >= 535) {
 		navLinks.classList.add('flex');
 	}
-	if (y < 480) {
+	if (y < 535) {
 		navLinks.classList.remove('flex');
 	}
 };

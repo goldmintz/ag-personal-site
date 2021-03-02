@@ -42,6 +42,7 @@ header .logo {
 .nav-links {
 	display: none;
 	justify-content: space-between;
+	opacity: 50%;
 }
 
 /* use to 'toggle' nav links into view */
