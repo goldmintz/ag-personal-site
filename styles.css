@@ -20,9 +20,13 @@ a {
 	color: black;
 }
 
+.hide-scroll {
+	overflow: hidden;
+}
+
 header {
 	display: flex;
-	padding: 1.5em 3em;
+	padding: 3em;
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
@@ -31,17 +35,18 @@ header {
 	z-index: 1;
 }
 
-header i {
+header .logo {
 	font-size: 20px;
 }
 
-.links {
-	display: flex;
+.nav-links {
+	display: none;
 	justify-content: space-between;
 }
 
-.header-link {
-	padding: 0em 1em;
+.nav-links > div {
+	margin-right: 1.5em;
+	font-size: smaller;
 }
 
 #page-wrapper {
@@ -51,7 +56,7 @@ header i {
 
 .landing {
 	display: flex;
-	height: calc(100vh - 3em);
+	height: calc(100vh - 1em);
 	flex-direction: column;
 }
 
@@ -67,6 +72,7 @@ header i {
 	font-size: 50px;
 	padding: 0em 1.5em;
 	width: 70%;
+	overflow-x: hidden;
 }
 
 .intro-content {
@@ -96,19 +102,21 @@ header i {
 	font-size: smaller;
 }
 
-/* hr {
+.pro-hr {
 	background-color: black;
-	height: 1px;
-	width: 80%;
+	height: 5px;
+	width: 90%;
 	margin-top: auto;
-} */
+	/* margin-left: 4.5em;
+	padding-right: 4.5em; */
+}
 
 /* PROJECTS */
 
 .projects-wrapper {
 	display: flex;
 	flex-direction: column;
-	padding: 3em;
+	padding: 1.5em 4.5em;
 }
 
 .projects-header {
@@ -152,7 +160,7 @@ header i {
 	left: -100vw;
 	opacity: 0;
 	background: rgba(0, 0, 0, 0.2);
-	overflow-y: scroll;
+	overflow: hidden;
 	z-index: 10;
 }
 
@@ -272,17 +280,21 @@ header i {
 	}
 
 	.intro-content {
-		padding: 0em;
+		padding-top: 1em;
 	}
 
 	.closing-line-content {
 		width: 100%;
 		font-size: 20px;
-		justify-content: flex-start;
-		padding: 0em 2.25em;
+		/* justify-content: flex-start; */
+		padding: 0em 3em;
 	}
 
 	/* Modal Smaller Viewports  */
+
+	.modal {
+		overflow-y: scroll;
+	}
 
 	.summary {
 		font-size: 20px;
