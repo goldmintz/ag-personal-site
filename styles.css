@@ -12,7 +12,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	/* font-family: pangramRegular; */
+	font-family: pangramRegular;
 }
 
 a {
@@ -21,177 +21,109 @@ a {
 }
 
 header {
-	display: block;
-	padding: 1.5% 3%;
+	display: flex;
+	padding: 1.5em 3em;
 	width: 100%;
+	justify-content: space-between;
+	align-items: center;
 	position: fixed;
+	background-color: white;
+	z-index: 1;
 }
 
 header i {
-	font-size: 30px;
+	font-size: 20px;
+}
+
+.links {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-link {
+	padding: 0em 1em;
 }
 
 #page-wrapper {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 3%;
 }
 
-.landing-wrapper {
+.landing {
 	display: flex;
-	flex-direction: row;
-	padding: 8% 5% 3% 5%;
-	/* height: calc(100vh - 50px); */
-}
-
-.main-column {
-	display: flex;
+	height: calc(100vh - 3em);
 	flex-direction: column;
-	padding: 0% 5% 0% 10%;
 }
 
-.site-heading {
+.professional {
+	cursor: url('./assets/images/cursor.png'), auto;
+}
+
+.intro {
 	display: flex;
-	flex-direction: column;
-	width: 100%;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	font-size: 50px;
+	padding: 0em 1.5em;
+	width: 70%;
 }
 
-.title-text {
-	font-size: 80px;
-	line-height: 0.75;
-	margin-bottom: 2%;
-	text-transform: capitalize;
+.intro-content {
+	padding-top: 5em;
 }
-
-#roles {
-	font-size: 24px;
-}
-
-.site-heading::after {
-	content: '';
-	background-color: black;
-	/* background-color: #fef6e2; */
-	width: 30%;
-	left: 0;
-	border-radius: 3px;
-	height: 3px;
-	margin-top: 2%;
+.closing-line {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 25px;
 	opacity: 50%;
 }
 
-.small-screen-links {
-	display: none;
-	gap: 10px;
-	align-self: flex-end;
-	margin-bottom: 2%;
-}
-
-/* TODO: Add clip to this to cut off ends */
-.underline {
-	height: 2%;
-	background-color: grey;
+.closing-line-content {
+	height: 100%;
 	width: 30%;
+	text-align: start;
+	margin-top: auto;
 }
 
-.main-content {
+.social-links {
 	display: flex;
-	gap: 40px;
-	margin: 5% 0% 1% 0%;
+	margin: 1.5em 0em;
 }
 
-.main-content > div {
-	flex: 1;
-	font-size: 24px;
-	line-height: 1.3;
-}
-
-.subheading {
-	margin-bottom: 1%;
+.social-links > div {
+	margin-right: 1.5em;
 	font-size: smaller;
 }
 
-.tagline {
-	display: flex;
-	justify-content: flex-end;
-	margin: 3% 0%;
-	font-size: 30px;
-}
-
-.tagline-text {
-	text-align: right;
-	font-weight: bold;
-}
-
-/* .closing-line {
+/* hr {
+	background-color: black;
+	height: 1px;
+	width: 80%;
 	margin-top: auto;
 } */
 
-.links-column {
-	writing-mode: vertical-lr;
-	display: flex;
-	align-items: center;
-	padding: -5% 0%;
-}
-
-.links-column > div {
-	padding: 2%;
-}
-
-#link-header {
-	flex: 1;
-	font-size: 16px;
-	position: relative;
-}
-
-#link-header::after {
-	content: '';
-	position: absolute;
-	background-color: black;
-	width: 2px;
-	border-radius: 2px;
-	height: 40%;
-	top: 30%;
-	right: 50%;
-	transform: translate(50%, 50%);
-	opacity: 50%;
-}
-
-.link-divider {
-	background-color: black;
-	width: 10px;
-	flex: 0.5;
-}
-
-.link-list {
-	display: flex;
-	justify-content: flex-start;
-	flex: 2;
-	font-size: 20px;
-	/* padding: 1%; */
-	gap: 1rem;
-}
-
 /* PROJECTS */
 
-.projects {
+.projects-wrapper {
 	display: flex;
 	flex-direction: column;
-	padding: 0% 6% 14% 14%;
-}
-
-.project {
-	margin-bottom: 5%;
+	padding: 3em;
 }
 
 .projects-header {
 	font-size: 50px;
 	width: 100%;
-	margin-bottom: 1.5%;
+	margin-bottom: 0.5em;
+}
+
+.project {
+	margin-bottom: 3em;
 }
 
 .project-title {
 	font-size: 30px;
-	margin-bottom: 1.5%;
+	margin-bottom: 0.5em;
 }
 
 .project-stack {
@@ -221,6 +153,7 @@ header i {
 	opacity: 0;
 	background: rgba(0, 0, 0, 0.2);
 	overflow-y: scroll;
+	z-index: 10;
 }
 
 .modal:target {
@@ -328,33 +261,25 @@ header i {
 	.page-wrapper {
 		height: 100%;
 	}
-	.site-heading {
-		display: flex;
-		flex-direction: column;
-	}
-	.title-text {
-		font-size: 60px;
-		line-height: 0.75;
-		margin-bottom: 2%;
-		text-transform: capitalize;
-	}
-	.small-screen-links {
-		display: flex;
-	}
-	.main-content {
-		flex-direction: column;
+
+	.landing-wrapper {
+		height: 100vh;
 	}
 
-	.links-column {
-		display: none;
+	.intro {
+		font-size: 40px;
+		width: 100%;
 	}
 
-	.main-content {
-		gap: 20px;
+	.intro-content {
+		padding: 0em;
 	}
-	.tagline {
-		line-height: 1;
-		font-size: 30px;
+
+	.closing-line-content {
+		width: 100%;
+		font-size: 20px;
+		justify-content: flex-start;
+		padding: 0em 2.25em;
 	}
 
 	/* Modal Smaller Viewports  */
