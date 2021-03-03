@@ -24,7 +24,7 @@ a {
 	overflow: hidden;
 }
 
-header {
+nav {
 	display: flex;
 	padding: 3em;
 	width: 100%;
@@ -35,8 +35,13 @@ header {
 	z-index: 1;
 }
 
-header .logo {
+.logo {
 	font-size: 20px;
+	margin-right: 3em;
+}
+
+#logo-dot {
+	color: purple;
 }
 
 .nav-links {
@@ -71,6 +76,10 @@ header .logo {
 	cursor: url('./assets/images/cursor.png'), auto;
 }
 
+.intro::before {
+	background: url('/assets/images/placeholder_bg.jpg');
+}
+
 .intro {
 	display: flex;
 	align-items: center;
@@ -97,6 +106,7 @@ header .logo {
 	width: 30%;
 	text-align: start;
 	margin-top: auto;
+	padding-right: 1.5em;
 }
 
 .social-links {

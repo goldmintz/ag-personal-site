@@ -1,22 +1,31 @@
 //Toggle between professional and party mode
 const introText = document.querySelector('.intro');
 const landing = document.querySelector('.landing');
+const introAside = document.querySelector('#intro-aside');
 
-const personal =
+const personalMain =
 	'<div class="intro-content" >Ashley is a mickey waffle connoisseur and Sweet Potatos biggest simp. </div>';
 
-const professional =
+const professionalMain =
 	'<div class="intro-content" > A. Goldmintz is a multi-disciplinary experience designer based in Chicago!</div>';
+
+const personalAside =
+	'<div id="intro-aside" >Here is something personal about me as an aside. </div>';
+
+const professionalAside =
+	'<div id="intro-aside"> 10 years experience making stuff.</div>';
 
 const toggleIntroText = () => {
 	if (landing.classList.contains('professional')) {
 		landing.classList.remove('professional');
 		landing.classList.add('personal');
-		introText.innerHTML = personal;
+		introText.innerHTML = personalMain;
+		introAside.innerHTML = personalAside;
 	} else if (landing.classList.contains('personal')) {
 		landing.classList.remove('personal');
 		landing.classList.add('professional');
-		introText.innerHTML = professional;
+		introText.innerHTML = professionalMain;
+		introAside.innerHTML = professionalAside;
 	}
 	console.log(landing.classList);
 };
