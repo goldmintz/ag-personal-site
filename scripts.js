@@ -46,9 +46,9 @@ var revealNav = () => {
 
 window.addEventListener('scroll', revealNav);
 
-window.onscroll = () => {
-	console.log('top: ' + window.pageYOffset);
-};
+// window.onscroll = () => {
+// 	console.log('top: ' + window.pageYOffset);
+// };
 
 //////////////////////////////
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
@@ -80,3 +80,6 @@ for (let i = 0, a; (a = closeModal[i]); i++) {
 	a.addEventListener('click', anchorClose, false);
 	a.addEventListener('click', returnBodyScroll, false);
 }
+
+var rect = document.getElementById('test').getBoundingClientRect();
+console.log(rect.top, rect.right, rect.bottom, rect.left);

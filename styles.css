@@ -28,7 +28,7 @@ a {
 
 nav {
 	display: flex;
-	padding: 3em 0em 3em 3em;
+	padding: 3em;
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
@@ -90,8 +90,9 @@ nav {
 	padding: 0em 1.5em;
 }
 
-.number {
-	margin-top: auto;
+.smaller {
+	font-size: x-small;
+	margin-right: 0.5em;
 }
 
 /* .intro-closing::before {
@@ -137,12 +138,38 @@ nav {
 	border: none;
 }
 
+/* ABOUT */
+.about-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.about-overview {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	font-size: 30px;
+	padding: 0em 10em;
+	/* offset parent height */
+	margin-top: 3em;
+	margin-bottom: 3em;
+	line-height: 2;
+}
+
+/* .about-overview p {
+	text-align: justify;
+	text-justify: distribute;
+	word-break: break-all;
+} */
+
 /* PROJECTS */
 
 .projects-wrapper {
 	display: flex;
 	flex-direction: column;
 	padding: 1.5em 4.5em;
+	height: 100vh;
 }
 
 .projects-header {
@@ -154,14 +181,22 @@ nav {
 .projects-overview {
 	font-size: 30px;
 	width: 100%;
-	margin-bottom: 1.5em;
-	width: 75%;
+	margin-bottom: 3em;
 	line-height: 1;
 }
 
 .project {
 	margin-bottom: 3em;
 }
+
+/* Apply different coloring to project text */
+/* .project:nth-of-type(1) {
+	color: pink;
+}
+
+.project:nth-of-type(2n) {
+	color: green;
+} */
 
 .project-title {
 	font-size: 30px;
