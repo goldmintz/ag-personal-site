@@ -46,9 +46,11 @@ var revealNav = () => {
 
 window.addEventListener('scroll', revealNav);
 
-// window.onscroll = () => {
-// 	console.log('top: ' + window.pageYOffset);
-// };
+window.onscroll = () => {
+	console.log('top: ' + window.pageYOffset);
+};
+
+window.onscroll = () => console.log('scroll');
 
 //////////////////////////////
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
