@@ -1,0 +1,142 @@
+* {
+	box-sizing: border-box;
+	/* outline: 1px solid red; */
+}
+
+body {
+	background-color: black;
+	padding: 0;
+	margin: 0;
+}
+
+/* *** FONT STYLINGS *** */
+/* Animated text/heading */
+@font-face {
+	font-family: objectSansHeavy;
+	src: url(../assets/fonts/ObjectSans-Heavy.woff);
+}
+
+/* Main content text */
+@font-face {
+	font-family: objectSansReg;
+	src: url(../assets/fonts/ObjectSans-Regular.woff);
+}
+
+/* Emphasised words in content */
+.bold {
+	color: greenyellow;
+}
+
+/* Daisy icons */
+.daisy {
+	color: hotpink;
+	margin: 0.5em;
+	font-size: smaller;
+}
+
+/* *** MAIN CONTENT STYLINGS *** */
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 12em;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.header-wrapper span {
+	display: flex;
+	flex-direction: row;
+}
+
+.header-wrapper span:first-child {
+	margin-right: 2em; /* add space between words */
+}
+
+.wave-text {
+	color: pink;
+	font-size: 5em;
+	font-family: objectSansHeavy;
+	text-align: center;
+	padding: 0.03em;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: whitesmoke;
+	margin-top: 2em;
+	font-family: objectSansReg;
+	line-height: 1.6;
+	font-size: 2em;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.links {
+	margin-top: 3.5em;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	font-size: 0.75em;
+	color: greenyellow;
+}
+.link {
+	font-size: 1em;
+}
+
+/* Text Animation */
+.c {
+	animation: wave 2s linear infinite;
+	color: red;
+}
+.o {
+	animation: wave 2s 200ms linear infinite;
+}
+.m {
+	animation: wave 2s 400ms linear infinite;
+}
+.i {
+	animation: wave 2s 600ms linear infinite;
+}
+.n {
+	animation: wave 2s 800ms linear infinite;
+}
+.g {
+	animation: wave 2s 1000ms linear infinite;
+}
+
+/* 2 seconds before next word animates */
+.s {
+	animation: wave 2s 1400ms linear infinite;
+}
+.o2 {
+	animation: wave 2s 1600ms linear infinite;
+}
+.o3 {
+	animation: wave 2s 1800ms linear infinite;
+}
+.n2 {
+	animation: wave 2s 2000ms linear infinite;
+}
+
+@keyframes wave {
+	25% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+}

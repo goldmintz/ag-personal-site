@@ -5,7 +5,7 @@
 
 * {
 	box-sizing: border-box;
-	/* outline: 1px solid red; */
+	outline: 1px solid red;
 }
 
 html,
@@ -13,6 +13,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: pangramRegular;
+<<<<<<< Updated upstream
 	/* background-color: #4e5b41; */
 	/* color: #231f20; */
 	/* color: #fef6e2; */
@@ -21,6 +22,25 @@ body {
 header {
 	display: block;
 	padding: 1.5% 3%;
+=======
+	background: #0c0d0c;
+	color: white;
+	/* scroll-snap-type: y mandatory; */
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.hide-scroll {
+	overflow: hidden;
+}
+
+nav {
+	display: flex;
+	padding: 1.5em 3em;
+>>>>>>> Stashed changes
 	width: 100%;
 	position: fixed;
 }
@@ -95,6 +115,7 @@ header i {
 
 .main-content {
 	display: flex;
+<<<<<<< Updated upstream
 	gap: 40px;
 	margin: 5% 0% 1% 0%;
 }
@@ -108,6 +129,35 @@ header i {
 .subheading {
 	margin-bottom: 1%;
 	font-size: smaller;
+=======
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	flex: 1;
+	font-size: 30px;
+	padding: 0em 10em;
+	margin-top: 3em;
+	line-height: 1.75;
+	cursor: default;
+	height: 100%;
+}
+
+/* PROJECTS */
+
+.projects-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0em 4.5em;
+	scroll-snap-align: start;
+}
+
+.projects-header {
+	/* margin-top: 3em; */
+	font-size: 50px;
+	width: 100%;
+	margin-bottom: 0.5em;
+>>>>>>> Stashed changes
 }
 
 .tagline {
