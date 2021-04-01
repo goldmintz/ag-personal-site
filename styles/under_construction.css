@@ -1,12 +1,27 @@
+:root {
+	--black: #000100;
+	--sea: #2b9eb3;
+	--olive: #849324;
+	--clementine: #f26430;
+	--flamingo: #fe938c;
+	--lime: #adff2f;
+	--hotpink: #ff69b4;
+	--lilac: #d7b8f3;
+	--softwhite: #f5f5f5;
+	--gradientBG: linear-gradient(45deg, #d7b8f3, #2b9eb3, #fe938c), #ff69b4;
+}
+
 * {
 	box-sizing: border-box;
 	/* outline: 1px solid red; */
 }
 
 body {
-	background-color: black;
+	/* background-color: var(--black); */
 	padding: 0;
 	margin: 0;
+	/* background: var(--gradientBG); */
+	background-color: var(--softwhite);
 }
 
 /* *** FONT STYLINGS *** */
@@ -24,24 +39,19 @@ body {
 
 /* Emphasised words in content */
 .bold {
-	color: greenyellow;
-}
-
-/* Daisy icons */
-.daisy {
-	color: hotpink;
-	margin: 0.5em;
-	font-size: smaller;
+	color: var(--lime);
 }
 
 /* *** MAIN CONTENT STYLINGS *** */
 main {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: calc(100vh - 1.4em); /*100 minus top and bottom margins*/
 	padding: 12em;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--black);
+	margin: 0.7em;
 }
 
 .header-wrapper {
@@ -49,6 +59,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-top: 0.3em;
 }
 
 .header-wrapper span {
@@ -61,7 +72,6 @@ main {
 }
 
 .wave-text {
-	color: pink;
 	font-size: 5em;
 	font-family: objectSansHeavy;
 	text-align: center;
@@ -73,60 +83,88 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: whitesmoke;
+	color: var(--softwhite);
 	margin-top: 2em;
 	font-family: objectSansReg;
-	line-height: 1.6;
 	font-size: 2em;
 	letter-spacing: 1px;
 	text-align: center;
+	width: 100%;
 }
 
-.links {
-	margin-top: 3.5em;
-	display: flex;
+.links-wrapper {
+	margin-top: 1em;
+	display: inline-flex;
 	width: 100%;
 	justify-content: space-evenly;
-	font-size: 0.75em;
-	color: greenyellow;
+	color: var(--lime);
 }
+
+.links-wrapper * span {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+}
+
+/* Daisy icons */
+.daisy {
+	color: var(--hotpink);
+	margin: 0.5em;
+	animation: spin 2s linear infinite;
+	font-size: 0.75em;
+}
+
 .link {
-	font-size: 1em;
+	font-size: 0.75em;
+	height: 1.6;
 }
 
 /* Text Animation */
+
 .c {
 	animation: wave 2s linear infinite;
-	color: red;
+	color: var(--sea);
 }
 .o {
 	animation: wave 2s 200ms linear infinite;
+	color: var(--olive);
 }
 .m {
 	animation: wave 2s 400ms linear infinite;
+	color: var(--clementine);
 }
 .i {
 	animation: wave 2s 600ms linear infinite;
+	color: var(--hotpink);
 }
 .n {
 	animation: wave 2s 800ms linear infinite;
+	color: var(--flamingo);
 }
 .g {
 	animation: wave 2s 1000ms linear infinite;
+	padding-right: 0.3em;
+	color: var(--lilac);
 }
 
 /* 2 seconds before next word animates */
 .s {
 	animation: wave 2s 1400ms linear infinite;
+	color: var(--clementine);
 }
 .o2 {
 	animation: wave 2s 1600ms linear infinite;
+	color: var(--sea);
 }
 .o3 {
 	animation: wave 2s 1800ms linear infinite;
+	color: var(--lilac);
 }
 .n2 {
 	animation: wave 2s 2000ms linear infinite;
+	color: var(--olive);
 }
 
 @keyframes wave {
@@ -138,5 +176,99 @@ main {
 	}
 	75% {
 		transform: rotate(-10deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* *** MEDIA QUERIES *** */
+/* @media (min-height: 680px), screen and (orientation: portrait) {
+	...;
+} */
+
+@media screen and (max-width: 600px) {
+	main {
+		height: calc(100vh - 0.7em); /*100 minus top and bottom margins*/
+		padding: 6em;
+		margin: 0.35em;
+	}
+
+	.header-wrapper {
+		margin-top: 0.15em;
+	}
+
+	.wave-text {
+		font-size: 2.5em;
+		font-family: objectSansHeavy;
+		text-align: center;
+		padding: 0.015em;
+	}
+
+	.content {
+		margin-top: 1em;
+		font-family: objectSansReg;
+		font-size: 1.25em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	main {
+		height: calc(100vh - 0.7em); /*100 minus top and bottom margins*/
+		padding: 6em;
+		margin: 0.35em;
+	}
+
+	.header-wrapper {
+		margin-top: 0.15em;
+	}
+
+	.wave-text {
+		font-size: 2.5em;
+		font-family: objectSansHeavy;
+		text-align: center;
+		padding: 0.015em;
+	}
+
+	.content {
+		margin-top: 1em;
+		font-family: objectSansReg;
+		font-size: 1.25em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	main {
+		height: calc(100vh - .75em); /*100 minus top and bottom margins*/
+		padding: 3em;
+		margin: 1em;
+	}
+
+	.header-wrapper {
+		margin-top: 0.15em;
+	}
+
+	.wave-text {
+		font-size: 1.25em;
+		font-family: objectSansHeavy;
+		text-align: center;
+		padding: 0.015em;
+	}
+
+	.content {
+		margin-top: 1em;
+		font-family: objectSansReg;
+		font-size: 0.75em;
+		line-height: 1.25;
+	}
+
+	.links-wrapper {
+		height: 2em;
 	}
 }
