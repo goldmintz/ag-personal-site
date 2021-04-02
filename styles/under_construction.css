@@ -281,6 +281,10 @@ main {
 		margin: 0.35em;
 	}
 
+	.logo {
+		display: none;
+	}
+
 	.header-wrapper {
 		margin-top: 0.15em;
 	}
@@ -353,6 +357,10 @@ main {
 		height: calc(100vh - 0.75em); /*100 minus top and bottom margins*/
 		padding: 3em;
 		margin: 1em;
+	}
+
+	.logo {
+		display: none;
 	}
 
 	.header-wrapper {
