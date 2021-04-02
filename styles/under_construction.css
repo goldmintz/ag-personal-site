@@ -97,7 +97,6 @@ main {
 	display: inline-flex;
 	width: 100%;
 	justify-content: space-evenly;
-	color: var(--lime);
 }
 
 .links-wrapper * span {
@@ -113,6 +112,7 @@ main {
 	color: var(--hotpink);
 	margin: 0.5em;
 	animation: spin 2s linear infinite;
+	-webkit-animation: spin 2s linear infinite;
 	font-size: 0.75em;
 }
 
@@ -121,30 +121,41 @@ main {
 	height: 1.6;
 }
 
+.link a {
+	text-decoration: none;
+	color: var(--lime);
+}
+
 /* Text Animation */
 
 .c {
 	animation: wave 2s linear infinite;
+	-webkit-animation: wave 2s linear infinite;
 	color: var(--sea);
 }
 .o {
 	animation: wave 2s 200ms linear infinite;
+	-webkit-animation: wave 2s 200ms linear infinite;
 	color: var(--olive);
 }
 .m {
 	animation: wave 2s 400ms linear infinite;
+	-webkit-animation: 2s 400ms linear infinite;
 	color: var(--clementine);
 }
 .i {
 	animation: wave 2s 600ms linear infinite;
+	-webkit-animation: wave 2s 600ms linear infinite;
 	color: var(--hotpink);
 }
 .n {
 	animation: wave 2s 800ms linear infinite;
+	-webkit-animation: wave 2s 800ms linear infinite;
 	color: var(--flamingo);
 }
 .g {
 	animation: wave 2s 1000ms linear infinite;
+	-webkit-animation: wave 2s 1000ms linear infinite;
 	padding-right: 0.3em;
 	color: var(--lilac);
 }
@@ -152,18 +163,22 @@ main {
 /* 2 seconds before next word animates */
 .s {
 	animation: wave 2s 1400ms linear infinite;
+	-webkit-animation: wave 2s 1400ms linear infinite;
 	color: var(--clementine);
 }
 .o2 {
 	animation: wave 2s 1600ms linear infinite;
+	-webkit-animation: wave 2s 1600ms linear infinite;
 	color: var(--sea);
 }
 .o3 {
 	animation: wave 2s 1800ms linear infinite;
+	-webkit-animation: wave 2s 1800ms linear infinite;
 	color: var(--lilac);
 }
 .n2 {
 	animation: wave 2s 2000ms linear infinite;
+	-webkit-animation: wave 2s 2000ms linear infinite;
 	color: var(--olive);
 }
 
@@ -179,7 +194,28 @@ main {
 	}
 }
 
+@-webkit-keyframes wave {
+	25% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+}
+
 @keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
 	from {
 		transform: rotate(0deg);
 	}
@@ -245,7 +281,7 @@ main {
 
 @media screen and (max-width: 480px) {
 	main {
-		height: calc(100vh - .75em); /*100 minus top and bottom margins*/
+		height: calc(100vh - 0.75em); /*100 minus top and bottom margins*/
 		padding: 3em;
 		margin: 1em;
 	}
