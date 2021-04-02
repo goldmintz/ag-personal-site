@@ -181,7 +181,7 @@ main {
 }
 .m {
 	animation: wave 2s 400ms linear infinite;
-	-webkit-animation: 2s 400ms linear infinite;
+	-webkit-animation: wave 2s 400ms linear infinite;
 	color: var(--clementine);
 }
 .i {
@@ -240,7 +240,7 @@ main {
 		transform: rotate(10deg);
 	}
 	50% {
-		transform: translateY(-1.5em);
+		transform: translateY(-20px);
 	}
 	75% {
 		transform: rotate(-10deg);
