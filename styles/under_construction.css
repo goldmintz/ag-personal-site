@@ -20,6 +20,7 @@ body {
 	/* background-color: var(--black); */
 	padding: 0;
 	margin: 0;
+	line-height: 1.6;
 	/* background: var(--gradientBG); */
 	background-color: var(--softwhite);
 }
@@ -59,9 +60,10 @@ main {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-top: 0.3em;
+	margin-top: 0.5em;
 }
 
+/* wrap around each word in header */
 .header-wrapper span {
 	display: flex;
 	flex-direction: row;
@@ -84,7 +86,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	color: var(--softwhite);
-	margin-top: 2em;
+	margin-top: 1em;
 	font-family: objectSansReg;
 	font-size: 2em;
 	letter-spacing: 1px;
@@ -110,20 +112,31 @@ main {
 /* Daisy icons */
 .daisy {
 	color: var(--hotpink);
-	margin: 0.5em;
+	/* margin: 0.5em; */
 	animation: spin 2s linear infinite;
 	-webkit-animation: spin 2s linear infinite;
-	font-size: 0.75em;
+	font-size: 1.5em;
+	width: 1.5em;
+	height: 1.5em;
 }
 
-.link {
-	font-size: 0.75em;
-	height: 1.6;
-}
 
-.link a {
+.social-link a {
+	font-size: 0.75em;
 	text-decoration: none;
 	color: var(--lime);
+}
+
+.social-link a:hover {
+	color: lightsalmon;
+}
+
+.grow {
+	transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+	transform: translateY(-0.2em);
 }
 
 /* Text Animation */
@@ -199,7 +212,7 @@ main {
 		transform: rotate(10deg);
 	}
 	50% {
-		transform: translateY(-20px);
+		transform: translateY(-1.5em);
 	}
 	75% {
 		transform: rotate(-10deg);
@@ -225,8 +238,12 @@ main {
 }
 
 /* *** MEDIA QUERIES *** */
-/* @media (min-height: 680px), screen and (orientation: portrait) {
-	...;
+@media (min-height: 680px), screen and (orientation: portrait) {
+	/* main {
+		height: calc(100vh - 0.7em);
+		padding: 8em;
+		margin: 1em;
+	}
 } */
 
 @media screen and (max-width: 600px) {
@@ -277,9 +294,33 @@ main {
 		font-family: objectSansReg;
 		font-size: 1.25em;
 	}
+
+	@keyframes wave {
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: translateY(-0.6em);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+	}
+
+	@-webkit-keyframes wave {
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: translateY(-0.6em);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+	}
 }
 
-@media screen and (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	main {
 		height: calc(100vh - 0.75em); /*100 minus top and bottom margins*/
 		padding: 3em;
@@ -306,5 +347,29 @@ main {
 
 	.links-wrapper {
 		height: 2em;
+	}
+
+	@keyframes wave {
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: translateY(-0.6em);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+	}
+
+	@-webkit-keyframes wave {
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: translateY(-0.6em);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
 	}
 }
