@@ -417,4 +417,28 @@ main {
 			transform: rotate(-10deg);
 		}
 	}
+
+	/* Stop spinning on smaller screens (too busy) */
+	@keyframes spin {
+		from {
+			transform: none;
+		}
+		to {
+			transform: none;
+		}
+	}
+
+	@-webkit-keyframes spin {
+		from {
+			transform: none;
+		}
+		to {
+			transform: none;
+		}
+	}
+
+	/* Remove break on last line */
+	#final-break {
+		display: none;
+	}
 }
