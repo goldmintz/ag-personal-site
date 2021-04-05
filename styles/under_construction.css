@@ -38,8 +38,12 @@ body {
 }
 
 /* Emphasised words in content */
-.bold {
+.lime {
 	color: var(--lime);
+}
+
+.pink {
+	color: var(--hotpink);
 }
 
 /* *** MAIN CONTENT STYLINGS *** */
@@ -109,7 +113,7 @@ main {
 	padding: 0.03em;
 }
 
-.content {
+.welcome-msg {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -295,7 +299,7 @@ main {
 		padding: 0.015em;
 	}
 
-	.content {
+	.welcome-msg {
 		margin-top: 1em;
 		font-family: objectSansReg;
 		font-size: 1.25em;
@@ -320,7 +324,7 @@ main {
 		padding: 0.015em;
 	}
 
-	.content {
+	.welcome-msg {
 		margin-top: 1em;
 		font-family: objectSansReg;
 		font-size: 1.25em;
@@ -373,11 +377,11 @@ main {
 		padding: 0.015em;
 	}
 
-	.content {
+	.welcome-msg {
 		margin-top: 1em;
 		font-family: objectSansReg;
 		font-size: 0.75em;
-		line-height: 1.25;
+		line-height: 1;
 	}
 
 	.links-wrapper {
