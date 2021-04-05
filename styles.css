@@ -13,16 +13,6 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: pangramRegular;
-<<<<<<< Updated upstream
-	/* background-color: #4e5b41; */
-	/* color: #231f20; */
-	/* color: #fef6e2; */
-}
-
-header {
-	display: block;
-	padding: 1.5% 3%;
-=======
 	background: #0c0d0c;
 	color: white;
 	/* scroll-snap-type: y mandatory; */
@@ -40,7 +30,6 @@ a {
 nav {
 	display: flex;
 	padding: 1.5em 3em;
->>>>>>> Stashed changes
 	width: 100%;
 	position: fixed;
 }
