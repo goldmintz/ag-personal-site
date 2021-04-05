@@ -56,6 +56,7 @@ main {
 	align-items: center;
 	background-color: var(--black);
 	margin: 0.7em;
+	cursor: url('/assets/cursor_daisy.png'), pointer;
 }
 
 .nav-wrapper {
@@ -71,7 +72,6 @@ main {
 	color: whitesmoke;
 	font-family: objectSansReg;
 	font-size: 1.5em;
-	cursor: pointer;
 }
 
 .logo #dot {
@@ -133,6 +133,7 @@ main {
 	width: 100%;
 	text-align: center;
 	justify-content: space-evenly;
+	cursor: pointer;
 }
 
 .links-wrapper * span {
@@ -140,6 +141,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	cursor: pointer;
 }
 
 /* Daisy icons */
