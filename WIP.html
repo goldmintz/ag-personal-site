@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script
+			src="https://kit.fontawesome.com/80881b6526.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Single Page Portfolio</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="logo">a<span id="logo-dot">✨</span>goldmintz</div>
+				<div class="nav-links">
+					<div id="test">email</div>
+					<div>resume</div>
+					<div>github</div>
+					<div>linkedin</div>
+				</div>
+			</nav>
+		</header>
+
+		<div id="page-wrapper">
+			<section class="landing professional">
+				<div class="intro" onclick="toggleIntroText()">
+					<div class="intro-content">
+						A. Goldmintz is a multi-disciplinary experience designer based in
+						Chicago.
+					</div>
+				</div>
+				<div class="intro-closing">
+					<div id="intro-aside">
+						<span class="smaller">01.</span>Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Laudantium, tempora!
+					</div>
+
+					<div class="social-links">
+						<div>email</div>
+						<div>resume</div>
+						<div>github</div>
+						<div>linkedin</div>
+					</div>
+				</div>
+			</section>
+			<hr class="pro-hr" />
+
+			<!-- Begin About Section -->
+
+			<section class="about-wrapper">
+				<div class="about-content">
+					<p>
+						<span class="smaller">02.</span>Here's where I talk about my value
+						prop, experience, and what I am looking for. Lorem ipsum dolor sit
+						amet consectetur adipisicing elit. Molestiae tempora iste non
+						incidunt magnam porro pariatur accusamus minima rerum et vero ipsam
+						similique error laborum autem repudiandae, architecto placeat.
+						Ratione?
+					</p>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+			</section>
+
+			<!-- Begin Projects Section -->
+			<section class="projects-wrapper">
+				<div class="projects-header">Select Coding Projects</div>
+				<div class="projects-overview">
+					<span class="smaller">03.</span>Summary about what I've done and how
+					these are some projects. Lorem ipsum dolor, sit amet consectetur
+					adipisicing elit. Doloremque, provident.
+				</div>
+
+				<a href="#project-1" class="modal-link">
+					<div class="project">
+						<div class="project-stack">
+							<div>tech</div>
+							<div>tech</div>
+							<div>tech</div>
+						</div>
+						<div class="project-title">Project title</div>
+
+						<div class="project-summary">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+							rem animi ad sapiente vitae at provident nulla necessitatibus
+							iste? Quod.
+						</div>
+					</div>
+				</a>
+
+				<!-- Project 1 Modal -->
+				<div id="project-1" class="modal">
+					<!-- Modal Content -->
+					<div class="modal-controls">
+						<a href="/" class="close-modal">LOGO</a>
+						<a href="/" class="close-modal">CLOSE</a>
+					</div>
+					<div class="modal-wrapper">
+						<section class="modal-main-content">
+							<div class="modal-headers">
+								<div class="modal-title">Project Title</div>
+								<div>Project Subtitle</div>
+							</div>
+
+							<div class="modal-project-summary">
+								<div class="summary">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+									Ipsum magnam a iste distinctio porro reprehenderit nisi
+									numquam debitis quaerat, maiores placeat qui sequi ex ipsam
+									facere repudiandae, assumenda quidem quis!
+								</div>
+								<div class="comments-wrapper">
+									<div class="comment-wrapper">
+										<div class="comment-subheading">approach</div>
+										<div class="comment-content">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Voluptas eligendi unde ullam dolorem, perferendis
+											inventore iusto reiciendis impedit architecto quidem.
+											Sapiente voluptatem nobis excepturi commodi dolorem porro
+											sunt officiis quod.
+										</div>
+									</div>
+
+									<div class="comment-wrapper">
+										<div class="comment-subheading">observations</div>
+										<div class="comment-content">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Voluptas eligendi unde ullam dolorem, perferendis
+											inventore iusto reiciendis impedit architecto quidem.
+											Sapiente voluptatem nobis excepturi commodi dolorem porro
+											sunt officiis quod.
+										</div>
+									</div>
+
+									<div class="comment-wrapper">
+										<div class="comment-subheading">tech stack</div>
+										<div class="comment-content">
+											<ul>
+												<li>tech</li>
+												<li>tech</li>
+												<li>tech</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="modal-project-images"
+								style="background: url(./assets/images/placeholder_bg.jpg)"
+							></div>
+						</section>
+					</div>
+				</div>
+
+				<!-- Project 2 -->
+
+				<div class="project">
+					<div class="project-stack">
+						<div>tech</div>
+						<div>tech</div>
+						<div>tech</div>
+					</div>
+					<div class="project-title">Project title</div>
+					<div class="project-summary">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+						rem animi ad sapiente vitae at provident nulla necessitatibus iste?
+						Quod.
+					</div>
+				</div>
+
+				<div class="project">
+					<div class="project-stack">
+						<div>tech</div>
+						<div>tech</div>
+						<div>tech</div>
+					</div>
+					<div class="project-title">Project title</div>
+					<div class="project-summary">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+						rem animi ad sapiente vitae at provident nulla necessitatibus iste?
+						Quod.
+					</div>
+				</div>
+			</section>
+			<div class="footer">baby footer!</div>
+		</div>
+		<script src="scripts.js"></script>
+	</body>
+</html>

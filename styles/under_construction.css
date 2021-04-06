@@ -1,0 +1,474 @@
+:root {
+	--black: #000100;
+	--sea: #2b9eb3;
+	--olive: #849324;
+	--clementine: #f26430;
+	--flamingo: #fe938c;
+	--lime: #adff2f;
+	--hotpink: #ff69b4;
+	--lilac: #d7b8f3;
+	--softwhite: #f5f5f5;
+	--gradientBG: linear-gradient(45deg, #d7b8f3, #2b9eb3, #fe938c), #ff69b4;
+}
+
+* {
+	box-sizing: border-box;
+	/* outline: 1px solid red; */
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	line-height: 1.6;
+	/* background: var(--gradientBG); */
+	background-color: var(--softwhite);
+}
+
+/* *** FONT STYLINGS *** */
+/* Animated text/heading */
+@font-face {
+	font-family: objectSansHeavy;
+	src: url(../assets/fonts/ObjectSans-Heavy.woff);
+}
+
+/* Main content text */
+@font-face {
+	font-family: objectSansReg;
+	src: url(../assets/fonts/ObjectSans-Regular.woff);
+}
+
+/* Emphasised words in content */
+.lime {
+	color: var(--lime);
+}
+
+.pink {
+	color: var(--hotpink);
+}
+
+/* Remove break on last line only used for mobile */
+#final-break {
+	content: ' ';
+}
+#final-break :after {
+	content: ' ';
+}
+
+/* *** MAIN CONTENT STYLINGS *** */
+main {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 1.4em); /*100 minus top and bottom margins*/
+	padding: 12em;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--black);
+	margin: 0.7em;
+	cursor: url('/assets/cursor_daisy.png'), pointer;
+}
+
+.nav-wrapper {
+	display: flex;
+	width: 100%;
+	padding: 0em 5em;
+}
+
+.logo {
+	position: absolute;
+	top: 2em;
+	right: 3em;
+	color: whitesmoke;
+	font-family: objectSansReg;
+	font-size: 1.5em;
+}
+
+.logo #dot {
+	color: var(--lime);
+}
+
+.logo .daisy {
+	color: var(--flamingo);
+	font-size: 1em;
+	transition: all 0.2s ease-in-out;
+}
+
+.logo .daisy:hover {
+	color: var(--clementine);
+}
+
+.header-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 0.5em;
+}
+
+/* wrap around each word in header */
+.header-wrapper span {
+	display: flex;
+	flex-direction: row;
+}
+
+.header-wrapper span:first-child {
+	margin-right: 2em; /* add space between words */
+}
+
+.wave-text {
+	font-size: 5em;
+	font-family: objectSansHeavy;
+	text-align: center;
+	padding: 0.03em;
+}
+
+.welcome-msg {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--softwhite);
+	margin-top: 1em;
+	font-family: objectSansReg;
+	font-size: 2em;
+	letter-spacing: 1px;
+	text-align: center;
+	width: 100%;
+}
+
+.links-wrapper {
+	margin-top: 1em;
+	display: inline-flex;
+	width: 100%;
+	text-align: center;
+	justify-content: space-evenly;
+	cursor: pointer;
+}
+
+.links-wrapper * span {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	cursor: pointer;
+}
+
+/* Daisy icons */
+.daisy {
+	color: var(--hotpink);
+	/* margin: 0.5em; */
+	animation: spin 2s linear infinite;
+	-webkit-animation: spin 2s linear infinite;
+	font-size: 1.5em;
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.social-link a {
+	font-size: 0.75em;
+	text-decoration: none;
+	color: var(--lime);
+}
+
+.social-link a:hover {
+	color: var(--clementine);
+}
+
+.grow {
+	transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+	transform: translateY(-0.2em);
+}
+
+/* Text Animation */
+.c {
+	animation: wave 2s linear infinite;
+	-webkit-animation: wave 2s linear infinite;
+	color: var(--sea);
+}
+.o {
+	animation: wave 2s 200ms linear infinite;
+	-webkit-animation: wave 2s 200ms linear infinite;
+	color: var(--olive);
+}
+.m {
+	animation: wave 2s 400ms linear infinite;
+	-webkit-animation: wave 2s 400ms linear infinite;
+	color: var(--clementine);
+}
+.i {
+	animation: wave 2s 600ms linear infinite;
+	-webkit-animation: wave 2s 600ms linear infinite;
+	color: var(--hotpink);
+}
+.n {
+	animation: wave 2s 800ms linear infinite;
+	-webkit-animation: wave 2s 800ms linear infinite;
+	color: var(--flamingo);
+}
+.g {
+	animation: wave 2s 1000ms linear infinite;
+	-webkit-animation: wave 2s 1000ms linear infinite;
+	padding-right: 0.3em;
+	color: var(--lilac);
+}
+
+/* 2 seconds before next word animates */
+.s {
+	animation: wave 2s 1400ms linear infinite;
+	-webkit-animation: wave 2s 1400ms linear infinite;
+	color: var(--clementine);
+}
+.o2 {
+	animation: wave 2s 1600ms linear infinite;
+	-webkit-animation: wave 2s 1600ms linear infinite;
+	color: var(--sea);
+}
+.o3 {
+	animation: wave 2s 1800ms linear infinite;
+	-webkit-animation: wave 2s 1800ms linear infinite;
+	color: var(--lilac);
+}
+.n2 {
+	animation: wave 2s 2000ms linear infinite;
+	-webkit-animation: wave 2s 2000ms linear infinite;
+	color: var(--olive);
+}
+
+@keyframes wave {
+	25% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+}
+
+@-webkit-keyframes wave {
+	25% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* *** MEDIA QUERIES *** */
+@media (min-height: 680px), screen and (orientation: portrait) {
+	/* main {
+		height: calc(100vh - 0.7em);
+		padding: 8em;
+		margin: 1em;
+	}*/
+}
+
+@media screen and (max-width: 600px) {
+	main {
+		height: calc(100vh - 0.7em); /*100 minus top and bottom margins*/
+		padding: 6em;
+		margin: 0.35em;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.header-wrapper {
+		margin-top: 0.15em;
+	}
+
+	.wave-text {
+		font-size: 2.5em;
+		font-family: objectSansHeavy;
+		text-align: center;
+		padding: 0.015em;
+	}
+
+	.welcome-msg {
+		margin-top: 1em;
+		font-family: objectSansReg;
+		font-size: 1.25em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	main {
+		height: calc(100vh - 0.7em); /*100 minus top and bottom margins*/
+		padding: 6em;
+		margin: 0.35em;
+	}
+
+	.header-wrapper {
+		margin-top: 0.15em;
+	}
+
+	.wave-text {
+		font-size: 2.5em;
+		font-family: objectSansHeavy;
+		text-align: center;
+		padding: 0.015em;
+	}
+
+	.welcome-msg {
+		margin-top: 1em;
+		font-family: objectSansReg;
+		font-size: 1.25em;
+	}
+
+	@keyframes wave {
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: translateY(-0.6em);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+	}
+
+	@-webkit-keyframes wave {
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: translateY(-0.6em);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	main {
+		height: calc(100vh - 0.75em); /*100 minus top and bottom margins*/
+		padding: 1.25em;
+		margin: 0.5em;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.header-wrapper {
+		margin-top: 0.15em;
+	}
+
+	.wave-text {
+		font-size: 1.75em;
+		font-family: objectSansHeavy;
+		text-align: center;
+		padding: 0.015em;
+	}
+
+	.welcome-msg {
+		margin-top: 1em;
+		font-family: objectSansReg;
+		font-size: 1.1em;
+		line-height: 1;
+	}
+
+	#final-break {
+		display: block;
+	}
+
+	.links-wrapper {
+		height: 2em;
+	}
+
+	.social-link {
+		font-size: 1.2em;
+	}
+
+	@keyframes wave {
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: translateY(-0.6em);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+	}
+
+	@-webkit-keyframes wave {
+		25% {
+			transform: rotate(10deg);
+		}
+		50% {
+			transform: translateY(-0.6em);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+	}
+
+	/* Stop spinning on smaller screens (too busy) */
+	@keyframes spin {
+		from {
+			transform: none;
+		}
+		to {
+			transform: none;
+		}
+	}
+
+	@-webkit-keyframes spin {
+		from {
+			transform: none;
+		}
+		to {
+			transform: none;
+		}
+	}
+}
+
+/* Remove animations on devices without hover */
+@media not all and (hover: none) {
+	.social-link a:hover {
+		color: var(--lime);
+	}
+	.social-link a:visited {
+		-webkit-transition-property: none;
+		-moz-transition-property: none;
+		-o-transition-property: none;
+		transition-property: none;
+		color: var(--lime);
+	}
+	.grow {
+		-webkit-transition-property: none;
+		-moz-transition-property: none;
+		-o-transition-property: none;
+		transition-property: none;
+	}
+	.grow:hover {
+		transform: none;
+	}
+}

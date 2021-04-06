@@ -5,7 +5,7 @@
 
 * {
 	box-sizing: border-box;
-	/* outline: 1px solid red; */
+	outline: 1px solid red;
 }
 
 html,
@@ -15,7 +15,7 @@ body {
 	font-family: pangramRegular;
 	background: #0c0d0c;
 	color: white;
-	scroll-snap-type: y mandatory;
+	/* scroll-snap-type: y mandatory; */
 }
 
 a {
@@ -29,7 +29,7 @@ a {
 
 nav {
 	display: flex;
-	padding: 3em;
+	padding: 1.5em 3em;
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
@@ -150,6 +150,8 @@ nav {
 	align-items: center;
 	scroll-snap-align: center;
 	height: 100vh;
+	gap: 40px;
+	margin: 5% 0% 1% 0%;
 }
 
 .about-content {
@@ -169,6 +171,37 @@ nav {
 }
 
 /* PROJECTS */
+.subheading {
+	margin-bottom: 1%;
+	font-size: smaller;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	flex: 1;
+	font-size: 30px;
+	padding: 0em 10em;
+	margin-top: 3em;
+	line-height: 1.75;
+	cursor: default;
+	height: 100%;
+}
+
+/* PROJECTS */
+
+.projects-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0em 4.5em;
+	scroll-snap-align: start;
+}
+
+.projects-header {
+	/* margin-top: 3em; */
+	font-size: 50px;
+	width: 100%;
+	margin-bottom: 0.5em;
+}
 
 .projects-wrapper {
 	display: flex;
