@@ -48,7 +48,10 @@ body {
 
 /* Remove break on last line only used for mobile */
 #final-break {
-	display: none;
+	content: ' ';
+}
+#final-break :after {
+	content: ' ';
 }
 
 /* *** MAIN CONTENT STYLINGS *** */
