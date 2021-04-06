@@ -46,6 +46,11 @@ body {
 	color: var(--hotpink);
 }
 
+/* Remove break on last line only used for mobile */
+#final-break {
+	display: none;
+}
+
 /* *** MAIN CONTENT STYLINGS *** */
 main {
 	display: flex;
@@ -162,7 +167,7 @@ main {
 }
 
 .social-link a:hover {
-	color: lightsalmon;
+	color: var(--clementine);
 }
 
 .grow {
@@ -386,6 +391,10 @@ main {
 		line-height: 1;
 	}
 
+	#final-break {
+		display: block;
+	}
+
 	.links-wrapper {
 		height: 2em;
 	}
@@ -436,9 +445,27 @@ main {
 			transform: none;
 		}
 	}
+}
 
-	/* Remove break on last line */
-	#final-break {
-		display: none;
+/* Remove animations on devices without hover */
+@media not all and (hover: none) {
+	.social-link a:hover {
+		color: var(--lime);
+	}
+	.social-link a:visited {
+		-webkit-transition-property: none;
+		-moz-transition-property: none;
+		-o-transition-property: none;
+		transition-property: none;
+		color: var(--lime);
+	}
+	.grow {
+		-webkit-transition-property: none;
+		-moz-transition-property: none;
+		-o-transition-property: none;
+		transition-property: none;
+	}
+	.grow:hover {
+		transform: none;
 	}
 }
