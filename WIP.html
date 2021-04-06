@@ -4,17 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles.css" />
-		<script
-			src="https://kit.fontawesome.com/80881b6526.js"
-			crossorigin="anonymous"
-		></script>
-		<title>Single Page Portfolio</title>
+		<link rel="stylesheet" href="/styles/styles.css" />
+		<title>a.g✿ldmintz | designer & developer</title>
 	</head>
 	<body>
 		<header>
 			<nav>
-				<div class="logo">a<span id="logo-dot">✨</span>goldmintz</div>
+				<div class="logo">
+					a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz
+				</div>
 				<div class="nav-links">
 					<div id="test">email</div>
 					<div>resume</div>
@@ -34,8 +32,8 @@
 				</div>
 				<div class="intro-closing">
 					<div id="intro-aside">
-						<span class="smaller">01.</span>Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Laudantium, tempora!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+						tempora!
 					</div>
 
 					<div class="social-links">
@@ -46,31 +44,29 @@
 					</div>
 				</div>
 			</section>
-			<hr class="pro-hr" />
 
 			<!-- Begin About Section -->
-
 			<section class="about-wrapper">
 				<div class="about-content">
 					<p>
-						<span class="smaller">02.</span>Here's where I talk about my value
-						prop, experience, and what I am looking for. Lorem ipsum dolor sit
-						amet consectetur adipisicing elit. Molestiae tempora iste non
-						incidunt magnam porro pariatur accusamus minima rerum et vero ipsam
-						similique error laborum autem repudiandae, architecto placeat.
-						Ratione?
+						Here's where I talk about my value prop, experience, and what I am
+						looking for. Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Molestiae tempora iste non incidunt magnam porro pariatur
+						accusamus minima rerum et vero ipsam similique error laborum autem
+						repudiandae, architecto placeat. Ratione?
 					</p>
 					<p>Lorem ipsum dolor sit amet.</p>
 				</div>
 			</section>
+			<!-- End About Section -->
 
 			<!-- Begin Projects Section -->
 			<section class="projects-wrapper">
 				<div class="projects-header">Select Coding Projects</div>
 				<div class="projects-overview">
-					<span class="smaller">03.</span>Summary about what I've done and how
-					these are some projects. Lorem ipsum dolor, sit amet consectetur
-					adipisicing elit. Doloremque, provident.
+					Summary about what I've done and how these are some projects. Lorem
+					ipsum dolor, sit amet consectetur adipisicing elit. Doloremque,
+					provident.
 				</div>
 
 				<a href="#project-1" class="modal-link">
@@ -94,7 +90,11 @@
 				<div id="project-1" class="modal">
 					<!-- Modal Content -->
 					<div class="modal-controls">
-						<a href="/" class="close-modal">LOGO</a>
+						<div class="logo">
+							<a href="/" class="close-modal"
+								>a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz</a
+							>
+						</div>
 						<a href="/" class="close-modal">CLOSE</a>
 					</div>
 					<div class="modal-wrapper">
@@ -105,16 +105,16 @@
 							</div>
 
 							<div class="modal-project-summary">
-								<div class="summary">
+								<div class="summary-content">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 									Ipsum magnam a iste distinctio porro reprehenderit nisi
 									numquam debitis quaerat, maiores placeat qui sequi ex ipsam
 									facere repudiandae, assumenda quidem quis!
 								</div>
-								<div class="comments-wrapper">
-									<div class="comment-wrapper">
-										<div class="comment-subheading">approach</div>
-										<div class="comment-content">
+								<div class="project-details-wrapper">
+									<div class="project-details-col">
+										<div class="project-subheading">approach</div>
+										<div class="detail-content">
 											Lorem ipsum dolor sit amet consectetur adipisicing elit.
 											Voluptas eligendi unde ullam dolorem, perferendis
 											inventore iusto reiciendis impedit architecto quidem.
@@ -123,9 +123,9 @@
 										</div>
 									</div>
 
-									<div class="comment-wrapper">
-										<div class="comment-subheading">observations</div>
-										<div class="comment-content">
+									<div class="project-details-col">
+										<div class="project-subheading">observations</div>
+										<div class="detail-content">
 											Lorem ipsum dolor sit amet consectetur adipisicing elit.
 											Voluptas eligendi unde ullam dolorem, perferendis
 											inventore iusto reiciendis impedit architecto quidem.
@@ -134,22 +134,21 @@
 										</div>
 									</div>
 
-									<div class="comment-wrapper">
-										<div class="comment-subheading">tech stack</div>
-										<div class="comment-content">
+									<div class="project-details-col">
+										<div class="project-subheading">tech stack</div>
+										<div class="detail-content">
 											<ul>
-												<li>tech</li>
-												<li>tech</li>
-												<li>tech</li>
+												<li>react</li>
+												<li>other tech</li>
+												<li>some other tool</li>
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div
-								class="modal-project-images"
-								style="background: url(./assets/images/placeholder_bg.jpg)"
-							></div>
+							<!-- <div class="project-image">
+								<img src="/assets/images/test-projectIMG.png" />
+							</div> -->
 						</section>
 					</div>
 				</div>
@@ -184,6 +183,7 @@
 					</div>
 				</div>
 			</section>
+			<!-- End Projects Section -->
 			<div class="footer">baby footer!</div>
 		</div>
 		<script src="scripts.js"></script>
