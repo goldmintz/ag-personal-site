@@ -27,6 +27,17 @@ body {
 	color: var(--softwhite);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+.section-anchor:target:before {
+	content: '';
+	display: block;
+	height: 4em;
+	margin: 4em 0 0;
+}
+
 /* ***FONT & LINK STYLINGS *** */
 @font-face {
 	font-family: objectSansHeavy;
@@ -49,6 +60,13 @@ a:visited {
 
 .hide-scroll {
 	overflow: hidden;
+}
+
+:target:before {
+	content: '';
+	display: block;
+	height: 6em;
+	margin: -6em 0 0;
 }
 
 nav {
@@ -135,10 +153,10 @@ nav {
 	padding: 0em 1.5em;
 }
 
-.smaller {
+/* .smaller {
 	font-size: x-small;
 	margin-right: 0.5em;
-}
+} */
 
 /* .intro-closing::before {
 	content: '01';
@@ -152,6 +170,7 @@ nav {
 	/* adjust for nav position fixed (intro overlaps) */
 	margin-top: 1.5em;
 	line-height: 1;
+	font-size: 0.8em;
 }
 
 .intro-closing {
@@ -170,11 +189,13 @@ nav {
 .social-links {
 	display: flex;
 	margin: 1.5em 0em;
+	cursor: pointer;
 }
 
 .social-links > div {
 	margin-right: 1.5em;
 	font-size: 20px;
+	cursor: pointer;
 }
 
 /* ABOUT */
@@ -185,7 +206,7 @@ nav {
 	align-items: center;
 	scroll-snap-align: center;
 	height: calc(100vh - 6em); /* full vh minus height of nav */
-	gap: 40px;
+	/* gap: 40px; */
 	margin: 5% 0% 1% 0%;
 	text-align: center;
 }
@@ -238,14 +259,17 @@ nav {
 	font-size: 3em;
 	width: 100%;
 	/* margin-bottom: 0.5em; */
-	font: objectSansHeavy;
+	font-family: objectSansHeavy;
+	letter-spacing: 1.25;
+	font-weight: lighter;
+	line-height: inherit;
 }
 
 .projects-overview {
 	font-size: 1.75em;
 	width: 100%;
 	margin-bottom: 1.5em;
-	line-height: 1;
+	line-height: 1.25;
 }
 
 .project {
@@ -275,6 +299,7 @@ nav {
 	margin-top: 1.5%;
 	padding-right: 5%;
 	font-size: 30px;
+	line-height: 1.25;
 }
 
 /* *** MODAL/LIGHTBOX PROJECT DISPLAY ***  */
@@ -306,6 +331,10 @@ nav {
 .modal > a {
 	position: absolute;
 	left: 0;
+}
+
+.modal-link {
+	margin-bottom: 2em;
 }
 
 /* Content inside div */
