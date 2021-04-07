@@ -133,6 +133,7 @@ main {
 	letter-spacing: 1px;
 	text-align: center;
 	width: 100%;
+	line-height: 1.25;
 }
 
 .links-wrapper {
