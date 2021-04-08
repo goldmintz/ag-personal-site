@@ -16,18 +16,18 @@ const professionalAside =
 	'<div id="intro-aside"> 10 years experience making stuff.</div>';
 
 const toggleIntroText = () => {
-	if (landing.classList.contains('professional')) {
-		landing.classList.remove('professional');
-		landing.classList.add('personal');
+	console.log('toggle clicked');
+	if (introText.classList.contains('professional')) {
+		introText.classList.remove('professional');
+		introText.classList.add('personal', 'fade-in-primary');
 		introText.innerHTML = personalMain;
 		introAside.innerHTML = personalAside;
-	} else if (landing.classList.contains('personal')) {
-		landing.classList.remove('personal');
-		landing.classList.add('professional');
+	} else if (introText.classList.contains('personal')) {
+		introText.classList.remove('personal');
+		introText.classList.add('professional');
 		introText.innerHTML = professionalMain;
 		introAside.innerHTML = professionalAside;
 	}
-	console.log(landing.classList);
 };
 
 //////////////////////////////
@@ -37,10 +37,10 @@ const navLinks = document.querySelector('.nav-links');
 var revealNav = () => {
 	var y = window.pageYOffset;
 	if (y >= 535) {
-		navLinks.classList.add('flex');
+		navLinks.classList.add('show-nav');
 	}
 	if (y < 535) {
-		navLinks.classList.remove('flex');
+		navLinks.classList.remove('show-nav');
 	}
 };
 

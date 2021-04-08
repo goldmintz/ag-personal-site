@@ -4,6 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/assets/favicon.ico" />
+		<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/styles/styles.css" />
 		<title>a.g✿ldmintz | designer & developer</title>
 	</head>
@@ -15,24 +17,24 @@
 						a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz
 					</a>
 				</div>
-				<div class="nav-links">
-					<div><a href="#about">about</a></div>
+				<div class="nav-links fade-in">
+					<div><a href="#experience">experience</a></div>
 					<div><a href="#projects">projects</a></div>
-					<div><a href="/">resume</a></div>
-					<div><a href="#projects">contact</a></div>
+					<div><a href="#contact">contact</a></div>
+					<div id="resume-btn"><a href="/">resume</a></div>
 				</div>
 			</nav>
 		</header>
 
 		<div id="page-wrapper">
-			<section class="landing professional">
-				<div class="intro" onclick="toggleIntroText()">
-					<div class="intro-content">
+			<section class="landing ">
+				<div class="intro fade-in professional" onclick="toggleIntroText()">
+					<div class="intro-content " >
 						A. Goldmintz is a multi-disciplinary experience designer based in
 						Chicago.
 					</div>
 				</div>
-				<div class="intro-closing">
+				<div class="intro-closing ">
 					<div id="intro-aside">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
 						tempora!
@@ -47,11 +49,11 @@
 				</div>
 			</section>
 
-			<!-- Begin About Section -->
-			<span id="about"></span>
+			<!-- Begin Experience Section -->
+			<span id="experience"></span>
 			<section class="about-wrapper">
 				<div class="about-content">
-					<p>
+					<p class="fade-in-primary">
 						Here's where I talk about my value prop, experience, and what I am
 						looking for. Lorem ipsum dolor sit amet consectetur adipisicing
 						elit. Molestiae tempora iste non incidunt magnam porro pariatur
@@ -188,8 +190,15 @@
 				</div>
 			</section>
 			<!-- End Projects Section -->
-			<div class="footer">baby footer!</div>
+
+			<!-- Begin Contact Section -->
+			<span id="contact"></span>
+			<div class="contact-wrapper"><div>Contact section to go here!</div>
 		</div>
 		<script src="scripts.js"></script>
+		<script
+			defer
+			src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+		></script>
 	</body>
 </html>

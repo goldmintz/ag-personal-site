@@ -14,14 +14,14 @@
 
 * {
 	box-sizing: border-box;
-	/* outline: 1px solid red; */
+	/* outline: 1px solid pink; */
 }
 
 html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: objectSansReg;
+	font-family: objectSansThin;
 	line-height: 1.6;
 	background: var(--black);
 	color: var(--softwhite);
@@ -31,6 +31,7 @@ html {
 	scroll-behavior: smooth;
 }
 
+/* add space above project section for smooth scroll to anchor */
 .section-anchor:target:before {
 	content: '';
 	display: block;
@@ -50,12 +51,24 @@ html {
 	src: url(../assets/fonts/ObjectSans-Regular.woff);
 }
 
+/* Link text */
+@font-face {
+	font-family: objectSansThin;
+	src: url(../assets/fonts/ObjectSans-Thin.woff);
+}
+
 a {
 	text-decoration: none;
+	color: var(--softwhite);
+	font-family: objectSansReg;
 }
 
 a:visited {
-	color: inherit;
+	color: var(--softwhite);
+}
+
+#about.active {
+	color: pink;
 }
 
 .hide-scroll {
@@ -103,19 +116,32 @@ nav {
 .nav-links {
 	display: none;
 	justify-content: space-between;
-	margin-right: 1.5em;
 	font-size: 1.25em;
-}
-
-/* use to 'toggle' nav links into view */
-.flex {
-	transition: ease-in 2s;
-	display: flex;
 }
 
 .nav-links > div {
 	margin-right: 1.5em;
 	font-size: 20px;
+}
+
+/* use to 'toggle' nav links into view */
+.show-nav.fade-in {
+	display: flex;
+}
+
+.nav-links > div:not(:last-child) {
+	margin-right: 1.5em;
+}
+
+#resume-btn {
+	/* box-shadow: 0 0 0 2pt var(--lime) inset; */
+	padding: 0 1em;
+	margin-right: 0;
+	background: var(--hotpink);
+}
+
+#resume-btn a {
+	color: var(--softwhite);
 }
 
 #page-wrapper {
@@ -131,10 +157,9 @@ nav {
 	width: 100%;
 	height: calc(100vh - 1em);
 	cursor: pointer;
-	scroll-snap-align: center;
 }
 
-.landing.personal {
+.landing.personal .intro-content {
 	cursor: url('/assets/cursor_daisy.png'), pointer;
 }
 
@@ -153,10 +178,10 @@ nav {
 	padding: 0em 1.5em;
 }
 
-/* .smaller {
+.smaller {
 	font-size: x-small;
 	margin-right: 0.5em;
-} */
+}
 
 /* .intro-closing::before {
 	content: '01';
@@ -205,10 +230,11 @@ nav {
 	justify-content: center;
 	align-items: center;
 	scroll-snap-align: center;
-	height: calc(100vh - 6em); /* full vh minus height of nav */
+	height: calc(100vh - 5em); /* full vh minus height of nav */
 	/* gap: 40px; */
 	margin: 5% 0% 1% 0%;
 	text-align: center;
+	font-family: objectSansThin;
 }
 
 .about-content {
@@ -258,11 +284,12 @@ nav {
 	/* margin-top: 3em; */
 	font-size: 3em;
 	width: 100%;
-	/* margin-bottom: 0.5em; */
-	font-family: objectSansHeavy;
+	margin-bottom: 0.25em;
+	/* font-family: objectSansHeavy; */
 	letter-spacing: 1.25;
 	font-weight: lighter;
-	line-height: inherit;
+	line-height: 1;
+	font-family: objectSansThin;
 }
 
 .projects-overview {
@@ -433,13 +460,47 @@ nav {
 	top: 0;
 }
 
-.footer {
+.contact-wrapper {
 	display: flex;
 	width: 100%;
+	height: calc(100vh - 6em);
 	justify-content: center;
-	scroll-snap-align: center;
 }
+
 /* ANIMATION CLASSES */
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInTextOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+.fade-in-primary {
+	opacity: 1;
+	animation-name: fadeInTextOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+.fade-in-secondary {
+	opacity: 1;
+	animation-name: fadeInTextOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-delay: 2s;
+	animation-duration: 4s;
+}
+
+@keyframes fadeInTextOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 786px) {
