@@ -170,7 +170,7 @@ main {
 	color: var(--lime);
 }
 
-.social-link a:hover {
+.social-link.grow a:hover {
 	color: var(--clementine);
 }
 
@@ -452,9 +452,9 @@ main {
 }
 
 /* Remove animations on devices without hover */
-@media not all and (hover: none) {
-	.social-link a:hover {
-		color: var(--lime);
+@media (hover: none) {
+	.social-link.grow a:hover {
+		color: inherit;
 	}
 	.social-link a:visited {
 		-webkit-transition-property: none;
