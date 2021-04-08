@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="top">
+<html lang="en" id="welcome">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,29 +13,30 @@
 		<header>
 			<nav>
 				<div class="logo">
-					<a href="#top">
+					<a href="#welcome">
 						a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz
 					</a>
 				</div>
-				<div class="nav-links fade-in">
-					<div><a href="#experience">experience</a></div>
-					<div><a href="#projects">projects</a></div>
-					<div><a href="#contact">contact</a></div>
-					<div id="resume-btn"><a href="/">resume</a></div>
+				<div class="nav-links-wrapper fade-in">
+					<div><a class="nav-link" href="#experience">experience</a></div>
+					<div><a class="nav-link"href="#projects">projects</a></div>
+					<div><a class="nav-link"href="#contact">contact</a></div>
+					<div ><a class="nav-link" id='resume-btn' href="/">resume</a></div>
 				</div>
 			</nav>
 		</header>
 
 		<div id="page-wrapper">
-			<section class="landing ">
+			<div class="landing">
 				<div class="intro fade-in professional" onclick="toggleIntroText()">
-					<div class="intro-content " >
+					<div class="intro-content professional" >
 						A. Goldmintz is a multi-disciplinary experience designer based in
 						Chicago.
 					</div>
 				</div>
-				<div class="intro-closing ">
-					<div id="intro-aside">
+
+				<div class="intro-closing fade-in">
+					<div id="intro-aside" class="fade-in">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
 						tempora!
 					</div>
@@ -47,13 +48,13 @@
 						<div>linkedin</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
 			<!-- Begin Experience Section -->
 			<span id="experience"></span>
 			<section class="about-wrapper">
 				<div class="about-content">
-					<p class="fade-in-primary">
+					<p class="fade-in">
 						Here's where I talk about my value prop, experience, and what I am
 						looking for. Lorem ipsum dolor sit amet consectetur adipisicing
 						elit. Molestiae tempora iste non incidunt magnam porro pariatur
@@ -104,7 +105,7 @@
 						<a href="/" class="close-modal">CLOSE</a>
 					</div>
 					<div class="modal-wrapper">
-						<section class="modal-main-content">
+						<div class="modal-main-content">
 							<div class="modal-headers">
 								<div class="modal-title">Project Title</div>
 								<div>Project Subtitle</div>
@@ -155,7 +156,7 @@
 							<!-- <div class="project-image">
 								<img src="/assets/images/test-projectIMG.png" />
 							</div> -->
-						</section>
+						</div>
 					</div>
 				</div>
 
@@ -193,12 +194,9 @@
 
 			<!-- Begin Contact Section -->
 			<span id="contact"></span>
-			<div class="contact-wrapper"><div>Contact section to go here!</div>
-		</div>
+			<section class="contact-wrapper"><div>Contact section to go here!</div>
+			</div>
 		<script src="scripts.js"></script>
-		<script
-			defer
-			src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-		></script>
+		
 	</body>
 </html>

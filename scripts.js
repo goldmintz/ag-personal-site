@@ -1,5 +1,6 @@
 //Toggle between professional and party mode
-const introText = document.querySelector('.intro');
+const introWrapper = document.querySelector('.intro');
+const introContent = document.querySelector('.intro-content');
 const landing = document.querySelector('.landing');
 const introAside = document.querySelector('#intro-aside');
 
@@ -16,41 +17,42 @@ const professionalAside =
 	'<div id="intro-aside"> 10 years experience making stuff.</div>';
 
 const toggleIntroText = () => {
-	console.log('toggle clicked');
-	if (introText.classList.contains('professional')) {
-		introText.classList.remove('professional');
-		introText.classList.add('personal', 'fade-in-primary');
-		introText.innerHTML = personalMain;
+	if (introWrapper.classList.contains('professional')) {
+		console.log('pro to pers');
+		introWrapper.classList.remove('professional');
+		introWrapper.classList.add('personal');
+		introWrapper.innerHTML = personalMain;
 		introAside.innerHTML = personalAside;
-	} else if (introText.classList.contains('personal')) {
-		introText.classList.remove('personal');
-		introText.classList.add('professional');
-		introText.innerHTML = professionalMain;
+	} else if (introWrapper.classList.contains('personal')) {
+		console.log('pers to pro');
+		introWrapper.classList.remove('personal', 'fade-in');
+		introWrapper.classList.add('professional', 'fade-in');
+		introWrapper.innerHTML = professionalMain;
 		introAside.innerHTML = professionalAside;
 	}
 };
 
 //////////////////////////////
 // Reveal nav links when page is scrolled
-const navLinks = document.querySelector('.nav-links');
+const navLinksWrapper = document.querySelector('.nav-links-wrapper');
 
 var revealNav = () => {
 	var y = window.pageYOffset;
 	if (y >= 535) {
-		navLinks.classList.add('show-nav');
+		navLinksWrapper.classList.add('show-nav');
 	}
 	if (y < 535) {
-		navLinks.classList.remove('show-nav');
+		navLinksWrapper.classList.remove('show-nav');
 	}
 };
 
 window.addEventListener('scroll', revealNav);
 
-window.onscroll = () => {
-	console.log('top: ' + window.pageYOffset);
-};
+// window.onscroll = () => {
+// 	console.log('top: ' + window.pageYOffset);
+// };
 
-window.onscroll = () => console.log('scroll');
+// window.onscroll = () => console.log('scroll');
 
 //////////////////////////////
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
@@ -83,5 +85,18 @@ for (let i = 0, a; (a = closeModal[i]); i++) {
 	a.addEventListener('click', returnBodyScroll, false);
 }
 
-var rect = document.getElementById('test').getBoundingClientRect();
-console.log(rect.top, rect.right, rect.bottom, rect.left);
+//add active class to links when anchor is visible
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
+
+const changeNavLinkState = () => {
+	let index = sections.length;
+
+	while (--index && window.scrollY + 200 < sections[index].offsetTop) {}
+
+	navLinks.forEach((link) => link.classList.remove('active-nav'));
+	navLinks[index].classList.add('active-nav');
+};
+
+changeNavLinkState();
+window.addEventListener('scroll', changeNavLinkState);

@@ -67,8 +67,12 @@ a:visited {
 	color: var(--softwhite);
 }
 
-#about.active {
-	color: pink;
+.active-nav {
+	border-bottom: 2px solid var(--lilac);
+}
+
+.active-nav:hover {
+	border-bottom: 2px solid var(--lime);
 }
 
 .hide-scroll {
@@ -113,15 +117,16 @@ nav {
 	transition: all 0.2s ease-in-out;
 }
 
-.nav-links {
+.nav-links-wrapper {
 	display: none;
 	justify-content: space-between;
 	font-size: 1.25em;
 }
 
-.nav-links > div {
+.nav-link {
 	margin-right: 1.5em;
 	font-size: 20px;
+	padding-bottom: 0.5em;
 }
 
 /* use to 'toggle' nav links into view */
@@ -129,7 +134,7 @@ nav {
 	display: flex;
 }
 
-.nav-links > div:not(:last-child) {
+.nav-link:not(:last-child) {
 	margin-right: 1.5em;
 }
 
@@ -159,16 +164,7 @@ nav {
 	cursor: pointer;
 }
 
-.landing.personal .intro-content {
-	cursor: url('/assets/cursor_daisy.png'), pointer;
-}
-
-.landing.professional {
-	cursor: url('/assets/cursor_daisy.png'), pointer;
-}
-
 .intro {
-	display: flex;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -176,6 +172,14 @@ nav {
 	height: 100%;
 	font-size: 75px;
 	padding: 0em 1.5em;
+}
+
+.intro.professional {
+	cursor: url('/assets/cursor_daisy.png'), pointer;
+}
+
+.intro.personal {
+	cursor: url('/assets/cursor_daisy.png'), pointer;
 }
 
 .smaller {
