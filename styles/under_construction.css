@@ -38,12 +38,16 @@ body {
 }
 
 /* Emphasised words in content */
-.lime {
+.lime-emphasis {
 	color: var(--lime);
 }
 
-.pink {
+.pink-emphasis {
 	color: var(--hotpink);
+}
+
+.blue-emphasis {
+	color: var(--sea);
 }
 
 /* Remove break on last line only used for mobile */
@@ -163,7 +167,7 @@ main {
 .social-link a {
 	font-size: 0.75em;
 	text-decoration: none;
-	color: var(--lime);
+	color: var(--sea);
 }
 
 .grow {
