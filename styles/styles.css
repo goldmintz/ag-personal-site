@@ -58,6 +58,11 @@ html {
 	src: url(../assets/fonts/ObjectSans-Thin.woff);
 }
 
+@font-face {
+	font-family: objectSansBold;
+	src: url(../assets/fonts/ObjectSans-Bold.woff);
+}
+
 a {
 	text-decoration: none;
 	color: var(--softwhite);
@@ -69,11 +74,11 @@ a:visited {
 }
 
 .active-nav {
-	border-bottom: 2px solid var(--lilac);
+	border-bottom: 4px solid var(--lilac);
 }
 
 .active-nav:hover {
-	border-bottom: 2px solid var(--lime);
+	border-bottom: 4px solid var(--lime);
 }
 
 .hide-scroll {
@@ -102,6 +107,14 @@ a:visited {
 .smaller {
 	display: inline-block;
 	font-size: 10px;
+}
+
+.bump {
+	transition: all 0.2s ease-in-out;
+}
+
+.bump:hover {
+	transform: translateY(-0.2em);
 }
 
 nav {
@@ -143,8 +156,11 @@ nav {
 
 .nav-link {
 	margin-right: 1.5em;
-	font-size: 1.15em;
 	padding-bottom: 0.5em;
+	font-size: 24px;
+	cursor: pointer;
+	font-family: objectSansReg;
+	letter-spacing: 1px;
 }
 
 /* use to 'toggle' nav links into view */
@@ -173,6 +189,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	/* margin: 1em 3em; */
 }
 
 .landing {
@@ -233,21 +250,37 @@ nav {
 .social-links-wrapper {
 	display: flex;
 	margin: 1.5em 0em;
-	font-family: objectSansHeavy;
-	letter-spacing: 2px;
+	padding-right: 3em;
+
 	justify-content: space-evenly;
 }
 
-.social-link {
-	margin-right: 1.5em;
+.social-link a {
+	/* margin-right: 1em; */
+	font-family: objectSansHeavy;
+	letter-spacing: 2px;
 	font-size: 26px;
 	cursor: pointer;
 	color: var(--hotpink);
 }
 
-.social-link:hover {
+.social-link a:hover {
 	color: var(--clementine);
 }
+
+.social-link.smaller {
+	width: 100%;
+	font-size: 20px;
+	margin-right: 1em;
+	margin-left: 1em;
+	text-align: center;
+	padding-top: 0.25em;
+	color: var(--olive);
+}
+/* 
+.social-links-wrapper > * {
+	border: 1px solid red;
+} */
 
 /* ABOUT */
 .about-wrapper {
