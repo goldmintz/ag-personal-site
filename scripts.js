@@ -5,28 +5,26 @@ const landing = document.querySelector('.landing');
 const introAside = document.querySelector('#intro-aside');
 
 const personalMain =
-	'<div class="intro-content fade-in" >Ashley is a mickey waffle connoisseur and Sweet Potatos biggest simp. </div>';
+	'<div class="intro-content fade-in">Ashley is a mickey waffle connoisseur and Sweet Potatos biggest simp.</div>';
 
 const professionalAside =
-	'<div id="intro-aside" class="fade-in"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>';
+	'<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>';
 
 const professionalMain =
-	'<div class="intro-content fade-in" > A. Goldmintz is a <span class="lime">multi-disciplinary experience designer </span> based in Chicago.</div>';
+	'<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary experience designer </span> based in Chicago.</div>';
 
 const personalAside =
-	'<div id="intro-aside" class="fade-in" >Here is something personal about me as an aside. </div>';
+	'<div id="intro-aside" class="fade-in">Here is something personal about me as an aside.</div>';
 
 const toggleIntroText = () => {
 	if (introWrapper.classList.contains('professional')) {
 		introWrapper.classList.remove('professional');
 		introWrapper.classList.add('personal');
-		introWrapper.classList.add('fade-out');
 		introWrapper.innerHTML = personalMain;
 		introAside.innerHTML = personalAside;
 	} else if (introWrapper.classList.contains('personal')) {
 		introWrapper.classList.remove('personal');
 		introWrapper.classList.add('professional');
-		introWrapper.classList.add('fade-out');
 		introWrapper.innerHTML = professionalMain;
 		introAside.innerHTML = professionalAside;
 	}
@@ -84,9 +82,10 @@ const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
 const changeNavLinkState = () => {
+	//remove resume button from length
 	let index = sections.length;
 
-	while (--index && window.scrollY + 200 < sections[index].offsetTop) {}
+	while (--index && window.scrollY < sections[index].offsetTop) {}
 
 	navLinks.forEach((link) => link.classList.remove('active-nav'));
 	navLinks[index].classList.add('active-nav');
