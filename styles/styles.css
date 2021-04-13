@@ -480,6 +480,14 @@ nav {
 	animation-duration: 1s;
 }
 
+.fade-out {
+	opacity: 1;
+	animation-name: fadeOutTextOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
 .fade-in-primary {
 	opacity: 1;
 	animation-name: fadeInTextOpacity;
@@ -503,6 +511,15 @@ nav {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes fadeOutTextOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 

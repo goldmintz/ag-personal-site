@@ -1,4 +1,4 @@
-//Toggle between professional and party mode
+//Toggle between professional and personal mode
 const introWrapper = document.querySelector('.intro');
 const introContent = document.querySelector('.intro-content');
 const landing = document.querySelector('.landing');
@@ -18,13 +18,11 @@ const professionalAside =
 
 const toggleIntroText = () => {
 	if (introWrapper.classList.contains('professional')) {
-		console.log('pro to pers');
 		introWrapper.classList.remove('professional');
 		introWrapper.classList.add('personal');
 		introWrapper.innerHTML = personalMain;
 		introAside.innerHTML = personalAside;
 	} else if (introWrapper.classList.contains('personal')) {
-		console.log('pers to pro');
 		introWrapper.classList.remove('personal', 'fade-in');
 		introWrapper.classList.add('professional', 'fade-in');
 		introWrapper.innerHTML = professionalMain;
@@ -32,8 +30,9 @@ const toggleIntroText = () => {
 	}
 };
 
-//////////////////////////////
-// Reveal nav links when page is scrolled
+//  ***SCROLL BEHAVIOR*** //
+
+// Reveal top nav links when page is scrolled //
 const navLinksWrapper = document.querySelector('.nav-links-wrapper');
 
 var revealNav = () => {
@@ -48,13 +47,6 @@ var revealNav = () => {
 
 window.addEventListener('scroll', revealNav);
 
-// window.onscroll = () => {
-// 	console.log('top: ' + window.pageYOffset);
-// };
-
-// window.onscroll = () => console.log('scroll');
-
-//////////////////////////////
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
 const modalLink = document.querySelectorAll('.modal-link');
 
@@ -72,7 +64,7 @@ for (let i = 0, a; (a = modalLink[i]); i++) {
 	a.addEventListener('click', hideBodyScroll, false);
 }
 
-// Prevent Refresh When User Closes Modal (otherwise, user is brought to top of page)
+// Prevent refresh When User Closes Modal (otherwise, user is brought to top of page)
 const closeModal = document.querySelectorAll('.close-modal');
 
 const anchorClose = (e) => {
