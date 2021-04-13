@@ -201,9 +201,9 @@ nav {
 
 .intro {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 	height: 100%;
 }
 
@@ -217,16 +217,19 @@ nav {
 
 .intro-content {
 	/* adjust for nav position fixed (intro overlaps) */
-	margin-top: 1.5em;
+	margin-top: auto;
 	line-height: 1;
-	font-size: 4.5em;
+	font-size: 4.25em;
 	padding: 0em 0.75em;
+	padding-right: 1.5em;
 	font-family: objectSansHeavy;
 	letter-spacing: 0.05em;
 	line-height: 1em;
+	margin-bottom: 0.25em;
 }
 
 #intro-img {
+	position: absolute;
 	height: 1em;
 	width: 1em;
 }
@@ -251,7 +254,6 @@ nav {
 	display: flex;
 	margin: 1.5em 0em;
 	padding-right: 3em;
-
 	justify-content: space-evenly;
 }
 

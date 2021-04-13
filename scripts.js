@@ -14,7 +14,7 @@ const professionalMain =
 	'<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary experience designer </span> based in Chicago.</div>';
 
 const personalAside =
-	'<div id="intro-aside" class="fade-in">Here is something personal about me as an aside.</div>';
+	'<div id="intro-aside" class="fade-in">Here is <em>something personal</em> about me as an aside.</div>';
 
 const toggleIntroText = () => {
 	if (introWrapper.classList.contains('professional')) {
