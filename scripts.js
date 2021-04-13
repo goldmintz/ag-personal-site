@@ -34,16 +34,33 @@ const toggleIntroText = () => {
 
 // Reveal top nav links when page is scrolled //
 const navLinksWrapper = document.querySelector('.nav-links-wrapper');
+const logoLoad = document.querySelector('.logo-load');
+const logoScroll = document.querySelector('.logo-scroll');
+const nav = document.querySelector('nav');
+
+let intViewportHeight = window.innerHeight;
+
+// if (y >= 535) {
 
 var revealNav = () => {
 	var y = window.pageYOffset;
-	if (y >= 535) {
+	if (y >= intViewportHeight / 75) {
+		logoLoad.style.display = 'none';
+		logoScroll.style.display = 'block';
+		nav.style.justifyContent = 'space-between';
 		navLinksWrapper.classList.add('show-nav');
 	}
 	if (y < 535) {
+		logoLoad.style.display = 'block';
+		logoScroll.style.display = 'none';
+		nav.style.justifyContent = 'flex-end';
 		navLinksWrapper.classList.remove('show-nav');
 	}
+	console.log(intViewportHeight);
+	console.log(window.pageYOffset);
 };
+
+/* justify-content: space-between; */
 
 window.addEventListener('scroll', revealNav);
 
