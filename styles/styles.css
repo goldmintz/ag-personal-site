@@ -194,14 +194,10 @@ nav {
 .nav-link {
 	margin-right: 1.5em;
 	padding-bottom: 0.5em;
-	font-size: 1.25em;
+	font-size: 1.5em;
 	cursor: pointer;
-	font-family: objectSansReg;
-	letter-spacing: 1px;
-	background: linear-gradient(to bottom, #000 0%, #000 100%);
-	background-position: 0 100%;
-	background-repeat: repeat-x;
-	background-size: 5px 5px;
+	font-family: objectSansBold;
+	letter-spacing: 2px;
 }
 
 .nav-link:hover {
@@ -234,10 +230,10 @@ nav {
 	text-align: center;
 	margin-right: 0;
 	background: var(--hotpink);
-	font-size: 1.25em;
+	font-size: 1.5em;
 	cursor: pointer;
-	font-family: objectSansReg;
-	letter-spacing: 1px;
+	font-family: objectSansBold;
+	letter-spacing: 2px;
 	color: var(--softwhite);
 	border: none;
 	/* border-image: linear-gradient(#f6b73c, #4d9f0c) 50; */
@@ -510,6 +506,21 @@ nav {
 	align-items: center;
 	background-color: var(--black);
 	height: 6em;
+	font-size: 1.25em;
+
+	/* display: flex;
+	padding: 1.5em 3em;
+	width: calc(100% - 1.3em);
+	justify-content: space-between;
+	position: fixed;
+	background: var(--deepBlue);
+	height: 6em;
+	top: 0.5em;
+	font-size: 0.75em; */
+}
+
+.modal-controls .logo {
+	font-size: 1.25em;
 }
 
 .modal-main-content {
