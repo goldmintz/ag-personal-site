@@ -18,6 +18,22 @@
 	/* outline: 1px solid pink; */
 }
 
+body:before,
+body:after {
+	content: '';
+	position: fixed;
+	background: var(--softwhite);
+	left: 0;
+	right: 0;
+	height: 10px;
+}
+body:before {
+	top: 0;
+}
+body:after {
+	bottom: 0;
+}
+
 html,
 body {
 	padding: 0;
@@ -26,6 +42,8 @@ body {
 	line-height: 1.6;
 	background: var(--deepBlue);
 	color: var(--softwhite);
+	border-left: 0.25em solid var(--softwhite);
+	border-right: 0.25em solid var(--softwhite);
 }
 
 html {
@@ -125,7 +143,7 @@ a:visited {
 nav {
 	display: flex;
 	padding: 1.5em 3em;
-	width: 100%;
+	width: calc(100% - 1em);
 	justify-content: flex-end;
 	/* justify-content: space-between; */
 	align-items: center;
@@ -133,6 +151,7 @@ nav {
 	background: var(--deepBlue);
 	z-index: 10;
 	height: 6em;
+	top: 0.5em;
 }
 
 .logo {
@@ -236,6 +255,7 @@ nav {
 	width: 100%;
 	height: calc(100vh - 1em);
 	cursor: pointer;
+	padding-bottom: 1.5em;
 }
 
 .intro {
@@ -264,7 +284,7 @@ nav {
 	font-family: objectSansHeavy;
 	letter-spacing: 0.05em;
 	line-height: 1em;
-	margin-bottom: 0.25em;
+	/* margin-bottom: 0.25em; */
 }
 
 #intro-img {
@@ -281,7 +301,6 @@ nav {
 }
 
 #intro-aside {
-	/* text-align: start; */
 	cursor: auto;
 	font-family: objectSansReg;
 	font-size: 28px;
@@ -294,6 +313,7 @@ nav {
 	margin: 1.5em 0em;
 	padding-right: 3em;
 	justify-content: space-evenly;
+	margin: 0;
 }
 
 .social-link a {
