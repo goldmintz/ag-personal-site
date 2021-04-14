@@ -54,8 +54,13 @@ html {
 .section-anchor:target:before {
 	content: '';
 	display: block;
-	height: 4em;
+	height: 3em;
 	margin: 4em 0 0;
+}
+
+/* project anchor made a little shorter because of previous sibling (experience) height */
+#projects.section-anchor:target:before {
+	height: 2em;
 }
 
 /* *** FONT & LINK STYLINGS *** */
@@ -151,7 +156,8 @@ nav {
 	background: var(--deepBlue);
 	z-index: 10;
 	height: 6em;
-	top: 0.5em;
+	/* top: 0.5em; */
+	border-top: solid 0.5em var(--softwhite);
 	font-size: 0.75em;
 }
 
@@ -369,6 +375,7 @@ nav {
 	font-size: 1.75em;
 	/* flex: 1; */
 	justify-content: center;
+
 	/* align-items: center; */
 	/* border-radius: 3%; */
 
@@ -384,9 +391,13 @@ nav {
 	height: 100%; */
 }
 
+.experience-text {
+	padding: 1em;
+}
+
 .experience-header {
 	color: var(--hotpink);
-	transform: rotate(-10deg);
+	transform: rotate(-5deg);
 	font-family: objectSansBold;
 	align-self: flex-start;
 	font-size: 2em;
@@ -397,15 +408,25 @@ nav {
 	background: var(--flamingo);
 	margin-right: 1.5em;
 	margin-bottom: 2em;
+	transform: rotate(3deg);
+}
+
+#experience-col-1 .experience-text {
+	outline: 0.2em solid var(--sea);
 }
 
 #experience-col-2 {
 	background: var(--olive);
 	margin-left: 1.5em;
-	margin-top: 2em;
+	margin-top: 1.5em;
+	transform: rotate(-5deg);
 }
 
-/* PROJECTS */
+#experience-col-2 .experience-text {
+	outline: 0.2em solid var(--lilac);
+}
+
+/* PROJECTS  */
 .subheading {
 	margin-bottom: 1%;
 	font-size: smaller;
