@@ -56,8 +56,8 @@ var revealNav = () => {
 		nav.style.justifyContent = 'flex-end';
 		navLinksWrapper.classList.remove('show-nav');
 	}
-	console.log(intViewportHeight);
-	console.log(window.pageYOffset);
+	// console.log(intViewportHeight);
+	// console.log(window.pageYOffset);
 };
 
 /* justify-content: space-between; */
@@ -110,3 +110,29 @@ const changeNavLinkState = () => {
 
 changeNavLinkState();
 window.addEventListener('scroll', changeNavLinkState);
+
+const techStack = ['Tech 1', 'Tech 2'];
+
+const colors = ['lime'];
+
+const tickerTapeWrapper = document.getElementsByClassName(
+	'ticker-tape-wrapper',
+);
+
+let innerDivs = [];
+
+const populateTicker = () => {
+	for (i = 0; i < techStack.length; i++) {
+		let tickerItem = document.createElement('div');
+		tickerItem.classList.add('ticker-tape-item');
+		tickerItem.innerHTML = techStack[i];
+		innerDivs.push(tickerItem);
+	}
+
+	tickerTapeWrapper.innerHTML = innerDivs;
+	return tickerTapeWrapper;
+};
+
+populateTicker();
+
+console.log(tickerTapeWrapper);

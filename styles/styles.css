@@ -55,7 +55,7 @@ html {
 	content: '';
 	display: block;
 	height: 3em;
-	margin: 4em 0 0;
+	/* margin: 4em 0; */
 }
 
 /* project anchor made a little shorter because of previous sibling (experience) height */
@@ -121,15 +121,13 @@ a:visited {
 }
 
 .lime {
+	display: inline-block;
 	color: var(--lime);
+	/* transform: rotate(2deg); */
 }
 
 .olive {
 	color: var(--olive);
-}
-
-.rotate-left {
-	transform: rotate(-90deg);
 }
 
 .smaller {
@@ -252,6 +250,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	/* margin: 1em 3em; */
+	/* box-shadow: 0px 2px 15px 5px #000000; */
 }
 
 .landing {
@@ -400,8 +399,9 @@ nav {
 	transform: rotate(-5deg);
 	font-family: objectSansBold;
 	align-self: flex-start;
-	font-size: 2em;
-	margin-bottom: 0.75em;
+	font-size: 3em;
+	margin-bottom: -0.25em;
+	z-index: 2;
 }
 
 #experience-col-1 {
@@ -427,7 +427,7 @@ nav {
 }
 
 /* PROJECTS  */
-.subheading {
+/* .subheading {
 	margin-bottom: 1%;
 	font-size: smaller;
 	flex-direction: column;
@@ -440,62 +440,156 @@ nav {
 	line-height: 1.75;
 	cursor: default;
 	height: 100%;
-}
+} */
 
 /* PROJECTS */
 
 .projects-wrapper {
 	display: flex;
+	height: 100vh;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 0em 4.5em;
+	padding: 0em 3em;
+	margin-top: 3em;
 }
 
 .projects-header {
 	width: 100%;
 	margin-bottom: 0.25em;
 	line-height: 1;
-	font-size: 3em;
-	font-family: objectSansHeavy;
+	font-size: 1em;
+	font-family: objectSansBold;
 	letter-spacing: 0.05em;
 }
 
 .projects-overview {
-	font-size: 1.75em;
+	font-family: objectSansReg;
+	font-size: 2em;
 	width: 100%;
-	margin-bottom: 1.5em;
 	line-height: 1.25;
+	width: 75%;
+	align-self: flex-start;
 }
 
-.project {
-	margin-bottom: 3em;
+/* Ticker Tape Band with Tech Stack Scrolling */
+@keyframes ticker-tape-scrolling {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -50%;
+	}
 }
 
-/* Apply different coloring to project text */
-/* .project:nth-of-type(1) {
-	color: pink;
+.ticker-tape {
+	display: inline-flex;
+	align-self: flex-start;
+	width: calc(100vw - 6em);
 }
 
-.project:nth-of-type(2n) {
-	color: green;
+.ticker-tape-scroll {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.ticker-tape-wrapper {
+	display: table-cell;
+	position: relative;
+	animation: ticker-tape-scrolling 60s linear infinite running;
+}
+
+/* .ticker-tape-title {
+	display: inline-block;
+	line-height: 2.5rem;
+	padding: 0 1.25rem;
+	font-family: objectSansReg;
+	width: 50%;
+	border: 1px solid red;
+} */
+
+.ticker-tape-item {
+	display: inline-block;
+	text-align: center;
+	/* vertical-align: top; */
+	padding: 0 1.25rem;
+	font-family: objectSansBold;
+	/* text-transform: uppercase; */
+	font-size: 2.25em;
+	letter-spacing: 2px;
+	width: 10em;
+	animation: wiggle 1s infinite;
+}
+
+@keyframes wiggle {
+	0% {
+		-webkit-transform: rotate(3deg);
+	}
+	25% {
+		-webkit-transform: rotate(-3deg);
+	}
+	50% {
+		-webkit-transform: rotate(3deg);
+	}
+	75% {
+		-webkit-transform: rotate(-3deg);
+	}
+	100% {
+		-webkit-transform: rotate(3deg);
+	}
+}
+
+.project-grid {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	gap: 2em;
+	flex-direction: row;
+	padding-top: 3em;
+}
+
+.project-prev {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	height: 100%;
+	width: 100%;
+	/* margin-right: 3em; */
+	text-align: center;
+}
+
+/* .project-prev-img {
+	flex: 1;
+	background: url('/assets/images/placeholder_bg.jpg');
 } */
 
 .project-title {
-	font-size: 30px;
-	margin-bottom: 0.5em;
+	font-size: 1.25em;
+	padding: 0.5em 0em;
+	background: var(--deepBlue);
+	margin-top: auto;
 }
 
-.project-stack {
-	display: flex;
-	gap: 20px;
+.project-tagline {
+	font-size: 1.25em;
+	line-height: 1;
+	background: var(--deepBlue);
 }
 
-.project-summary {
-	margin-top: 1.5%;
-	padding-right: 5%;
-	font-size: 30px;
-	line-height: 1.25;
+#project-1-prev {
+	flex: 1;
+	background: url('/assets/images/placeholder_bg.jpg') no-repeat center;
+	/* margin-right: 3em; TODO: Add this margin only on safari where gap is not applied */
+}
+
+#project-2-prev {
+	background: url('/assets/images/giphy.gif') no-repeat center;
+	/* margin-right: 3em; TODO: Add this margin only on safari where gap is not applied */
+}
+
+#project-3-prev {
+	background: url('/assets/images/test-projectIMG.png') no-repeat center;
+	/* margin-right: 3em; TODO: Add this margin only on safari where gap is not applied */
 }
 
 /* *** MODAL/LIGHTBOX PROJECT DISPLAY ***  */
