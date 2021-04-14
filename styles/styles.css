@@ -78,7 +78,12 @@ a:visited {
 }
 
 .active-nav:hover {
-	border-bottom: 4px solid var(--lime);
+	border-bottom: none;
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='var(--lilac)' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+	background-position: 0 100%;
+	background-size: auto 5px;
+	background-repeat: repeat-x;
+	text-decoration: none;
 }
 
 .hide-scroll {
@@ -172,6 +177,18 @@ nav {
 	cursor: pointer;
 	font-family: objectSansReg;
 	letter-spacing: 1px;
+	background: linear-gradient(to bottom, #000 0%, #000 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 5px 5px;
+}
+
+.nav-link:hover {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='pink' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+	background-position: 0 100%;
+	background-size: auto 5px;
+	background-repeat: repeat-x;
+	text-decoration: none;
 }
 
 /* use to 'toggle' nav links into view */
@@ -192,14 +209,17 @@ nav {
 }
 
 #resume-btn {
-	/* box-shadow: 0 0 0 2pt var(--lime) inset; */
 	padding: 0 1em;
+	text-align: center;
 	margin-right: 0;
 	background: var(--hotpink);
-}
-
-#resume-btn a {
+	font-size: 24px;
+	cursor: pointer;
+	font-family: objectSansReg;
+	letter-spacing: 1px;
 	color: var(--softwhite);
+	border: none;
+	/* border-image: linear-gradient(#f6b73c, #4d9f0c) 50; */
 }
 
 .page-wrapper {
