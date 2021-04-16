@@ -111,28 +111,19 @@ const changeNavLinkState = () => {
 changeNavLinkState();
 window.addEventListener('scroll', changeNavLinkState);
 
-const techStack = ['Tech 1', 'Tech 2'];
+// Populate Tech Stack Ticker
+const techStack = [
+	'Full-stack',
+	'ReactJS',
+	'CSS & SaSS',
+	'Responsive',
+	'Wireframing',
+	'Collaboration',
+	'MongoDB'
+];
+const techTextColors = ['lime', 'pink'];
 
-const colors = ['lime'];
-
-const tickerTapeWrapper = document.getElementsByClassName(
-	'ticker-tape-wrapper',
-);
-
-let innerDivs = [];
-
-const populateTicker = () => {
-	for (i = 0; i < techStack.length; i++) {
-		let tickerItem = document.createElement('div');
-		tickerItem.classList.add('ticker-tape-item');
-		tickerItem.innerHTML = techStack[i];
-		innerDivs.push(tickerItem);
-	}
-
-	tickerTapeWrapper.innerHTML = innerDivs;
-	return tickerTapeWrapper;
-};
-
-populateTicker();
-
-console.log(tickerTapeWrapper);
+const outerDiv = document.getElementById('ticker-wrapper');
+techStack.forEach((tech) => {
+	outerDiv.innerHTML += `<div class="ticker-tape-item">${tech}</div>`;
+});

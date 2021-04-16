@@ -271,7 +271,7 @@ nav {
 	width: 100%;
 	height: calc(100vh - 1em);
 	cursor: pointer;
-	padding-bottom: 0.5em;
+	padding-bottom: 1em;
 }
 
 .intro {
