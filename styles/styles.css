@@ -233,6 +233,7 @@ nav {
 	margin-right: 1.5em;
 	padding-bottom: 0.5em;
 	font-size: 1.75em;
+	letter-spacing: 1px;
 	cursor: pointer;
 	font-family: objectSansHeavy;
 }
@@ -271,6 +272,7 @@ nav {
 	cursor: pointer;
 	font-family: objectSansHeavy;
 	color: var(--softwhite);
+	letter-spacing: 1px;
 	border: none;
 
 	/* border-image: linear-gradient(#f6b73c, #4d9f0c) 50; */
