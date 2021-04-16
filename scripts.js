@@ -4,17 +4,13 @@ const introContent = document.querySelector('.intro-content');
 const landing = document.querySelector('.landing');
 const introAside = document.querySelector('#intro-aside');
 
-const personalMain =
-	'<div class="intro-content fade-in">Ashley is a mickey waffle connoisseur and Sweet Potatos biggest simp.</div>';
+const personalMain = `<div class="intro-content fade-in">Ashley is a <span class="pink">mickey waffle connoisseur</span> and Sweet Potato's biggest simp.</div>`;
 
-const professionalAside =
-	'<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>';
+const professionalAside = `<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>`;
 
-const professionalMain =
-	'<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary experience designer </span> based in Chicago.</div>';
+const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary experience designer </span> based in Chicago.</div>`;
 
-const personalAside =
-	'<div id="intro-aside" class="fade-in">Here is <em>something personal</em> about me as an aside.</div>';
+const personalAside = `<div id="intro-aside" class="fade-in">Here is <em>something personal</em> about me as an aside.</div>`;
 
 const toggleIntroText = () => {
 	if (introWrapper.classList.contains('professional')) {
@@ -40,8 +36,6 @@ const nav = document.querySelector('nav');
 
 let intViewportHeight = window.innerHeight;
 
-// if (y >= 535) {
-
 var revealNav = () => {
 	var y = window.pageYOffset;
 	if (y >= intViewportHeight / 75) {
@@ -59,8 +53,6 @@ var revealNav = () => {
 	// console.log(intViewportHeight);
 	// console.log(window.pageYOffset);
 };
-
-/* justify-content: space-between; */
 
 window.addEventListener('scroll', revealNav);
 
@@ -119,7 +111,7 @@ const techStack = [
 	'Responsive',
 	'Wireframing',
 	'Collaboration',
-	'MongoDB'
+	'MongoDB',
 ];
 const techTextColors = ['lime', 'pink'];
 
