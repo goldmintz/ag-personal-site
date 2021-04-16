@@ -51,7 +51,7 @@ html {
 }
 
 section {
-	margin: 3em 0em;
+	margin: 1em 0em;
 }
 
 /* add space above project section for smooth scroll to anchor */
@@ -232,10 +232,9 @@ nav {
 .nav-link {
 	margin-right: 1.5em;
 	padding-bottom: 0.5em;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	cursor: pointer;
-	font-family: objectSansReg;
-	letter-spacing: 2px;
+	font-family: objectSansHeavy;
 }
 
 .nav-link:hover {
@@ -268,12 +267,12 @@ nav {
 	text-align: center;
 	margin-right: 0;
 	background: var(--hotpink);
-	font-size: 1.5em;
+	font-size: 1.75em;
 	cursor: pointer;
-	font-family: objectSansBold;
-	letter-spacing: 2px;
+	font-family: objectSansHeavy;
 	color: var(--softwhite);
 	border: none;
+
 	/* border-image: linear-gradient(#f6b73c, #4d9f0c) 50; */
 }
 
@@ -344,6 +343,7 @@ nav {
 	font-size: 1.25em;
 	line-height: 1.25em;
 	padding-right: 0.75em;
+	margin-bottom: 0.25em;
 }
 
 .social-links-wrapper {
@@ -527,6 +527,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* padding: 0.75em 0em; */
 }
 
 .ticker-tape-wrapper {
@@ -543,7 +544,7 @@ nav {
 	font-size: 2.25em;
 	letter-spacing: 2px;
 	width: 10em;
-	/* animation: wiggle 1s infinite; */
+	animation: wiggle 1s infinite;
 }
 
 @keyframes wiggle {
@@ -597,6 +598,7 @@ nav {
 
 .project-tagline {
 	font-size: 1em;
+	padding: 0.5em 1em;
 	line-height: 1;
 	background: var(--deepBlue);
 }
