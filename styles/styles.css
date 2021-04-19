@@ -28,12 +28,12 @@ body:after {
 	height: 10px;
 } */
 
-body:before {
+/* body:before {
 	top: 0;
 }
 body:after {
 	bottom: 0;
-}
+} */
 
 html,
 body {
@@ -176,7 +176,7 @@ li {
 
 nav {
 	display: flex;
-	padding: 1.5em 4.25em;
+	padding: 1.5em 5em;
 	width: calc(100% - 1.3em);
 	justify-content: flex-end;
 	position: fixed;
@@ -265,6 +265,7 @@ nav {
 
 #resume-btn {
 	padding: 0 1em;
+	margin-bottom: 0.5em;
 	text-align: center;
 	margin-right: 0;
 	background: var(--hotpink);
@@ -284,6 +285,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 0em 2em;
 	/* margin: 1em 3em; */
 	/* box-shadow: 0px 2px 15px 5px #000000; */
 }
@@ -291,11 +293,11 @@ nav {
 .landing {
 	display: flex;
 	width: 100%;
-	/* remove section top margin */
+	/* remove inherited section top margin */
 	margin-top: 0;
 	height: calc(100vh - 1em);
 	cursor: pointer;
-	padding-bottom: 2em;
+	padding-bottom: 1em;
 }
 
 .intro {
@@ -523,6 +525,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 100vw;
 	/* margin: 2em 0em; */
 	/* padding: 0.75em 0em; */
 }
@@ -627,8 +630,10 @@ nav {
 }
 
 .projects-header {
-	font-size: 2.5em;
-	margin-bottom: 2em;
+	font-size: 1em;
+	margin-bottom: 1em;
+	padding-left: 0.75em;
+	text-transform: uppercase;
 }
 
 .col-wrapper {
@@ -641,28 +646,37 @@ nav {
 	flex-direction: column;
 	flex: 1;
 	align-items: center;
+	padding: 1em;
 }
 
 .test-item {
 	display: flex;
-	/* flex: 1; */
-	/* height: 1em; */
+	justify-content: space-between;
+	align-items: center;
 	font-size: 2em;
 	font-family: objectSansReg;
 	text-align: left;
-	padding: 1em;
+	padding: 1em 1em 0.5em 0em;
 	width: 100%;
-	border-top: 0.1em solid pink;
-	border-bottom: 0.1em solid pink;
+	border-top: 2px solid var(--lime);
+	border-bottom: 2px solid var(--lime);
+	cursor: pointer;
 }
 
 .test-item:nth-child(2) {
 	border: none;
 }
+.test-item:nth-child(1) {
+	border-top: none;
+}
 
 .test-item a:hover {
-	transform: translate(1em);
-	cursor: pointer;
+	color: var(--hotpink);
+}
+
+.project-prev-tagline,
+.project-prev-stack {
+	font-size: 0.75em;
 }
 
 /* *** MODAL/LIGHTBOX PROJECT DISPLAY ***  */
