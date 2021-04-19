@@ -15,7 +15,7 @@
 
 * {
 	box-sizing: border-box;
-	/* outline: 1px solid pink; */
+	outline: 1px solid pink;
 }
 
 /* body:before,
@@ -39,10 +39,11 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: objectSansThin;
+	font-family: objectSansReg;
 	line-height: 1.6;
 	background: var(--deepBlue);
 	color: var(--softwhite);
+	overflow-x: hidden;
 	/* border-left: 0.25em solid var(--softwhite);
 	border-right: 0.25em solid var(--softwhite); */
 }
@@ -53,6 +54,10 @@ html {
 
 section {
 	margin: 1em 0em;
+}
+
+p {
+	margin: 0;
 }
 
 /* add space above project section for smooth scroll to anchor */
@@ -275,8 +280,6 @@ nav {
 	color: var(--softwhite);
 	letter-spacing: 1px;
 	border: none;
-
-	/* border-image: linear-gradient(#f6b73c, #4d9f0c) 50; */
 }
 
 .page-wrapper {
@@ -302,9 +305,7 @@ nav {
 
 .intro {
 	display: flex;
-	/* flex-direction: column; */
 	align-items: center;
-	/* justify-content: center; */
 	height: 100%;
 }
 
@@ -324,8 +325,11 @@ nav {
 	padding: 0em 0.75em;
 	padding-right: 1.5em;
 	font-family: objectSansHeavy;
-	/* letter-spacing: 0.05em; */
 	line-height: 1em;
+}
+
+.intro-content p:first-of-type {
+	margin-bottom: 0.5em;
 }
 
 #intro-img {
@@ -380,10 +384,6 @@ nav {
 	padding-top: 0.25em;
 	color: var(--olive);
 }
-/* 
-.social-links-wrapper > * {
-	border: 1px solid red;
-} */
 
 /* EXPERIENCE SECTION */
 .experience-wrapper {
@@ -391,7 +391,6 @@ nav {
 	flex-direction: column;
 	padding: 5em 3.25em;
 	font-family: objectSansReg;
-	/* height: 100vh; */
 }
 
 .experience-cols {
@@ -485,7 +484,7 @@ nav {
 	margin-top: 3em;
 }
 
-.projects-header {
+.section-header {
 	width: 100%;
 	margin-bottom: 0.25em;
 	line-height: 1;
@@ -514,7 +513,7 @@ nav {
 }
 
 .ticker-tape-scroll {
-	overflow: hidden;
+	/* overflow: hidden; */
 	white-space: nowrap;
 	display: flex;
 	align-items: center;
@@ -623,8 +622,8 @@ nav {
 	height: calc(100vh - 12em);
 }
 
-.projects-header {
-	font-size: 1em;
+.section-header {
+	font-size: 1.25em;
 	margin-bottom: 1em;
 	padding-left: 0.75em;
 	text-transform: uppercase;
@@ -819,28 +818,39 @@ nav {
 	top: 0;
 }
 
+/* CONTACT SECTION */
 .contact-wrapper {
 	display: flex;
+	flex-direction: column;
 	width: 100%;
-	height: calc(100vh - 7em);
-	padding: 3em;
-	gap: 2em;
+	padding: 0em 3em;
 }
 
-.contact-headshot-col {
+.contact-row {
 	display: flex;
-	height: 100%;
-	width: 40%;
-	/* outline: 1px solid whitesmoke; */
-	align-items: center;
-	justify-content: center;
+	width: 100%;
+	margin-bottom: 2em;
 }
 
-.contact-headshot-col img {
-	height: 75%;
-	width: 75%;
-	transform: rotate(-75deg);
+.contact-col {
+	display: flex;
+	flex-direction: column;
 }
+
+#contact-closing-col {
+	font-size: 1.75em;
+	line-height: 1.25em;
+}
+
+.contact-closing-content {
+	background: pink;
+}
+
+/* .contact-headshot-col img {
+	height: 50%;
+	width: 50%;
+	transform: rotate(-75deg);
+} */
 
 .contact-info-col {
 	display: flex;
@@ -864,7 +874,6 @@ footer {
 	display: flex;
 	height: 2em;
 	width: 100%;
-	outline: 1px solid whitesmoke;
 	background: var(--lime);
 }
 
@@ -998,6 +1007,14 @@ footer {
 		height: 7em;
 	}
 
+	section {
+		margin-top: 5em;
+	}
+
+	.section-header {
+		margin: unset;
+	}
+
 	.logo {
 		align-self: center;
 	}
@@ -1073,12 +1090,7 @@ footer {
 	.test-wrapper {
 		justify-content: flex-start;
 		padding: unset;
-		margin-top: 2.5em;
 		height: unset;
-	}
-
-	.projects-header {
-		margin: unset;
 	}
 
 	.test-item {
@@ -1098,5 +1110,46 @@ footer {
 
 	.project-prev-stack {
 		display: none;
+	}
+
+	/* CONTACT SECTION */
+	.contact-wrapper {
+		flex-direction: column;
+		padding: unset;
+		align-items: center;
+	}
+
+	.contact-headshot-col {
+		width: 100%;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 1em;
+	}
+
+	.contact-headshot-col p {
+		font-size: 1.75em;
+	}
+
+	.contact-info-col {
+		padding: 1em;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		line-height: 1.6;
+		font-size: 0.75em;
+	}
+
+	.contact-info-content {
+		text-align: center;
+	}
+
+	.contact-headshot-col img {
+		/* height: 50%;
+		width: 50%; */
+		margin-top: 1.5em;
+	}
+
+	.contact-info-header {
+		width: 100%;
 	}
 }

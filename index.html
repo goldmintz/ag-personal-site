@@ -51,14 +51,17 @@
 			<section class="landing">
 				<div class="intro fade-in professional" onclick="toggleIntroText()">
 					<div class="intro-content professional fade-in">
-						A. Goldmintz is a
-						<span class="lime">multidisciplinary experience designer</span>
-						based in Chicago.
-						<br />
-						She's trying to see how much
-						<span class="lime">extra text</span>
-						she can put in here.
-						<img id="intro-img" src="./assets/images/giphy.gif" />
+						<p>
+							A. Goldmintz is a
+							<span class="lime">multidisciplinary experience designer</span>
+							based in Chicago. 
+
+							<p>She's trying to see how much
+							<span class="lime">extra text</span>
+							she can put in here.</p>
+						</p>
+
+						<!-- <img id="intro-img" src="./assets/images/giphy.gif" /> -->
 					</div>
 				</div>
 
@@ -86,7 +89,7 @@
 			<!-- End Landing/Intro Section-->
 
 			<!-- Begin Experience Section -->
-			<div class="section-anchor" id="experience"></div>
+			<span class="section-anchor" id="experience"></span>
 
 			<span id="experience"></span>
 			<section class="experience-wrapper">
@@ -116,17 +119,15 @@
 			<!-- End About Section -->
 
 			<!-- Begin Ticker Tape Feature -->
-			<div class="section-anchor" id="projects"></div>
+			<span class="section-anchor" id="projects"></span>
 			<div class="ticker-tape-scroll">
 				<div class="ticker-tape-wrapper" id="ticker-wrapper"></div>
 			</div>
 			<!-- End Ticker Tape Feature -->
 
 			<!-- Test Project Layout -->
-
 			<section class="test-wrapper">
-				<div class="projects-header">Project Header</div>
-				<div class="col-wrapper">
+				<div class="section-header">Select Coding Projects</div>
 					<div class="test-items-col">
 						<div class="test-item">
 							<a href="#project-1"> <div>Project Title</div></a>
@@ -144,19 +145,7 @@
 							<div class="project-prev-stack">a third thing</div>
 						</div>
 					</div>
-					<!-- <div class="test-items-col">
-						<div class="test-item">
-							<a href="#project-1"><span>Project Title</span></a>
-						</div>
-						<div class="test-item">
-							<a href="#project-1"><span>Project Title</span></a>
-						</div>
-						<div class="test-item">
-							<a href="#project-1"><span>Project Title</span></a>
-						</div>
-					</div> -->
-				</div>
-
+					
 				<!-- Begin Project 1 Modal -->
 				<div id="project-1" class="modal">
 					<!-- Modal Content -->
@@ -222,46 +211,24 @@
 				</div>
 			</section>
 
-			<!-- Begin Projects Section -->
-			<!-- <section class="projects-wrapper">
-				<div class="project-grid">
-					<a href="#project-1" class="modal-link">
-						<div class="project-prev grow" id="project-1-prev">
-							<div class="project-title">Project title</div>
-							<div class="project-tagline">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</div>
-						</div>
-					</a>
-
-					<a href="#project-2" class="modal-link">
-						<div class="project-prev grow" id="project-2-prev">
-							<div class="project-title">Project title</div>
-							<div class="project-tagline">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</div>
-						</div>
-					</a>
-
-					<a href="#project-3" class="modal-link">
-						<div class="project-prev grow" id="project-3-prev">
-							<div class="project-title">Project title</div>
-							<div class="project-tagline">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</div>
-						</div>
-					</a>
-				</div>
-			</section> -->
-			<!-- End Projects Section -->
 
 			<!-- Begin Contact Section -->
-			<div class="section-anchor" id="contact"></div>
+			<span class="section-anchor" id="contact"></span>
 			<section class="contact-wrapper">
-				<div class="contact-headshot-col">
-					<img src="/assets/images/headshot.png" />
+				<div class="section-header">Get In Touch</div>
+				<div class="contact-row">
+					<div class="contact-col" id='contact-closing-col'>
+					<p>huuuuh</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, odio.</p>
 				</div>
-				<div class="contact-info-col">
+				
+				<div class="contact-col" id='headshot-col'>
+				<img src="/assets/images/headshot.png" id='headshot'/>
+				</div>
+			</div>
+
+
+				<div class="contact-row" id='contact-info'>
 					<div class="contact-info-content">
 						<div class="contact-info-header">Header!</div>
 						<ul>
@@ -288,8 +255,9 @@
 					</div>
 				</div>
 			</section>
-			<footer>footer here!</footer>
+			
 		</div>
+		<footer>footer here!</footer>
 		<script src="scripts.js"></script>
 		<!-- <script src="/path/to/ztext.min.js"></script> -->
 	</body>
