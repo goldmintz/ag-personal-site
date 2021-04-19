@@ -18,7 +18,7 @@
 	/* outline: 1px solid pink; */
 }
 
-body:before,
+/* body:before,
 body:after {
 	content: '';
 	position: fixed;
@@ -26,7 +26,8 @@ body:after {
 	left: 0;
 	right: 0;
 	height: 10px;
-}
+} */
+
 body:before {
 	top: 0;
 }
@@ -42,8 +43,8 @@ body {
 	line-height: 1.6;
 	background: var(--deepBlue);
 	color: var(--softwhite);
-	border-left: 0.25em solid var(--softwhite);
-	border-right: 0.25em solid var(--softwhite);
+	/* border-left: 0.25em solid var(--softwhite);
+	border-right: 0.25em solid var(--softwhite); */
 }
 
 html {
@@ -178,15 +179,14 @@ nav {
 	padding: 1.5em 4.25em;
 	width: calc(100% - 1.3em);
 	justify-content: flex-end;
-	/* justify-content: space-between; */
-	align-items: center;
 	position: fixed;
+	top: 0;
 	background: var(--deepBlue);
 	z-index: 10;
 	height: 7em;
-	/* top: 0.5em; */
-	border-top: solid 0.5em var(--softwhite);
+	/* border-top: solid 0.5em var(--softwhite); */
 	font-size: 0.75em;
+	transition: top 0.3s;
 }
 
 .logo {

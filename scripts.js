@@ -50,11 +50,23 @@ var revealNav = () => {
 		nav.style.justifyContent = 'flex-end';
 		navLinksWrapper.classList.remove('show-nav');
 	}
-	// console.log(intViewportHeight);
-	// console.log(window.pageYOffset);
 };
 
 window.addEventListener('scroll', revealNav);
+
+/* Hide nav on scroll down. Reveal nav on scroll up. */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		document.getElementById('navbar').style.top = '0';
+	} else {
+		document.getElementById('navbar').style.top = '-7em';
+	}
+	prevScrollpos = currentScrollPos;
+};
+
+// Change Page Title With Anchor Click
 
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
 const modalLink = document.querySelectorAll('.modal-link');
@@ -73,7 +85,7 @@ for (let i = 0, a; (a = modalLink[i]); i++) {
 	a.addEventListener('click', hideBodyScroll, false);
 }
 
-// Prevent refresh When User Closes Modal (otherwise, user is brought to top of page)
+// Prevent refresh when user closes modal (otherwise, user is brought to top of page)
 const closeModal = document.querySelectorAll('.close-modal');
 
 const anchorClose = (e) => {
