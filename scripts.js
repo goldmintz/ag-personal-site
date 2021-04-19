@@ -8,7 +8,7 @@ const personalMain = `<div class="intro-content fade-in">Ashley is a <span class
 
 const professionalAside = `<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>`;
 
-const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary experience designer </span> based in Chicago.</div>`;
+const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multidisciplinary experience designer </span> based in Chicago.</div>`;
 
 const personalAside = `<div id="intro-aside" class="fade-in">Here is <em>something personal</em> about me as an aside.</div>`;
 

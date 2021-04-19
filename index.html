@@ -48,7 +48,7 @@
 				<div class="intro fade-in professional" onclick="toggleIntroText()">
 					<div class="intro-content professional fade-in">
 						A. Goldmintz is a
-						<span class="lime">multi-disciplinary experience designer</span>
+						<span class="lime">multidisciplinary experience designer</span>
 						based in Chicago.
 						<br />
 						She's trying to see how much
@@ -82,6 +82,8 @@
 			<!-- End Landing/Intro Section-->
 
 			<!-- Begin Experience Section -->
+			<div class="section-anchor" id="experience"></div>
+
 			<span id="experience"></span>
 			<section class="experience-wrapper">
 				<!-- <div class="experience-header">the creds.</div> -->
@@ -110,21 +112,23 @@
 			<!-- End About Section -->
 
 			<!-- Begin Ticker Tape Feature -->
+			<div class="section-anchor" id="projects"></div>
 			<div class="ticker-tape-scroll">
 				<div class="ticker-tape-wrapper" id="ticker-wrapper"></div>
 			</div>
 			<!-- End Ticker Tape Feature -->
 
 			<!-- Test Project Layout -->
-			<div class="section-anchor" id="projects"></div>
+
 			<section class="test-wrapper">
+				<div class="projects-header">Project Section Header Here</div>
 				<div class="col-wrapper">
 					<div class="test-items-col">
 						<div class="test-item">
-							<a href="#project-1"><span>Project Title</span></a>
+							<a href="#project-1"><span>Project Title ➺</span></a>
 						</div>
 						<div class="test-item">
-							<a href="#project-1"><span>Project Title</span></a>
+							<a href="#project-1"><span>Project Title ⇝</span></a>
 						</div>
 						<div class="test-item">
 							<a href="#project-1"><span>Project Title</span></a>
@@ -142,10 +146,74 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Begin Project 1 Modal -->
+				<div id="project-1" class="modal">
+					<!-- Modal Content -->
+					<div class="modal-controls">
+						<div class="logo modal-logo">
+							<a href="/" class="close-modal"
+								>a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz</a
+							>
+						</div>
+						<a href="/" class="close-modal">CLOSE</a>
+					</div>
+					<div class="modal-wrapper">
+						<div class="modal-main-content">
+							<div class="modal-headers">
+								<div class="modal-title">Project Title</div>
+								<div>Project Subtitle</div>
+							</div>
+
+							<div class="modal-project-summary">
+								<div class="summary-content">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+									Ipsum magnam a iste distinctio porro reprehenderit nisi
+									numquam debitis quaerat, maiores placeat qui sequi ex ipsam
+									facere repudiandae, assumenda quidem quis!
+								</div>
+								<div class="project-details-wrapper">
+									<div class="project-details-col">
+										<div class="project-subheading">approach</div>
+										<div class="detail-content">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Voluptas eligendi unde ullam dolorem, perferendis
+											inventore iusto reiciendis impedit architecto quidem.
+											Sapiente voluptatem nobis excepturi commodi dolorem porro
+											sunt officiis quod.
+										</div>
+									</div>
+
+									<div class="project-details-col">
+										<div class="project-subheading">observations</div>
+										<div class="detail-content">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Voluptas eligendi unde ullam dolorem, perferendis
+											inventore iusto reiciendis impedit architecto quidem.
+											Sapiente voluptatem nobis excepturi commodi dolorem porro
+											sunt officiis quod.
+										</div>
+									</div>
+
+									<div class="project-details-col">
+										<div class="project-subheading">tech stack</div>
+										<div class="detail-content">
+											<ul>
+												<li>react</li>
+												<li>other tech</li>
+												<li>some other tool</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<!-- Begin Projects Section -->
-			<section class="projects-wrapper">
+			<!-- <section class="projects-wrapper">
 				<div class="project-grid">
 					<a href="#project-1" class="modal-link">
 						<div class="project-prev grow" id="project-1-prev">
@@ -173,81 +241,13 @@
 							</div>
 						</div>
 					</a>
-
-					<!-- Begin Project 1 Modal -->
-					<div id="project-1" class="modal">
-						<!-- Modal Content -->
-						<div class="modal-controls">
-							<div class="logo modal-logo">
-								<a href="/" class="close-modal"
-									>a<span id="dot">.</span>g<span class="daisy">✿</span
-									>ldmintz</a
-								>
-							</div>
-							<a href="/" class="close-modal">CLOSE</a>
-						</div>
-						<div class="modal-wrapper">
-							<div class="modal-main-content">
-								<div class="modal-headers">
-									<div class="modal-title">Project Title</div>
-									<div>Project Subtitle</div>
-								</div>
-
-								<div class="modal-project-summary">
-									<div class="summary-content">
-										Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-										Ipsum magnam a iste distinctio porro reprehenderit nisi
-										numquam debitis quaerat, maiores placeat qui sequi ex ipsam
-										facere repudiandae, assumenda quidem quis!
-									</div>
-									<div class="project-details-wrapper">
-										<div class="project-details-col">
-											<div class="project-subheading">approach</div>
-											<div class="detail-content">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												Voluptas eligendi unde ullam dolorem, perferendis
-												inventore iusto reiciendis impedit architecto quidem.
-												Sapiente voluptatem nobis excepturi commodi dolorem
-												porro sunt officiis quod.
-											</div>
-										</div>
-
-										<div class="project-details-col">
-											<div class="project-subheading">observations</div>
-											<div class="detail-content">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												Voluptas eligendi unde ullam dolorem, perferendis
-												inventore iusto reiciendis impedit architecto quidem.
-												Sapiente voluptatem nobis excepturi commodi dolorem
-												porro sunt officiis quod.
-											</div>
-										</div>
-
-										<div class="project-details-col">
-											<div class="project-subheading">tech stack</div>
-											<div class="detail-content">
-												<ul>
-													<li>react</li>
-													<li>other tech</li>
-													<li>some other tool</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- <div class="project-image">
-								<img src="/assets/images/test-projectIMG.png" />
-							</div> -->
-							</div>
-						</div>
-					</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- End Projects Section -->
 
 			<!-- Begin Contact Section -->
+			<div class="section-anchor" id="contact"></div>
 			<section class="contact-wrapper">
-				<div class="section-anchor" id="contact"></div>
 				<div class="contact-headshot-col">
 					<img src="/assets/images/headshot.png" />
 				</div>

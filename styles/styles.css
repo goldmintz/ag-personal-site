@@ -58,8 +58,8 @@ section {
 .section-anchor:target:before {
 	content: '';
 	display: block;
-	height: 5em;
-	margin: 4em 0;
+	height: 1em;
+	margin: 2em 0;
 }
 
 /* project anchor made a little shorter because of previous sibling (experience) height */
@@ -530,7 +530,7 @@ nav {
 .ticker-tape-wrapper {
 	display: table-cell;
 	position: relative;
-	animation: ticker-tape-scrolling 60s linear infinite running;
+	animation: ticker-tape-scrolling 30s linear infinite running;
 }
 
 .ticker-tape-item {
@@ -620,9 +620,15 @@ nav {
 .test-wrapper {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	width: 100%;
 	padding: 0em 3em;
-	height: calc(100vh - 3em);
+	height: calc(100vh - 12em);
+}
+
+.projects-header {
+	font-size: 2.5em;
+	margin-bottom: 2em;
 }
 
 .col-wrapper {
@@ -646,8 +652,8 @@ nav {
 	text-align: left;
 	padding: 1em;
 	width: 100%;
-	border-top: 1px solid pink;
-	border-bottom: 1px solid pink;
+	border-top: 0.1em solid pink;
+	border-bottom: 0.1em solid pink;
 }
 
 .test-item:nth-child(2) {
