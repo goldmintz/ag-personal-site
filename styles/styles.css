@@ -177,7 +177,7 @@ li {
 nav {
 	display: flex;
 	padding: 1.5em 5em;
-	width: calc(100% - 1.3em);
+	width: 100%;
 	justify-content: flex-end;
 	position: fixed;
 	top: 0;
@@ -512,12 +512,6 @@ nav {
 		left: -50%;
 	}
 }
-
-/* .ticker-tape {
-	display: inline-flex;
-	align-self: flex-start;
-	width: 100vw;
-} */
 
 .ticker-tape-scroll {
 	overflow: hidden;
@@ -989,5 +983,120 @@ footer {
 
 	.comment-wrapper {
 		padding: 1em 0em !important;
+	}
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+	html {
+		font-size: 13px;
+	}
+
+	nav {
+		padding: 1em 3em;
+		align-items: center;
+		height: 7em;
+	}
+
+	.logo {
+		align-self: center;
+	}
+
+	.page-wrapper {
+		width: 100%;
+		overflow-x: hidden;
+	}
+
+	/* LANDING SECTION */
+	.landing {
+		margin-top: 7em;
+		flex-direction: row;
+		height: unset;
+		padding: unset;
+	}
+
+	.intro {
+		align-items: flex-start;
+		margin: 0.5em 0em;
+		flex: 1;
+	}
+
+	.intro-content {
+		font-size: 0.75em;
+		width: 100%;
+		margin-top: 0;
+		font-family: objectSansReg;
+	}
+
+	#intro-img,
+	.intro-closing {
+		display: none;
+	}
+
+	/* EXPERIENCE SECTION */
+	.experience-wrapper {
+		height: unset;
+		padding: unset;
+	}
+	.experience-cols {
+		flex-direction: column;
+		margin: 0;
+		line-height: 1.6;
+		font-size: 0.75em;
+	}
+
+	#experience-col-1,
+	#experience-col-2 {
+		transform: none;
+		margin: 0;
+		background: none;
+	}
+
+	.experience-content {
+		padding: unset;
+		outline: none;
+	}
+
+	#experience-col-1 .experience-text,
+	#experience-col-2 .experience-text {
+		outline: none;
+	}
+
+	/* TICKER TAPE SECTION */
+	.ticker-tape-item {
+		font-family: objectSansBold;
+		font-size: 1.5em;
+		/* animation: wiggle 1s infinite; */
+	}
+
+	/* PROJECT SECTION */
+	.test-wrapper {
+		justify-content: flex-start;
+		padding: unset;
+		margin-top: 2.5em;
+		height: unset;
+	}
+
+	.projects-header {
+		margin: unset;
+	}
+
+	.test-item {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-right: unset;
+	}
+
+	.test-item:nth-child(1) {
+		padding-top: unset;
+	}
+
+	.project-prev-title {
+		font-size: 0.75em;
+	}
+
+	.project-prev-stack {
+		display: none;
 	}
 }
