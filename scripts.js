@@ -55,18 +55,16 @@ var revealNav = () => {
 window.addEventListener('scroll', revealNav);
 
 /* Hide nav on scroll down. Reveal nav on scroll up. */
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-	var currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
-		document.getElementById('navbar').style.top = '0';
-	} else {
-		document.getElementById('navbar').style.top = '-7em';
-	}
-	prevScrollpos = currentScrollPos;
-};
-
-// Change Page Title With Anchor Click
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+// 	var currentScrollPos = window.pageYOffset;
+// 	if (prevScrollpos > currentScrollPos) {
+// 		document.getElementById('navbar').style.top = '0';
+// 	} else {
+// 		document.getElementById('navbar').style.top = '-7em';
+// 	}
+// 	prevScrollpos = currentScrollPos;
+// };
 
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
 const modalLink = document.querySelectorAll('.modal-link');
@@ -98,7 +96,7 @@ for (let i = 0, a; (a = closeModal[i]); i++) {
 	a.addEventListener('click', returnBodyScroll, false);
 }
 
-//add active class to links when anchor is visible
+//Add active class to links when anchor is visible
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
@@ -112,7 +110,6 @@ const changeNavLinkState = () => {
 	navLinks[index].classList.add('active-nav');
 };
 
-changeNavLinkState();
 window.addEventListener('scroll', changeNavLinkState);
 
 // Populate Tech Stack Ticker
@@ -125,7 +122,6 @@ const techStack = [
 	'Collaboration',
 	'MongoDB',
 ];
-const techTextColors = ['lime', 'pink'];
 
 const outerDiv = document.getElementById('ticker-wrapper');
 techStack.forEach((tech) => {
