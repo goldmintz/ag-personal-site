@@ -247,125 +247,9 @@ nav {
 	border: none;
 }
 
-/* .burger input[type='checkbox'] {
-	visibility: hidden;
-} */
-
-.burger-wrapper {
-	position: fixed;
-	top: 1.5em;
-	right: 6em;
-	align-self: center;
-}
-
-.toggle {
-	position: absolute;
-	top: -1em;
-	right: -2em;
-	cursor: pointer;
-	width: 5em;
-	height: 5em;
-	opacity: 0;
-	z-index: 200;
-}
-
-/* Show menu when toggle is clicked (checkbox is checked) */
-.toggle:checked ~ .burger-menu {
-	visibility: visible;
-}
-
-.toggle:checked ~ .burger-menu > div {
-	transform: scale(1);
-}
-
-.burger {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 3em;
-	height: 3em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	z-index: 199;
-}
-
-/* Create middle line of hamburger menu */
-.burger > div {
-	position: relative;
-	width: 100%;
-	height: 0.5em;
-	background-color: var(--softwhite);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
-}
-
-/* Create top and bottom lines in hamburger menu */
-.burger > div::before,
-.burger > div::after {
-	content: '';
-	position: absolute;
-	top: -1em;
-	width: 100%;
-	height: 0.5em;
-	background-color: inherit;
-}
-
-.burger > div::after {
-	top: 1em;
-}
-
-/* Animate burger toggle */
-.toggle:checked + .burger > div {
-	transform: rotate(135deg);
-}
-
-.toggle:checked + .burger > div::before,
-.toggle:checked + .burger > div::after {
-	top: 0;
-	transform: rotate(90deg);
-}
-
-.burger-menu {
-	visibility: hidden;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	overflow: hidden;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-}
-
-.burger-menu > div {
-	background-color: var(--burgerBG);
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	color: var(--softwhite);
-	transform: scale(0);
-	transition: all 0.3s ease;
-}
-
-.burger-link-wrapper {
-	display: flex;
-	flex-direction: column;
-}
-.burger-link {
-	font-size: 3em;
-	padding: 1em;
-	color: var(--softwhite);
-	text-transform: uppercase;
+.burger-menu,
+input {
+	display: none;
 }
 
 /* MAIN PAGE CONTENT */
@@ -987,46 +871,135 @@ footer {
 		display: none;
 	}
 
-	/* Hamburger Menu */
-	label,
-	label::before,
-	label::after {
+	/* Hamburger Menu - Mobile Only */
+	.burger-wrapper {
+		position: fixed;
+		top: 1.5em;
+		right: 3em;
+		align-self: center;
+	}
+	/* 
+	.toggle {
 		position: absolute;
-		width: 3em;
-		height: 0.5em;
-		background: var(--softwhite);
-		transition: 1s;
-	}
-
-	label {
+		top: -1em;
+		right: -2em;
 		cursor: pointer;
-		top: 3em;
-		right: 6em;
-		/* margin-left: -50px;
-		margin-top: -7.5px; */
+		width: 5em;
+		height: 5em;
+		opacity: 0;
+		z-index: 200;
+	} */
+
+	/* Show menu when toggle is clicked (checkbox is checked) */
+	.toggle:checked ~ .burger-menu {
+		visibility: visible;
 	}
 
-	label::before {
+	.toggle:checked ~ .burger-menu > div {
+		transform: scale(1);
+	}
+
+	.burger {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 3em;
+		height: 3em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		z-index: 199;
+	}
+
+	/* Create middle line of hamburger menu */
+	.burger > div {
+		position: relative;
+		width: 100%;
+		height: 0.5em;
+		background-color: var(--lime);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+	}
+
+	/* Create top and bottom lines in hamburger menu */
+	.burger > div::before,
+	.burger > div::after {
 		content: '';
-		transform: translateY(-1em);
+		position: absolute;
+		top: -1em;
+		width: 100%;
+		height: 0.5em;
+		background-color: inherit;
 	}
 
-	label::after {
-		content: '';
-		transform: translateY(1em);
+	.burger > div::after {
+		background-color: var(--hotpink);
 	}
 
-	/* burgee animation*/
-	#burgee-menu:checked + label {
-		width: 0em;
+	.burger > div::before {
+		background-color: var(--clementine);
 	}
 
-	#burgee-menu:checked + label::before {
-		transform: rotate(45deg) translate(0em);
+	.burger > div::after {
+		top: 1em;
 	}
 
-	#burgee-menu:checked + label::after {
-		transform: rotate(-45deg) translate(0em);
+	/* Animate burger toggle */
+	.toggle:checked + .burger > div {
+		transform: rotate(135deg);
+	}
+
+	.toggle:checked + .burger > div::before,
+	.toggle:checked + .burger > div::after {
+		top: 0;
+		transform: rotate(90deg);
+	}
+
+	.burger-menu {
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		overflow: hidden;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	.burger-menu > div {
+		background-color: var(--burgerBG);
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: var(--softwhite);
+		transform: scale(0);
+		transition: all 0.3s ease;
+	}
+
+	.burger-link-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.burger-link {
+		font-size: 3em;
+		padding: 1em;
+		color: var(--softwhite);
+		text-transform: uppercase;
+	}
+
+	.burger-link a {
+		height: 100%;
+		width: 100%;
 	}
 
 	/* MAIN WRAPPER AND UTILITIES */

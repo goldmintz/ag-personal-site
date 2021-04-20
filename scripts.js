@@ -59,10 +59,13 @@ if (screen.width > 768) {
 }
 
 // Uncheck/Close Hamburger Menu When Burger Link Clicked
-const burgerLinks = document.getElementsByClassName('burger-link');
+const burgerMenuToggle = document.getElementById('menu-toggle');
 
 const toggleMenu = () => {
-	let burgerMenuToggle = document.getElementById('menu-toggle');
+	return (burgerMenuToggle.checked = !burgerMenuToggle.checked);
+};
+
+const closeMenu = () => {
 	burgerMenuToggle.checked = false;
 };
 
