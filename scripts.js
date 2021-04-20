@@ -58,30 +58,13 @@ if (screen.width > 768) {
 	window.addEventListener('scroll', revealNav);
 }
 
-/* Hide nav on scroll down. Reveal nav on scroll up. */
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function () {
-// 	var currentScrollPos = window.pageYOffset;
-// 	if (prevScrollpos > currentScrollPos) {
-// 		document.getElementById('navbar').style.top = '0';
-// 	} else {
-// 		document.getElementById('navbar').style.top = '-7em';
-// 	}
-// 	prevScrollpos = currentScrollPos;
-// };
+// Uncheck/Close Hamburger Menu When Burger Link Clicked
+const burgerLinks = document.getElementsByClassName('burger-link');
 
-// Handle Hamburger Menu
-const menuTriggers = document.querySelectorAll('[data-menu-toggle]');
-
-Array.prototype.forEach.apply(menuTriggers, [
-	function (trigger) {
-		trigger.addEventListener('click', function (e) {
-			e.preventDefault(); // prevent default link behaviour
-			// Toggle the sidebar when a click is detected.
-			toggleSidebar(); // this function will be defined in a later step
-		});
-	},
-]);
+const toggleMenu = () => {
+	let burgerMenuToggle = document.getElementById('menu-toggle');
+	burgerMenuToggle.checked = false;
+};
 
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
 const modalLink = document.querySelectorAll('.modal-link');

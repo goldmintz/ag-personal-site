@@ -14,7 +14,6 @@
 		<header>
 			<nav>
 				<!-- logo visible only when scroll to top -->
-
 				<div class="logo logo-scroll fade-in">
 					<a href="#welcome">
 						a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz
@@ -27,9 +26,33 @@
 					</a>
 				</div>
 
-				<div class="burgee">
-					<input type="checkbox" id="burgee-menu" />
-					<label for="burgee-menu"></label>
+				<!-- Burgee Menu for Tablet and Mobile -->
+				<div class="burger-wrapper">
+					<input type="checkbox" class="toggle" id="menu-toggle" />
+					<div class="burger">
+						<!-- empty div used to create burger lines -->
+						<div></div>
+					</div>
+					<div class="burger-menu">
+						<div>
+							<div class="burger-link-wrapper">
+								<div onclick="toggleMenu()" class="burger-link">
+									<a href="#experience">experience</a>
+								</div>
+								<div onclick="toggleMenu()" class="burger-link">
+									<a href="#projects">projects</a>
+								</div>
+
+								<div onclick="toggleMenu()" class="burger-link">
+									<a href="#contact">contact</a>
+								</div>
+
+								<div onclick="toggleMenu()" class="burger-link">
+									<a href="/">resume</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="nav-links-wrapper fade-in">
