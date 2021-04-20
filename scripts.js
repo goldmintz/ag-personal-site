@@ -30,7 +30,7 @@ const toggleIntroText = () => {
 
 // Reveal top nav links when page is scrolled //
 const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-const logoLoad = document.querySelector('.logo-loaded');
+const logoLoaded = document.querySelector('.logo-loaded');
 const logoScroll = document.querySelector('.logo-scroll');
 const nav = document.querySelector('nav');
 
@@ -39,21 +39,24 @@ let intViewportHeight = window.innerHeight;
 var revealNav = () => {
 	var y = window.pageYOffset;
 
+	console.log('revealfun running');
 	if (y >= intViewportHeight / 75) {
-		logoLoad.style.display = 'none';
+		logoLoaded.style.display = 'none';
 		logoScroll.style.display = 'block';
 		nav.style.justifyContent = 'space-between';
 		navLinksWrapper.classList.add('show-nav');
 	}
 	if (y < 535) {
-		logoLoad.style.display = 'block';
+		logoLoaded.style.display = 'block';
 		logoScroll.style.display = 'none';
 		nav.style.justifyContent = 'flex-end';
 		navLinksWrapper.classList.remove('show-nav');
 	}
 };
 
-window.width > 768 ? window.addEventListener('scroll', revealNav) : null;
+if (screen.width > 768) {
+	window.addEventListener('scroll', revealNav);
+}
 
 /* Hide nav on scroll down. Reveal nav on scroll up. */
 // var prevScrollpos = window.pageYOffset;
