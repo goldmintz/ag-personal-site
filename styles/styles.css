@@ -139,9 +139,9 @@ li {
 /* NAVBAR AND NAV LINK STYLING */
 nav {
 	display: flex;
-	padding: 1.5em 5em;
+	padding: 1.5em 7em;
 	width: 100%;
-	justify-content: flex-end;
+	justify-content: space-between;
 	position: fixed;
 	top: 0;
 	background: var(--deepBlue);
@@ -149,7 +149,7 @@ nav {
 	height: 7em;
 	/* border-top: solid 0.5em var(--softwhite); */
 	font-size: 0.75em;
-	transition: top 0.3s;
+	/* transition: top 0.3s; */
 }
 
 .active-nav {
@@ -166,7 +166,8 @@ nav {
 }
 
 .logo {
-	margin-right: 3.75em;
+	/* margin-right: 3.75em; */
+		font-size: 1.5em;
 }
 
 .logo a {
@@ -190,19 +191,19 @@ nav {
 
 .logo-load {
 	align-self: flex-end;
-	display: block;
-	margin-right: 1.2em;
-	font-size: 1.5em;
+	/* margin-right: 1.2em; */
+	/* font-size: 1.5em; */
 }
 
 .logo-scroll {
 	display: none;
-	font-size: 1.5em;
+	/* font-size: 1.5em; */
 }
 
 .nav-links-wrapper {
 	display: none;
 	justify-content: space-between;
+
 }
 
 .nav-link {
@@ -313,7 +314,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	margin-right: 1.25em;
+	margin-right: 2em;
 }
 
 #intro-aside {
@@ -321,24 +322,24 @@ nav {
 	font-family: objectSansReg;
 	font-size: 1.25em;
 	line-height: 1.25em;
-	padding-right: 0.75em;
 	margin-bottom: 0.25em;
 }
 
 .social-links-wrapper {
 	display: flex;
 	margin: 1.5em 0em;
-	padding-right: 3em;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	margin: 0;
+	back
 }
 
 .social-link a {
 	font-family: objectSansHeavy;
 	letter-spacing: 2px;
-	font-size: 26px;
+	font-size: 1.5em;
 	cursor: pointer;
 	color: var(--hotpink);
+	text-align: right;
 }
 
 .social-link a:hover {
@@ -419,7 +420,7 @@ nav {
 .ticker-tape {
 	display: flex;
 	width: 100vw;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 	white-space: nowrap;
 }
 
