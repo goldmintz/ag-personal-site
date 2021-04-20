@@ -30,7 +30,7 @@ const toggleIntroText = () => {
 
 // Reveal top nav links when page is scrolled //
 const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-const logoLoad = document.querySelector('.logo-load');
+const logoLoad = document.querySelector('.logo-loaded');
 const logoScroll = document.querySelector('.logo-scroll');
 const nav = document.querySelector('nav');
 
@@ -38,6 +38,7 @@ let intViewportHeight = window.innerHeight;
 
 var revealNav = () => {
 	var y = window.pageYOffset;
+
 	if (y >= intViewportHeight / 75) {
 		logoLoad.style.display = 'none';
 		logoScroll.style.display = 'block';
@@ -52,7 +53,7 @@ var revealNav = () => {
 	}
 };
 
-window.addEventListener('scroll', revealNav);
+window.width > 768 ? window.addEventListener('scroll', revealNav) : null;
 
 /* Hide nav on scroll down. Reveal nav on scroll up. */
 // var prevScrollpos = window.pageYOffset;
@@ -65,6 +66,19 @@ window.addEventListener('scroll', revealNav);
 // 	}
 // 	prevScrollpos = currentScrollPos;
 // };
+
+// Handle Hamburger Menu
+const menuTriggers = document.querySelectorAll('[data-menu-toggle]');
+
+Array.prototype.forEach.apply(menuTriggers, [
+	function (trigger) {
+		trigger.addEventListener('click', function (e) {
+			e.preventDefault(); // prevent default link behaviour
+			// Toggle the sidebar when a click is detected.
+			toggleSidebar(); // this function will be defined in a later step
+		});
+	},
+]);
 
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
 const modalLink = document.querySelectorAll('.modal-link');
