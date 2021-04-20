@@ -91,9 +91,11 @@ a:visited {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
 	margin: 0;
 	padding: 0;
+	text-transform: uppercase;
 }
 
 p {
@@ -269,7 +271,7 @@ nav {
 	margin-top: 0;
 	height: calc(100vh - 1em);
 	cursor: pointer;
-	padding-bottom: 1em;
+	padding: 1em;
 }
 
 .intro {
@@ -290,7 +292,7 @@ nav {
 	/* adjust for nav position fixed (intro overlaps) */
 	margin-top: auto;
 	line-height: 1;
-	font-size: 4.3em;
+	font-size: 4em;
 	padding: 0em 0.75em;
 	padding-right: 1.5em;
 	font-family: objectSansHeavy;
@@ -364,39 +366,52 @@ nav {
 .experience-cols {
 	display: flex;
 	flex-direction: row;
+	padding: 1em;
+	gap: 4em;
 }
 
-.experience-content {
+.experience-content-col {
 	display: flex;
-	padding: 1em;
 	font-size: 1.75em;
 	justify-content: center;
 }
 
-.experience-text {
-	padding: 1em;
-}
-
 #experience-col-1 {
+	flex: 2;
+	/* padding-right: 2em;
 	background: var(--flamingo);
 	margin-right: 1.5em;
 	margin-bottom: 2em;
-	transform: rotate(3deg);
+	transform: rotate(3deg); */
 }
 
-#experience-col-1 .experience-text {
+/* #experience-col-1 .experience-text {
 	outline: 0.2em solid var(--sea);
-}
+} */
 
 #experience-col-2 {
-	background: var(--olive);
-	margin-left: 1.5em;
-	margin-top: 1.5em;
-	transform: rotate(-5deg);
+	/* margin-left: 1.5em;
+	margin-top: 1.5em; */
+	transform: rotate(-3deg);
+	font-size: 1.25em;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	flex: 1;
 }
 
 #experience-col-2 .experience-text {
+	background: var(--olive);
 	outline: 0.2em solid var(--lilac);
+	padding: 2em;
+}
+
+#experience-col-2 .experience-text:hover {
+	animation: wiggle 1s infinite;
+}
+
+.experience-text h4 {
+	margin-bottom: 0.75em;
 }
 
 /* TICKER TAPE FEATURE */
@@ -655,6 +670,7 @@ footer {
 .slide {
 	transition: all 0.2s ease-in-out;
 }
+
 .bump:hover {
 	transform: translateY(-0.2em);
 }
@@ -728,6 +744,15 @@ footer {
 	}
 	100% {
 		-webkit-transform: rotate(3deg);
+	}
+}
+
+@keyframes swing {
+	0% {
+		transform: rotate(3deg);
+	}
+	100% {
+		transform: rotate(-3deg);
 	}
 }
 
