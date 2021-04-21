@@ -114,14 +114,16 @@ window.addEventListener('scroll', changeNavLinkState);
 
 // hide nav on scroll down / reveal on scroll up
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
+window.onscroll = () => {
 	var currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
-		document.getElementById('navbar').style.top = '0';
-	} else {
-		document.getElementById('navbar').style.top = '-7em';
+	while (screen.width > 768) {
+		if (prevScrollpos > currentScrollPos) {
+			document.getElementById('navbar').style.top = '0';
+		} else {
+			document.getElementById('navbar').style.top = '-7em';
+		}
+		prevScrollpos = currentScrollPos;
 	}
-	prevScrollpos = currentScrollPos;
 };
 
 // Populate Tech Stack Ticker
