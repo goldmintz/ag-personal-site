@@ -74,12 +74,10 @@ const modalLink = document.querySelectorAll('.modal-link');
 
 const hideBodyScroll = () => {
 	document.body.classList.add('hide-scroll');
-	console.log(document.body.classList);
 };
 
 const returnBodyScroll = () => {
 	document.body.classList.remove('hide-scroll');
-	console.log(document.body.classList);
 };
 
 for (let i = 0, a; (a = modalLink[i]); i++) {
@@ -103,8 +101,9 @@ for (let i = 0, a; (a = closeModal[i]); i++) {
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
+console.log(sections);
+
 const changeNavLinkState = () => {
-	//remove resume button from length
 	let index = sections.length;
 
 	while (--index && window.scrollY < sections[index].offsetTop) {}

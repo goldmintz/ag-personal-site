@@ -149,7 +149,7 @@ li {
 .section-header {
 	font-size: 1.25em;
 	margin-bottom: 1em;
-	padding-left: 0.75em;
+	/* padding-left: 0.75em; */
 	text-transform: uppercase;
 	width: 100%;
 	font-family: stellarBold;
@@ -159,7 +159,7 @@ li {
 /* NAVBAR AND NAV LINK STYLING */
 nav {
 	display: flex;
-	padding: 1.5em 7em;
+	padding: 1.5em 5em;
 	width: 100%;
 	justify-content: flex-end;
 	align-items: center;
@@ -168,14 +168,19 @@ nav {
 	background: var(--deepBlue);
 	z-index: 10;
 	height: 7em;
-	font-size: 0.75em;
+	font-size: 16px;
+	/* font-size: 0.75em; */
 	/* animation: colorchange 90s linear 1s infinite; */
 	/* border-top: solid 0.5em var(--softwhite); */
 	/* transition: top 0.3s; */
 }
 
+nav a {
+	font-size: 1.25em;
+}
+
 .active-nav {
-	border-bottom: 4px solid var(--lilac);
+	border-bottom: 0.25em solid var(--lilac);
 }
 
 .active-nav:hover {
@@ -188,7 +193,7 @@ nav {
 }
 
 .logo a {
-	font-size: 1.75em;
+	font-size: 1.5em;
 	font-family: objectSansHeavy;
 }
 
@@ -222,7 +227,6 @@ nav {
 .nav-link {
 	margin-right: 1.5em;
 	padding-bottom: 0.5em;
-	font-size: 1.75em;
 	letter-spacing: 1px;
 	cursor: pointer;
 	font-family: objectSansHeavy;
@@ -259,7 +263,7 @@ nav {
 	text-align: center;
 	margin-right: 0;
 	background: var(--hotpink);
-	font-size: 1.75em;
+	font-size: 1.25em;
 	cursor: pointer;
 	font-family: objectSansHeavy;
 	color: var(--softwhite);
@@ -388,8 +392,7 @@ input {
 .experience-cols {
 	display: flex;
 	flex-direction: row;
-	padding: 1em;
-	gap: 4em;
+	gap: 5em;
 }
 
 .experience-content-col {
@@ -482,8 +485,9 @@ input {
 .projects-list-col {
 	display: flex;
 	flex-direction: column;
-	padding: 1em;
+	/* padding: 1em; */
 	height: 100%;
+	margin-top: 1em;
 }
 
 .project-prev-wrapper {
@@ -522,10 +526,9 @@ input {
 	transition: left 0s 1s, opacity 1s;
 	left: -100vw;
 	opacity: 0;
-	background: var(--black);
-	/* overflow: hidden; */
 	z-index: 100;
-	height: 100vh;
+	/* height: 100vh; */
+	font-size: 16px;
 }
 
 .modal,
@@ -548,8 +551,23 @@ input {
 	transition: left 0s, opacity 1s;
 }
 
-.modal-link {
-	margin-bottom: 2em;
+/* matches main nav for a seamless transition/toggle */
+.modal-controls {
+	display: flex;
+	padding: 1.5em 5em;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	background: var(--deepBlue);
+	z-index: 10;
+	height: 7em;
+	font-size: 16px;
+}
+
+.modal-controls .logo a {
+	font-size: 1.5em;
 }
 
 /* Content inside div */
@@ -557,8 +575,7 @@ input {
 	width: 100vw;
 	height: 100vh;
 	transition: top 1s;
-	padding: 3% 5% 0% 4.5em;
-	background: var(--black);
+	background: var(--deepBlue);
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
 	scrollbar-width: none; /* Firefox */
 }
@@ -567,81 +584,67 @@ input {
 	display: none; /* Safari and Chrome */
 }
 
-.modal-controls {
-	position: absolute;
-	padding: 0.75em 3em;
-	top: 0;
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	align-items: center;
-	background-color: var(--deepBlue);
-	height: 6em;
-	font-size: 1.25em;
-}
-
-.modal-controls .logo {
-	font-size: 1em;
-}
-
 .modal-main-content {
 	display: flex;
+	height: 100%;
 	width: 100%;
 	flex-direction: column;
-	padding: 3em 1.5em 0em 1.5em;
-	height: 100%;
+	padding: 3em 5em;
+	margin-top: 7em;
 }
 
-.modal-headers {
-	margin-bottom: 1em;
+.modal-title.section-header {
+	font-size: 1.75em;
+	margin-bottom: 0.5em;
 }
 
-.modal-title {
-	font-size: 50px;
+.summary-content-wrapper {
+	font-size: 1.25em;
+	display: flex;
+	gap: 3em;
+	line-height: 1.25;
 }
 
-.modal-project-summary {
-	margin: 0.5em 0em;
-	height: 100%;
+.project-overview-col {
+	font-size: 1.5em;
+	width: 60%;
 }
 
-.modal .summary-content {
-	font-size: 24px;
+.project-sh-col {
+	width: 40%;
+	margin-top: -5em;
+	margin-bottom: 0;
+	background: url(../assets/images/test_SH.gif);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .project-details-wrapper {
 	margin-top: 3em;
 	display: flex;
 	flex-direction: row;
-}
-
-.project-subheading {
-	margin-bottom: 0.5em;
+	justify-content: space-between;
+	gap: 10em;
 }
 
 .project-details-col {
-	padding: 0 1em 0 0;
-	margin-right: 4em;
 	flex: 1;
 }
 
-.project-details-col:last-child {
-	margin: 0;
-}
-
-.detail-content ul {
+.detail-content {
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
 
-.project-image {
+/* .project-image {
 	position: absolute;
 	height: 2em;
 	right: calc(-50vw + 50%);
 	bottom: calc(100vh - 40%);
 	opacity: 50%;
-}
+} */
 
 .modal:target > div {
 	top: 0;
@@ -664,7 +667,7 @@ input {
 	width: 100%;
 	margin-bottom: 2em;
 	gap: 2em;
-	padding: 1em;
+	/* padding: 1em; */
 }
 
 .contact-col {
