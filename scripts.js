@@ -101,8 +101,6 @@ for (let i = 0, a; (a = closeModal[i]); i++) {
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
-console.log(sections);
-
 const changeNavLinkState = () => {
 	let index = sections.length;
 
@@ -113,6 +111,18 @@ const changeNavLinkState = () => {
 };
 
 window.addEventListener('scroll', changeNavLinkState);
+
+// hide nav on scroll down / reveal on scroll up
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		document.getElementById('navbar').style.top = '0';
+	} else {
+		document.getElementById('navbar').style.top = '-7em';
+	}
+	prevScrollpos = currentScrollPos;
+};
 
 // Populate Tech Stack Ticker
 const techStack = [
