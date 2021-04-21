@@ -36,6 +36,21 @@
 	src: url(../assets/fonts/ObjectSans-Bold.woff);
 }
 
+@font-face {
+	font-family: stellarLight;
+	src: url(../assets/fonts/Stellar-Light.woff);
+}
+
+@font-face {
+	font-family: stellarReg;
+	src: url(../assets/fonts/Stellar-Regular.woff);
+}
+
+@font-face {
+	font-family: stellarBold;
+	src: url(../assets/fonts/Stellar-Bold.woff);
+}
+
 * {
 	box-sizing: border-box;
 	/* outline: 1px solid pink; */
@@ -50,6 +65,7 @@ body {
 	background: var(--deepBlue);
 	color: var(--softwhite);
 	overflow-x: hidden;
+	/* animation: colorchange 90s linear 1s infinite; */
 }
 
 html {
@@ -135,6 +151,8 @@ li {
 	padding-left: 0.75em;
 	text-transform: uppercase;
 	width: 100%;
+	font-family: stellarBold;
+	letter-spacing: 1px;
 }
 
 /* NAVBAR AND NAV LINK STYLING */
@@ -150,6 +168,7 @@ nav {
 	z-index: 10;
 	height: 7em;
 	font-size: 0.75em;
+	/* animation: colorchange 90s linear 1s infinite; */
 	/* border-top: solid 0.5em var(--softwhite); */
 	/* transition: top 0.3s; */
 }
@@ -261,6 +280,7 @@ input {
 	justify-content: center;
 	align-items: center;
 	padding: 0em 2em;
+	font-size: 16px;
 }
 
 /* LANDING & INTRO SECTION*/
@@ -272,6 +292,7 @@ input {
 	height: calc(100vh - 1em);
 	cursor: pointer;
 	padding: 1em;
+	font-size: 16px;
 }
 
 .intro {
@@ -360,6 +381,7 @@ input {
 	flex-direction: column;
 	padding: 5em 3.25em;
 	font-family: objectSansReg;
+	font-size: 16px;
 }
 
 .experience-cols {
@@ -371,7 +393,7 @@ input {
 
 .experience-content-col {
 	display: flex;
-	font-size: 1.75em;
+	font-size: 1.5em;
 	justify-content: center;
 }
 
@@ -420,22 +442,23 @@ input {
 	width: 100vw;
 	margin-bottom: 3em;
 	white-space: nowrap;
+	font-size: 16px;
 }
 
 .ticker-tape-wrapper {
 	display: table-cell;
 	position: relative;
-	animation: ticker-tape-scrolling 30s linear infinite running;
+	animation: ticker-tape-scrolling 15s linear infinite running;
 }
 
 .ticker-tape-item {
 	display: inline-block;
 	text-align: center;
-	padding: 0 1.25rem;
+	padding: 0 5rem;
 	font-family: objectSansBold;
-	font-size: 1.75em;
+	font-size: 1em;
 	letter-spacing: 2px;
-	width: 10em;
+	/* width: 10em; */
 	/* animation: wiggle 1s infinite; */
 }
 
@@ -447,6 +470,7 @@ input {
 	width: 100%;
 	padding: 0em 3em;
 	height: calc(100vh - 7em);
+	font-size: 16px;
 }
 
 .col-wrapper {
@@ -465,10 +489,9 @@ input {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 2em;
 	font-family: objectSansReg;
 	text-align: left;
-	padding: 1em 1em 0.5em 0em;
+	padding: 3em 1em 0.5em 0em;
 	width: 100%;
 	border-bottom: 2px solid var(--lime);
 	cursor: pointer;
@@ -483,9 +506,13 @@ input {
 	color: var(--hotpink);
 }
 
+.project-prev-title {
+	font-size: 1.5em;
+}
+
 .project-prev-tagline,
 .project-prev-stack {
-	font-size: 0.75em;
+	font-size: 1.25em;
 }
 
 /* *** MODAL/LIGHTBOX PROJECT DISPLAY ***  */
@@ -621,6 +648,7 @@ input {
 
 /* CONTACT SECTION */
 .contact-wrapper {
+	font-size: 16px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -641,7 +669,7 @@ input {
 .contact-col {
 	display: flex;
 	flex-direction: column;
-	font-size: 1.75em;
+	font-size: 1.5em;
 }
 
 #contact-content-col {
@@ -755,6 +783,29 @@ footer {
 	}
 }
 
+@keyframes colorchange {
+	0% {
+		background: var(--hotpink);
+
+		/* color: cyan; */
+	}
+	33% {
+		background: var(--lime);
+
+		/* color: magenta; */
+	}
+	66% {
+		background: var(--sea);
+
+		/* color: yellow; */
+	}
+	100% {
+		background: var(--flamingo);
+
+		/* color: cyan; */
+	}
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 786px) {
 	nav {
@@ -788,14 +839,6 @@ footer {
 	.social-links {
 		display: none;
 	}
-	/* .social-links {
-		justify-content: space-between;
-	}
-
-	.social-links > div {
-		margin: 0em;
-		margin-right: 0.5em;
-	} */
 
 	.about-content {
 		font-size: 20px;
