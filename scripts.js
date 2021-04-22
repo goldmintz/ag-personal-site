@@ -8,7 +8,7 @@ const personalMain = `<div class="intro-content fade-in">Ashley is a <span class
 
 const professionalAside = `<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>`;
 
-const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multidisciplinary experience designer </span> based in Chicago.</div>`;
+const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary developer </span> based in Chicago.</div>`;
 
 const personalAside = `<div id="intro-aside" class="fade-in">Here is <em>something personal</em> about me as an aside.</div>`;
 
@@ -116,7 +116,7 @@ window.addEventListener('scroll', changeNavLinkState);
 var prevScrollpos = window.pageYOffset;
 window.onscroll = () => {
 	var currentScrollPos = window.pageYOffset;
-	while (screen.width > 768) {
+	if (screen.width > 768) {
 		if (prevScrollpos > currentScrollPos) {
 			document.getElementById('navbar').style.top = '0';
 		} else {
