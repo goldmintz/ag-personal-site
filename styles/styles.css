@@ -1,7 +1,15 @@
 /* ***Color Palette*** */
 :root {
-	--background: whitesmoke;
-	--black: #000100;
+	--background: #fcf1d6;
+	--mainText: #001202;
+	--softPink: #f2a1b3;
+	--salmon: #f5baaf;
+	--marigold: #f7bd61;
+	--tangerine: #ef6a37;
+	--limeade: #bdcc3e;
+	--periwinkle: #8699df;
+
+	/* --black: #000100;
 	--deepBlue: #050411;
 	--sea: #2b9eb3;
 	--olive: #849324;
@@ -12,7 +20,7 @@
 	--lilac: #d7b8f3;
 	--softwhite: #f5f5f5;
 	--burgerBG: rgba(242, 100, 48, 0.95);
-	--gradientBG: linear-gradient(45deg, #d7b8f3, #2b9eb3, #fe938c), #ff69b4;
+	--gradientBG: linear-gradient(45deg, #d7b8f3, #2b9eb3, #fe938c), #ff69b4; */
 }
 
 @font-face {
@@ -41,8 +49,8 @@ body {
 	margin: 0;
 	font-family: Regular;
 	line-height: 1.6;
-	/* background: var(--deepBlue); */
-	/* color: var(--softwhite); */
+	background: var(--background);
+	color: var(--mainText);
 	overflow-x: hidden;
 	/* animation: colorchange 90s linear 1s infinite; */
 }
@@ -142,7 +150,7 @@ nav {
 	position: fixed;
 	top: 0;
 	/* background: var(--deepBlue); */
-	background: white;
+	background: var(--background);
 	z-index: 10;
 	height: 7em;
 	font-size: 16px;
@@ -296,6 +304,7 @@ input {
 	font-size: 4.75em;
 	line-height: 1;
 	font-family: Bold;
+	color: var(--mainText);
 }
 
 .intro-content p:first-of-type {
