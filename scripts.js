@@ -4,9 +4,9 @@ const introContent = document.querySelector('.intro-content');
 const landing = document.querySelector('.landing');
 const introAside = document.querySelector('#intro-aside');
 
-const personalMain = `<div class="intro-content fade-in">Ashley is a <span class="pink">mickey waffle connoisseur</span> and Sweet Potato's biggest simp.</div>`;
+const personalMain = `<div class="intro-content fade-in">Ashley is a <span>mickey waffle connoisseur</span> and Sweet Potato's biggest simp.</div>`;
 
-const professionalAside = `<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>`;
+// const professionalAside = `<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>`;
 
 const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary developer </span> based in Chicago.</div>`;
 
@@ -17,12 +17,12 @@ const toggleIntroText = () => {
 		introWrapper.classList.remove('professional');
 		introWrapper.classList.add('personal');
 		introWrapper.innerHTML = personalMain;
-		introAside.innerHTML = personalAside;
+		// introAside.innerHTML = personalAside;
 	} else if (introWrapper.classList.contains('personal')) {
 		introWrapper.classList.remove('personal');
 		introWrapper.classList.add('professional');
 		introWrapper.innerHTML = professionalMain;
-		introAside.innerHTML = professionalAside;
+		// introAside.innerHTML = professionalAside;
 	}
 };
 
@@ -30,26 +30,25 @@ const toggleIntroText = () => {
 
 // Reveal top nav links when page is scrolled //
 const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-const logoLoaded = document.querySelector('.logo-loaded');
-const logoScroll = document.querySelector('.logo-scroll');
+// const logoLoaded = document.querySelector('.logo-loaded');
+// const logoScroll = document.querySelector('.logo-scroll');
 const nav = document.querySelector('nav');
 
 let intViewportHeight = window.innerHeight;
 
-var revealNav = () => {
-	var y = window.pageYOffset;
+const revealNav = () => {
+	let y = window.pageYOffset;
 
-	console.log('revealfun running');
 	if (y >= intViewportHeight / 75) {
-		logoLoaded.style.display = 'none';
-		logoScroll.style.display = 'block';
-		nav.style.justifyContent = 'space-between';
+		// logoLoaded.style.display = 'none';
+		// logoScroll.style.display = 'block';
+		// nav.style.justifyContent = 'space-between';
 		navLinksWrapper.classList.add('show-nav');
 	}
 	if (y < 535) {
-		logoLoaded.style.display = 'block';
-		logoScroll.style.display = 'none';
-		nav.style.justifyContent = 'flex-end';
+		// logoLoaded.style.display = 'block';
+		// logoScroll.style.display = 'none';
+		// nav.style.justifyContent = 'flex-end';
 		navLinksWrapper.classList.remove('show-nav');
 	}
 };

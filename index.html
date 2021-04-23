@@ -13,19 +13,6 @@
 		<!-- Begin Header/Nav -->
 		<header>
 			<nav id="navbar">
-				<!-- logo visible only when scroll to top -->
-				<div class="logo logo-scroll fade-in">
-					<a href="#welcome">
-						a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz
-					</a>
-				</div>
-
-				<div class="logo logo-loaded fade-in">
-					<a href="#welcome">
-						a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz
-					</a>
-				</div>
-
 				<!-- Burgee Menu for Tablet and Mobile -->
 				<div class="burger-wrapper" onclick="toggleMenu()">
 					<input type="checkbox" class="toggle" id="menu-toggle" />
@@ -55,6 +42,12 @@
 					</div>
 				</div>
 
+				<div class="logo fade-in">
+					<a href="#welcome">
+						a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz
+					</a>
+				</div>
+
 				<div class="nav-links-wrapper fade-in">
 					<div>
 						<a class="nav-link" href="#experience" title="experience"
@@ -78,32 +71,26 @@
 		<!-- BEGIN PAGE CONTENT -->
 		<div class="page-wrapper">
 			<!-- End Landing/Intro Section-->
-			<section class="landing">
+			<section class="landing-wrapper">
 				<div class="intro fade-in professional" onclick="toggleIntroText()">
 					<div class="intro-content professional fade-in">
-						A. Goldmintz is a multi-disciplinary developer based in Chicago.
-						<!-- <img id="intro-img" src="./assets/images/giphy.gif" /> -->
+						<p>A. Goldmintz is a design-focused developer based in Chicago.</p>
 					</div>
 				</div>
 
-				<div class="intro-closing fade-in">
-					<div id="intro-aside">One liner only, please.</div>
-
-					<div class="social-links-wrapper">
-						<div class="social-link bump">
-							<a href="https://github.com/goldmintz" target="_blank">github</a>
-						</div>
-						<div class="social-link smaller">✿</div>
-						<div class="social-link bump">
-							<a
-								href="mailto:agoldmintz@gmail.com?subject=Hello from your site!"
-								>email</a
-							>
-						</div>
-						<div class="social-link smaller">✿</div>
-						<div class="social-link bump">
-							<a href="/PDF/AGoldmintz_Resume.pdf" target="_blank">resume</a>
-						</div>
+				<div class="social-links-wrapper">
+					<div class="social-link bump">
+						<a href="https://github.com/goldmintz" target="_blank">github</a>
+					</div>
+					<div class="social-link smaller">✿</div>
+					<div class="social-link bump">
+						<a href="mailto:agoldmintz@gmail.com?subject=Hello from your site!"
+							>email</a
+						>
+					</div>
+					<div class="social-link smaller">✿</div>
+					<div class="social-link bump">
+						<a href="/PDF/AGoldmintz_Resume.pdf" target="_blank">resume</a>
 					</div>
 				</div>
 			</section>
@@ -138,7 +125,7 @@
 
 					<div class="experience-content-col" id="experience-col-2">
 						<div class="experience-text">
-							<h4>subeading</h4>
+							<h4>subheading</h4>
 							<p>
 								Here's where I talk about my value prop, experience, and what I
 								am looking for. Lorem ipsum dolor sit amet consectetur
@@ -153,7 +140,6 @@
 
 			<!-- Begin Project Layout -->
 			<span class="section-anchor" id="projects"></span>
-
 			<section class="projects-wrapper">
 				<!-- Begin Ticker Tape Feature -->
 				<div class="ticker-tape">
