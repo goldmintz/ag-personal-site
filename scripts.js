@@ -3,25 +3,32 @@ const introWrapper = document.querySelector('.intro');
 const introContent = document.querySelector('.intro-content');
 const landing = document.querySelector('.landing');
 const introAside = document.querySelector('#intro-aside');
+const heart = document.getElementById('heart');
+const flower = document.getElementById('flower');
 
 const personalMain = `<div class="intro-content fade-in">Ashley is a <span>mickey waffle connoisseur</span> and Sweet Potato's biggest simp.</div>`;
 
 // const professionalAside = `<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>`;
+// const personalAside = `<div id="intro-aside" class="fade-in">Here is <em>something personal</em> about me as an aside.</div>`;
 
 const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary developer </span> based in Chicago.</div>`;
-
-const personalAside = `<div id="intro-aside" class="fade-in">Here is <em>something personal</em> about me as an aside.</div>`;
 
 const toggleIntroText = () => {
 	if (introWrapper.classList.contains('professional')) {
 		introWrapper.classList.remove('professional');
 		introWrapper.classList.add('personal');
 		introWrapper.innerHTML = personalMain;
+		heart.style.display = 'none';
+		flower.style.display = 'block';
+
 		// introAside.innerHTML = personalAside;
 	} else if (introWrapper.classList.contains('personal')) {
 		introWrapper.classList.remove('personal');
 		introWrapper.classList.add('professional');
 		introWrapper.innerHTML = professionalMain;
+		heart.style.display = 'block';
+		flower.style.display = 'none';
+
 		// introAside.innerHTML = professionalAside;
 	}
 };
@@ -140,3 +147,46 @@ const outerDiv = document.getElementById('ticker-wrapper');
 techStack.forEach((tech) => {
 	outerDiv.innerHTML += `<div class="ticker-tape-item">${tech}</div>`;
 });
+
+// Draggable Elements
+const dragEl = (el) => {
+	var pos1 = 0,
+		pos2 = 0,
+		pos3 = 0,
+		pos4 = 0;
+
+	const dragMouseDown = (e) => {
+		e = e || window.event;
+		e.preventDefault();
+		// get the mouse cursor position
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmouseup = closeDragElement;
+		// call function when  cursor moves
+		document.onmousemove = elementDrag;
+	};
+
+	el.onmousedown = dragMouseDown;
+
+	const elementDrag = (e) => {
+		e = e || window.event;
+		e.preventDefault();
+		// calculate new cursor position
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		// set element's new position:
+		el.style.top = el.offsetTop - pos2 + 'px';
+		el.style.left = el.offsetLeft - pos1 + 'px';
+	};
+
+	const closeDragElement = () => {
+		// stop moving when mouse button is released:
+		document.onmouseup = null;
+		document.onmousemove = null;
+	};
+};
+
+dragEl(document.getElementById('flower'));
+dragEl(document.getElementById('heart'));
