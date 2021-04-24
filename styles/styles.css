@@ -83,9 +83,9 @@ a {
 	font-family: Regular;
 }
 
-/* a:visited {
-	color: var(--softwhite);
-} */
+a:visited {
+	color: var(--mainText);
+}
 
 h1,
 h2,
@@ -133,6 +133,11 @@ li {
 	position: absolute;
 }
 
+/* Text Styling */
+mark {
+	background-color: var(--darkenedBG);
+}
+
 /* Remove underline from project modal title  */
 .modal-title.section-header::after {
 	content: none;
@@ -152,6 +157,7 @@ nav {
 	height: 5em;
 	font-size: 16px;
 	transition: top 0.5s;
+	border-top: 0.25em solid var(--mainText);
 }
 
 nav a {
@@ -325,7 +331,6 @@ input {
 	letter-spacing: 2px;
 	font-size: 1em;
 	cursor: pointer;
-	color: var(--hotpink);
 	text-align: right;
 	font-family: Regular;
 }
@@ -490,7 +495,7 @@ input {
 	left: -100vw;
 	opacity: 0;
 	z-index: 100;
-	/* height: 100vh; */
+	height: 100vh;
 	font-size: 16px;
 }
 
@@ -523,22 +528,21 @@ input {
 	align-items: center;
 	position: fixed;
 	top: 0;
-	background: white;
-	/* background: var(--deepBlue); */
+	animation: colorchange 120s linear 1s infinite;
 	z-index: 10;
-	height: 7em;
+	height: 5em;
 	font-size: 16px;
 }
 
 .modal-controls .logo a {
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
 /* Content inside div */
 .modal-wrapper {
 	transition: top 1s;
-	background: white;
-	/* background: var(--deepBlue); */
+	animation: colorchange 120s linear 1s infinite;
+	height: calc(100vh - 5em);
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
 	scrollbar-width: none; /* Firefox */
 }
@@ -549,11 +553,11 @@ input {
 
 .modal-main-content {
 	display: flex;
-	height: 100%;
+	/* height: 100%; */
 	width: 100%;
 	flex-direction: column;
 	padding: 3em 5em;
-	margin-top: 7em;
+	margin-top: 5em;
 }
 
 .modal-title.section-header {
@@ -569,7 +573,7 @@ input {
 }
 
 .project-overview-col {
-	font-size: 1.5em;
+	font-size: 1.25em;
 	width: 60%;
 }
 
@@ -657,7 +661,7 @@ footer {
 }
 
 .bump:hover {
-	transform: translateY(-0.2em);
+	transform: translateY(-0.3em);
 }
 
 .grow:hover {
@@ -781,6 +785,10 @@ footer {
 		margin-top: 5em;
 	}
 
+	.section-header {
+		white-space: nowrap;
+	}
+
 	p {
 		font-family: Regular;
 		font-size: 1.25em;
@@ -788,6 +796,7 @@ footer {
 
 	.logo {
 		align-self: center;
+		font-size: 1.25em;
 	}
 
 	/* Show logo on left side of nav  */
@@ -831,7 +840,7 @@ footer {
 	.burger > div {
 		position: relative;
 		width: 100%;
-		height: 0.5em;
+		height: 0.25em;
 		background-color: var(--mainText);
 		display: flex;
 		align-items: center;
@@ -846,7 +855,7 @@ footer {
 		position: absolute;
 		top: -1em;
 		width: 100%;
-		height: 0.5em;
+		height: 0.25em;
 		background-color: inherit;
 	}
 
@@ -880,7 +889,7 @@ footer {
 	}
 
 	.burger-menu > div {
-		background-color: var(--burgerBG);
+		animation: colorchange 120s linear 1s infinite;
 		width: 100vw;
 		height: 100vh;
 		display: flex;
@@ -895,6 +904,7 @@ footer {
 	.burger-link-wrapper {
 		display: flex;
 		flex-direction: column;
+		padding: 3em;
 	}
 
 	.burger-link {
@@ -922,17 +932,17 @@ footer {
 
 	.landing-wrapper {
 		height: unset;
+		padding: unset;
 	}
 
 	.intro {
-		margin-top: 2em;
+		margin: 2em 0em;
 		justify-content: center;
-		background-color: red;
+		max-height: 80vh;
 	}
 
 	.intro-content {
 		font-size: 3em;
-		width: 100%;
 	}
 
 	.social-links-wrapper {
@@ -943,6 +953,7 @@ footer {
 	.experience-wrapper {
 		height: unset;
 		padding: unset;
+		margin: unset;
 	}
 
 	.experience-cols {
