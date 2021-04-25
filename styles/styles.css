@@ -51,8 +51,7 @@ html {
 }
 
 .hide-scroll {
-	overflow: hidden;
-	position: fixed;
+	overflow-y: hidden;
 }
 
 section {
@@ -720,7 +719,9 @@ footer {
 	display: flex;
 	height: 2em;
 	width: 100%;
-	background: var(--lime);
+	background: var(--darkenedBG);
+	align-items: center;
+	padding: 3em;
 }
 
 /* TRANSITION CLASSES */
