@@ -21,24 +21,22 @@ const toggleIntroText = () => {
 		heart.style.display = 'none';
 		flower.style.display = 'block';
 
-		// introAside.innerHTML = personalAside;
 	} else if (introWrapper.classList.contains('personal')) {
 		introWrapper.classList.remove('personal');
 		introWrapper.classList.add('professional');
 		introWrapper.innerHTML = professionalMain;
 		heart.style.display = 'block';
 		flower.style.display = 'none';
-
-		// introAside.innerHTML = professionalAside;
 	}
 };
+
+
+
 
 //  ***SCROLL BEHAVIOR*** //
 
 // Reveal top nav links when page is scrolled //
 const navLinksWrapper = document.querySelector('.nav-links-wrapper');
-// const logoLoaded = document.querySelector('.logo-loaded');
-// const logoScroll = document.querySelector('.logo-scroll');
 const nav = document.querySelector('nav');
 
 let intViewportHeight = window.innerHeight;
@@ -47,15 +45,9 @@ const revealNav = () => {
 	let y = window.pageYOffset;
 
 	if (y >= intViewportHeight / 75) {
-		// logoLoaded.style.display = 'none';
-		// logoScroll.style.display = 'block';
-		// nav.style.justifyContent = 'space-between';
 		navLinksWrapper.classList.add('show-nav');
 	}
 	if (y < 535) {
-		// logoLoaded.style.display = 'block';
-		// logoScroll.style.display = 'none';
-		// nav.style.justifyContent = 'flex-end';
 		navLinksWrapper.classList.remove('show-nav');
 	}
 };
@@ -92,6 +84,7 @@ for (let i = 0, a; (a = modalLink[i]); i++) {
 
 // Prevent refresh when user closes modal (otherwise, user is brought to top of page)
 const closeModal = document.querySelectorAll('.close-modal');
+const openModal = document.querySelectorAll('.modal-link');
 
 const anchorClose = (e) => {
 	e.preventDefault();

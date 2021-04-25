@@ -3,6 +3,7 @@
 	--background: #fcf1d6;
 	--mainText: #001202;
 	--darkenedBG: rgba(0, 0, 0, 0.2);
+	--evenDarkerBG: rgba(0, 0, 0, 0.4);
 
 	--softPink: #f2a1b3;
 	--salmon: #f5baaf;
@@ -51,6 +52,7 @@ html {
 
 .hide-scroll {
 	overflow: hidden;
+	position: fixed;
 }
 
 section {
@@ -135,6 +137,7 @@ li {
 
 /* Text Styling */
 mark {
+	color: var(--mainText);
 	background-color: var(--darkenedBG);
 }
 
@@ -205,7 +208,6 @@ nav a {
 }
 
 .active-nav:hover {
-	border-bottom: none;
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='black' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 	background-position: 0 100%;
 	background-size: auto 5px;
@@ -276,19 +278,19 @@ nav a {
 	padding: 0 1em;
 	margin-right: 1em;
 	text-align: center;
-	background: var(--hotpink);
 	font-size: 1em;
-	color: var(--softwhite);
 	letter-spacing: 1px;
 	border: none;
 	font-family: Regular;
 	letter-spacing: 1px;
 	cursor: pointer;
 	outline: 1px solid var(--mainText);
+	background: var(--darkenedBG);
+	transition: 0.2s ease-in-out;
 }
 
 #resume-btn:hover {
-	background: var(--darkenedBG);
+	background: var(--evenDarkerBG);
 }
 
 .burger-menu,
@@ -476,6 +478,7 @@ input {
 	display: table-cell;
 	position: relative;
 	animation: ticker-tape-scrolling 15s linear infinite running;
+	transform: translate(45deg);
 }
 
 .ticker-tape-item {
@@ -549,15 +552,6 @@ input {
 
 /* *** MODAL/LIGHTBOX PROJECT DISPLAY ***  */
 
-.modal {
-	transition: left 0s 1s, opacity 1s;
-	left: -100vw;
-	opacity: 0;
-	z-index: 100;
-	height: 100vh;
-	font-size: 16px;
-}
-
 .modal,
 .modal > a {
 	position: fixed;
@@ -565,6 +559,15 @@ input {
 	/* set a/link wrapper around modal content */
 	width: 100%;
 	height: 100%;
+}
+
+.modal {
+	transition: left 0s 1s, opacity 1s;
+	left: -100vw;
+	opacity: 0;
+	z-index: 100;
+	font-size: 16px;
+	overflow: hidden;
 }
 
 .modal > a {
@@ -601,7 +604,8 @@ input {
 .modal-wrapper {
 	transition: top 1s;
 	animation: colorchange 120s linear 1s infinite;
-	height: calc(100vh - 5em);
+	height: 100vh;
+
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
 	scrollbar-width: none; /* Firefox */
 }
@@ -612,8 +616,8 @@ input {
 
 .modal-main-content {
 	display: flex;
-	/* height: 100%; */
 	width: 100%;
+	height: 100%;
 	flex-direction: column;
 	padding: 3em 5em;
 	margin-top: 5em;
@@ -629,6 +633,7 @@ input {
 	display: flex;
 	gap: 3em;
 	line-height: 1.25;
+	height: 50%;
 }
 
 .project-overview-col {
@@ -644,6 +649,7 @@ input {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	height: auto;
 }
 
 .project-details-wrapper {
@@ -652,10 +658,15 @@ input {
 	flex-direction: row;
 	justify-content: space-between;
 	gap: 10em;
+	height: 50%;
 }
 
 .project-details-col {
 	flex: 1;
+}
+
+.project-details-col > .section-header {
+	margin-bottom: 2em;
 }
 
 .detail-content {
