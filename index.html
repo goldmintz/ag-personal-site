@@ -75,9 +75,12 @@
 				<!-- Draggable Elements for Fun -->
 
 				<div id="flower" class="fade-in">✿</div>
-				<div id="heart" class="fade-in">♡</div>
+				<div id="heart" class="fade-in">❤</div>
+				<div id="learn-more" onclick="toggleIntroText()">
+					click to learn more
+				</div>
 
-				<div class="intro fade-in professional" onclick="toggleIntroText()">
+				<div class="intro fade-in professional">
 					<div class="intro-content professional fade-in">
 						<p>
 							A. Goldmintz is a
@@ -90,13 +93,18 @@
 					<div class="social-link bump">
 						<a href="https://github.com/goldmintz" target="_blank">github</a>
 					</div>
-					<div class="social-link smaller">✿</div>
-					<div class="social-link bump">
-						<a href="mailto:agoldmintz@gmail.com?subject=Hello from your site!"
-							>email</a
-						>
+					<div class="social-link smaller">⚘</div>
+					<div
+						class="social-link bump tooltip"
+						id="email-link"
+						onclick="copyToClipboard()"
+						aria-label="click to copy"
+					>
+						<!-- href="mailto:agoldmintz@gmail.com?subject=Hello from your site!" -->
+
+						email
 					</div>
-					<div class="social-link smaller">✿</div>
+					<div class="social-link smaller">⚘</div>
 					<div class="social-link bump">
 						<a href="/PDF/AGoldmintz_Resume.pdf" target="_blank">resume</a>
 					</div>

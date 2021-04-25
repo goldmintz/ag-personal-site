@@ -5,6 +5,7 @@ const landing = document.querySelector('.landing');
 const introAside = document.querySelector('#intro-aside');
 const heart = document.getElementById('heart');
 const flower = document.getElementById('flower');
+const learnMore = document.getElementById('learn-more');
 
 const personalMain = `<div class="intro-content fade-in">Ashley is a <span>mickey waffle connoisseur</span> and Sweet Potato's biggest simp.</div>`;
 
@@ -20,7 +21,6 @@ const toggleIntroText = () => {
 		introWrapper.innerHTML = personalMain;
 		heart.style.display = 'none';
 		flower.style.display = 'block';
-
 	} else if (introWrapper.classList.contains('personal')) {
 		introWrapper.classList.remove('personal');
 		introWrapper.classList.add('professional');
@@ -30,8 +30,31 @@ const toggleIntroText = () => {
 	}
 };
 
+// COPY EMAIL TO CLIPBOARD
 
+const copyToClipboard = () => {
+	const emailLink = document.getElementById('email-link');
 
+	//create a temporary element and add email as value
+	const tempEl = document.createElement('textarea');
+	tempEl.value = 'agoldmintz@gmail.com';
+
+	//avoid flickering and usability issues by 'hiding' element and making read-only
+	tempEl.setAttribute('readonly', '');
+	tempEl.style.position = 'absolute';
+	tempEl.style.left = '-9999px';
+
+	//add and select to run copy command
+	document.body.appendChild(tempEl);
+	tempEl.select();
+	document.execCommand('copy');
+	document.body.removeChild(tempEl);
+	emailLink.setAttribute('aria-label', 'email copied!');
+
+	setTimeout(() => {
+		emailLink.setAttribute('aria-label', 'click to copy');
+	}, 5000);
+};
 
 //  ***SCROLL BEHAVIOR*** //
 

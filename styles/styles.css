@@ -42,7 +42,7 @@ body {
 	background: var(--background);
 	color: var(--mainText);
 	overflow-x: hidden;
-	animation: colorchange 120s linear 1s infinite;
+	animation: colorChange 120s linear 1s infinite;
 	font-size: 16px;
 }
 
@@ -190,7 +190,7 @@ nav {
 	align-items: center;
 	position: fixed;
 	top: 0;
-	animation: colorchange 120s linear 1s infinite;
+	animation: colorChange 120s linear 1s infinite;
 	z-index: 10;
 	height: 5em;
 	font-size: 16px;
@@ -324,10 +324,12 @@ input {
 #flower {
 	position: absolute;
 	text-align: center;
+	right: 1.25em;
 	cursor: move;
 	z-index: 10;
 	font-size: 10em;
 	display: none;
+	animation: spin 6s linear infinite;
 }
 
 #heart {
@@ -337,9 +339,20 @@ input {
 	top: 2em;
 	cursor: move;
 	z-index: 10;
-	transform: rotate(15deg);
-
 	font-size: 10em;
+	color: pink;
+}
+
+#learn-more {
+	position: absolute;
+	text-align: center;
+	right: 2em;
+	top: 2em;
+	cursor: move;
+	z-index: 10;
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 50%;
 }
 
 .intro {
@@ -350,13 +363,13 @@ input {
 	max-height: 35em;
 }
 
-.intro.professional {
+/* .intro.professional {
 	cursor: url('/assets/cursor_daisy.png'), pointer;
 }
 
 .intro.personal {
 	cursor: url('/assets/cursor_daisy.png'), pointer;
-}
+} */
 
 .intro-content {
 	margin-top: auto;
@@ -386,17 +399,17 @@ input {
 	align-items: center;
 }
 
-.social-link a {
+.social-link {
+	position: relative;
+}
+.social-link a,
+#email-link {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 1em;
 	cursor: pointer;
 	text-align: right;
 	font-family: Regular;
-}
-
-.social-link a:hover {
-	color: var(--clementine);
 }
 
 .social-link.smaller {
@@ -407,6 +420,28 @@ input {
 	text-align: center;
 	/* padding-top: 0.25em; */
 	color: var(--olive);
+}
+
+#email-link::after {
+	/* content: 'copy email'; */
+	content: attr(aria-label);
+	top: 0;
+	left: 50%;
+	white-space: nowrap;
+	transform: translate(-50%, -125%);
+	background-color: var(--darkenedBG);
+	display: none;
+	position: absolute;
+	text-align: center;
+	z-index: 999;
+	font-size: 0.75em;
+	padding: 0.5em;
+	text-transform: lowercase;
+	border-bottom: 0.15em solid var(--mainText);
+}
+
+#email-link:hover::after {
+	display: block;
 }
 
 /* EXPERIENCE SECTION */
@@ -589,7 +624,7 @@ input {
 	align-items: center;
 	position: fixed;
 	top: 0;
-	animation: colorchange 120s linear 1s infinite;
+	animation: colorChange 120s linear 1s infinite;
 	z-index: 10;
 	height: 5em;
 	font-size: 16px;
@@ -602,7 +637,7 @@ input {
 /* Content inside div */
 .modal-wrapper {
 	transition: top 1s;
-	animation: colorchange 120s linear 1s infinite;
+	animation: colorChange 120s linear 1s infinite;
 	height: 100vh;
 
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -816,7 +851,7 @@ footer {
 	}
 }
 
-@keyframes colorchange {
+@keyframes colorChange {
 	0% {
 		background: var(--softPink);
 	}
@@ -829,6 +864,13 @@ footer {
 	100% {
 		background: var(--periwinkle);
 		/* color: cyan; */
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
 
@@ -954,7 +996,7 @@ footer {
 	}
 
 	.burger-menu > div {
-		animation: colorchange 120s linear 1s infinite;
+		animation: colorChange 120s linear 1s infinite;
 		width: 100vw;
 		height: 100vh;
 		display: flex;
