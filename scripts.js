@@ -7,12 +7,9 @@ const heart = document.getElementById('heart');
 const flower = document.getElementById('flower');
 const learnMore = document.getElementById('learn-more');
 
-const personalMain = `<div class="intro-content fade-in">Ashley is a <span>mickey waffle connoisseur</span> and Sweet Potato's biggest simp.</div>`;
+const personalMain = `<div class="intro-content fade-in">Ashley is a henkeeper and Sweet Potato's biggest simp.</div>`;
 
-// const professionalAside = `<div id="intro-aside" class="fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora!</div>`;
-// const personalAside = `<div id="intro-aside" class="fade-in">Here is <em>something personal</em> about me as an aside.</div>`;
-
-const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a <span class="lime">multi-disciplinary developer </span> based in Chicago.</div>`;
+const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a multi-disciplinary developer based in Chicago.</div>`;
 
 const toggleIntroText = () => {
 	if (introWrapper.classList.contains('professional')) {
@@ -35,25 +32,32 @@ const toggleIntroText = () => {
 const copyToClipboard = () => {
 	const emailLink = document.getElementById('email-link');
 
-	//create a temporary element and add email as value
-	const tempEl = document.createElement('textarea');
-	tempEl.value = 'agoldmintz@gmail.com';
+	try {
+		//create a temporary element and add email as value
+		const tempEl = document.createElement('textarea');
+		tempEl.value = 'agoldmintz@gmail.com';
 
-	//avoid flickering and usability issues by 'hiding' element and making read-only
-	tempEl.setAttribute('readonly', '');
-	tempEl.style.position = 'absolute';
-	tempEl.style.left = '-9999px';
+		//avoid flickering and usability issues by 'hiding' element and making read-only
+		tempEl.setAttribute('readonly', '');
+		tempEl.style.position = 'absolute';
+		tempEl.style.left = '-9999px';
 
-	//add and select to run copy command
-	document.body.appendChild(tempEl);
-	tempEl.select();
-	document.execCommand('copy');
-	document.body.removeChild(tempEl);
-	emailLink.setAttribute('aria-label', 'email copied!');
+		//add and select to run copy command
+		document.body.appendChild(tempEl);
+		tempEl.select();
+		document.execCommand('copy');
+		document.body.removeChild(tempEl);
 
-	setTimeout(() => {
-		emailLink.setAttribute('aria-label', 'click to copy');
-	}, 5000);
+		//let user know
+		emailLink.setAttribute('aria-label', 'email copied!');
+
+		//switch copy back to default after 5 seconds
+		setTimeout(() => {
+			emailLink.setAttribute('aria-label', 'click to copy');
+		}, 5000);
+	} catch (error) {
+		alert(`Oops, can't copy that email address!`);
+	}
 };
 
 //  ***SCROLL BEHAVIOR*** //
@@ -206,3 +210,4 @@ const dragEl = (el) => {
 
 dragEl(document.getElementById('flower'));
 dragEl(document.getElementById('heart'));
+dragEl(document.getElementById('learn-more'));

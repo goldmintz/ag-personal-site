@@ -30,7 +30,7 @@
 
 * {
 	box-sizing: border-box;
-	/* outline: 1px solid black; */
+	outline: 1px solid black;
 }
 
 html,
@@ -321,38 +321,34 @@ input {
 }
 
 /* Draggable Elements */
-#flower {
+.draggable {
 	position: absolute;
+	height: max-content;
+	width: max-content;
 	text-align: center;
-	right: 1.25em;
 	cursor: move;
 	z-index: 10;
-	font-size: 10em;
+}
+#flower {
+	right: 1.25em;
+	font-size: 8em;
 	display: none;
 	animation: spin 6s linear infinite;
 }
 
 #heart {
-	position: absolute;
-	text-align: center;
+	display: block;
 	right: 2em;
 	top: 2em;
-	cursor: move;
-	z-index: 10;
 	font-size: 10em;
 	color: pink;
 }
 
 #learn-more {
-	position: absolute;
-	text-align: center;
 	right: 2em;
 	top: 2em;
-	cursor: move;
-	z-index: 10;
 	font-size: 1em;
 	cursor: pointer;
-	border-radius: 50%;
 }
 
 .intro {
@@ -397,17 +393,18 @@ input {
 	align-self: flex-end;
 	justify-content: space-around;
 	align-items: center;
+	cursor: pointer;
 }
 
 .social-link {
 	position: relative;
 }
+
 .social-link a,
 #email-link {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 1em;
-	cursor: pointer;
 	text-align: right;
 	font-family: Regular;
 }
@@ -745,8 +742,9 @@ input {
 #contact-headshot-col img {
 	height: 80%;
 	width: 80%;
-	transform: rotate(40deg);
+	/* transform: rotate(40deg); */
 	align-self: center;
+	background-color: var(--darkenedBG);
 }
 
 /* FOOTER SECTION */
@@ -1040,6 +1038,12 @@ footer {
 	.landing-wrapper {
 		height: unset;
 		padding: unset;
+	}
+
+	#heart,
+	#flower,
+	#learn-more {
+		display: none;
 	}
 
 	.intro {
