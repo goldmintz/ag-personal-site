@@ -42,7 +42,7 @@ body {
 	background: var(--background);
 	color: var(--mainText);
 	overflow-x: hidden;
-	animation: colorChange 120s linear 1s infinite;
+	animation: colorChange 120s infinite alternate;
 	font-size: 16px;
 }
 
@@ -190,7 +190,7 @@ nav {
 	align-items: center;
 	position: fixed;
 	top: 0;
-	animation: colorChange 120s linear 1s infinite;
+	animation: colorChange 120s infinite alternate;
 	z-index: 10;
 	height: 5em;
 	font-size: 16px;
@@ -529,7 +529,7 @@ input {
 .ticker-tape-wrapper {
 	display: table-cell;
 	position: relative;
-	animation: ticker-tape-scrolling 15s linear infinite running;
+	animation: ticker-tape-scrolling 15s infinite linear;
 	transform: translate(45deg);
 }
 
@@ -642,7 +642,7 @@ input {
 	align-items: center;
 	position: fixed;
 	top: 0;
-	animation: colorChange 120s linear 1s infinite;
+	animation: colorChange 120s infinite alternate;
 	z-index: 10;
 	height: 5em;
 	font-size: 16px;
@@ -655,7 +655,7 @@ input {
 /* Content inside div */
 .modal-wrapper {
 	transition: top 1s;
-	animation: colorChange 120s linear 1s infinite;
+	animation: colorChange 120s infinite alternate;
 	height: 100vh;
 
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -862,11 +862,18 @@ footer {
 
 /* Ticker Tape Band with Tech Stack Scrolling */
 @keyframes ticker-tape-scrolling {
-	0% {
+	/* 0% {
 		left: 0;
 	}
 	100% {
 		left: -50%;
+	} */
+
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-100%, 0);
 	}
 }
 
@@ -1042,7 +1049,7 @@ footer {
 	}
 
 	.burger-menu > div {
-		animation: colorChange 120s linear 1s infinite;
+		animation: colorChange 120s infinite alternate;
 		width: 100vw;
 		height: 100vh;
 		display: flex;
