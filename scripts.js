@@ -2,10 +2,8 @@
 const introWrapper = document.querySelector('.intro');
 const introContent = document.querySelector('.intro-content');
 const landing = document.querySelector('.landing');
-const introAside = document.querySelector('#intro-aside');
 const heart = document.getElementById('heart');
 const flower = document.getElementById('flower');
-const learnMore = document.getElementById('learn-more');
 
 const personalMain = `<div class="intro-content fade-in">Ashley is a henkeeper and Sweet Potato's biggest simp.</div>`;
 
@@ -16,13 +14,13 @@ const toggleIntroText = () => {
 		introWrapper.classList.remove('professional');
 		introWrapper.classList.add('personal');
 		introWrapper.innerHTML = personalMain;
-		heart.style.display = 'none';
+		// heart.style.display = 'none';
 		flower.style.display = 'block';
 	} else if (introWrapper.classList.contains('personal')) {
 		introWrapper.classList.remove('personal');
 		introWrapper.classList.add('professional');
 		introWrapper.innerHTML = professionalMain;
-		heart.style.display = 'block';
+		// heart.style.display = 'block';
 		flower.style.display = 'none';
 	}
 };
@@ -208,10 +206,10 @@ const dragEl = (el) => {
 	};
 };
 
-dragEl(document.getElementById('flower'));
-dragEl(document.getElementById('heart'));
-dragEl(document.getElementById('learn-more'));
-dragEl(document.getElementById('circle-badge'));
+const draggableElements = ['flower', 'circle-badge'];
+draggableElements.forEach((draggableEl) => {
+	return dragEl(document.getElementById(draggableEl));
+});
 
 //Create circular badge
 const slice = (selector, context) => {
@@ -226,28 +224,50 @@ slice('.circular').forEach((el) => {
 	let svg = document.createElementNS(NS, 'svg');
 	//make the svg a circle
 	svg.setAttribute('viewBox', '0 0 100 100');
-
 	let circle = document.createElementNS(NS, 'path');
-	// circle.setAttribute('stroke', 'black');
 	circle.setAttribute('fill', 'black');
 	circle.setAttribute('fill-opacity', '.15');
 	circle.setAttribute('d', 'M0,50 a50,50 0 1,1 0,1z');
 	circle.setAttribute('id', 'circle');
 
-	var text = document.createElementNS(NS, 'text');
-	var textPath = document.createElementNS(NS, 'textPath');
-	textPath.setAttributeNS(
+	// Make text around circle
+	let outertText = document.createElementNS(NS, 'text');
+	let outerTextPath = document.createElementNS(NS, 'textPath');
+	outerTextPath.setAttributeNS(
 		'http://www.w3.org/1999/xlink',
 		'xlink:href',
 		'#circle',
 	);
+	outerTextPath.textContent = el.textContent;
+	outertText.appendChild(outerTextPath);
 
-	textPath.textContent = el.textContent;
-	text.appendChild(textPath);
-
+	// Put it all together
 	svg.appendChild(circle);
-	svg.appendChild(text);
+	svg.appendChild(outertText);
 
 	el.textContent = '';
 	el.appendChild(svg);
+});
+
+const slidingEls = document.querySelectorAll('.slide-in');
+const appearOptions = {
+	//since some elements might be off-screen on load, set the threshold as low as possible
+	threshold: 0,
+};
+
+const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+	entries.forEach((entry) => {
+		// dont look for it if it's not on screen
+		if (!entry.isIntersecting) {
+			return;
+		} else {
+			entry.target.classList.add('appear');
+			appearOnScroll.unobserve(entry.target);
+			console.log('I see you!');
+		}
+	});
+}, appearOptions);
+
+slidingEls.forEach((el) => {
+	appearOnScroll.observe(el);
 });

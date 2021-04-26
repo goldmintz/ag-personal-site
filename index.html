@@ -75,42 +75,48 @@
 				<!-- Draggable Elements for Fun -->
 
 				<div id="flower" class="fade-in draggable">✿</div>
-				<div id="heart" class="fade-in draggable"><div>❤</div></div>
-				<div id="learn-more" class="draggable" onclick="toggleIntroText()">
+				<!-- <div id="heart" class="fade-in draggable"><div>❤</div></div> -->
+				<!-- <div id="learn-more" class="draggable" onclick="toggleIntroText()">
 					click to learn more
-				</div>
+				</div> -->
 
-				<div class="circular draggable" id="circle-badge">
+				<div
+					class="circular draggable"
+					id="circle-badge"
+					onclick="toggleIntroText()"
+				>
 					circular text goes here and here
 				</div>
 
 				<div class="intro fade-in professional">
 					<div class="intro-content professional fade-in">
-						<p>
-							A. Goldmintz is a
-							<mark>design-focused</mark> developer based in Chicago.
-						</p>
+						<p>A. Goldmintz is a design-focused developer based in Chicago.</p>
 					</div>
 				</div>
 
-				<div class="social-links-wrapper">
-					<div class="social-link bump">
-						<a href="https://github.com/goldmintz" target="_blank">github</a>
+				<div class="intro-closing-wrapper">
+					<div id="view-more" class="bounce">
+						<a href="#experience">☟</a>
 					</div>
-					<div class="social-link smaller">⚘</div>
-					<div
-						class="social-link bump tooltip"
-						id="email-link"
-						onclick="copyToClipboard()"
-						aria-label="click to copy"
-					>
-						<!-- href="mailto:agoldmintz@gmail.com?subject=Hello from your site!" -->
+					<div class="social-links-wrapper">
+						<div class="social-link bump">
+							<a href="https://github.com/goldmintz" target="_blank">github</a>
+						</div>
+						<div class="social-link smaller">⚘</div>
+						<div
+							class="social-link bump tooltip"
+							id="email-link"
+							onclick="copyToClipboard()"
+							aria-label="click to copy"
+						>
+							<!-- href="mailto:agoldmintz@gmail.com?subject=Hello from your site!" -->
 
-						email
-					</div>
-					<div class="social-link smaller">⚘</div>
-					<div class="social-link bump">
-						<a href="/PDF/AGoldmintz_Resume.pdf" target="_blank">resume</a>
+							email
+						</div>
+						<div class="social-link smaller">⚘</div>
+						<div class="social-link bump">
+							<a href="/PDF/AGoldmintz_Resume.pdf" target="_blank">resume</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -144,13 +150,13 @@
 					</div>
 
 					<div class="experience-content-col" id="experience-col-2">
-						<div class="experience-text">
+						<div class="experience-text slide-in from-right">
 							<h4>subheading</h4>
 							<p>
 								Here's where I talk about my value prop, experience, and what I
 								am looking for. Lorem ipsum dolor sit amet consectetur
 								adipisicing elit. Molestiae tempora iste non incidunt magnam
-								porro pariatur accusamus. Ratione?
+								porro pariatur accusamus. loooook?
 							</p>
 						</div>
 					</div>
