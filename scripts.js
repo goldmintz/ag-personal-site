@@ -1,25 +1,42 @@
 //Toggle between professional and personal mode
-const introWrapper = document.querySelector('.intro');
-const introContent = document.querySelector('.intro-content');
+const introText = document.querySelector('.intro');
 const landing = document.querySelector('.landing');
 const heart = document.getElementById('heart');
 const flower = document.getElementById('flower');
 
-const personalMain = `<div class="intro-content fade-in">Ashley is a henkeeper and Sweet Potato's biggest simp.</div>`;
+//items[Math.floor(Math.random() * items.length)];
 
-const professionalMain = `<div class="intro-content fade-in">A. Goldmintz is a multi-disciplinary developer based in Chicago.</div>`;
-
+const personalQuotes = [
+	`Ash is a henkeeper of four chunky Chicago chickens.`,
+	`Ash is a fan of bucket hats and crocs in summer.`,
+	'Personal quote 3',
+	'Personal quote 4',
+	'Personal quote 5',
+	'Personal quote 6',
+];
+const professionalQuotes = [
+	`Ash is a multi-disciplinary developer based in Chicago`,
+	'Ash wants you to check out her GitHub',
+	'Professional quote 3',
+	'Professional quote 4',
+	'Professional quote 5',
+	'Professional quote 6',
+];
 const toggleIntroText = () => {
-	if (introWrapper.classList.contains('professional')) {
-		introWrapper.classList.remove('professional');
-		introWrapper.classList.add('personal');
-		introWrapper.innerHTML = personalMain;
+	if (introText.classList.contains('professional')) {
+		introText.classList.remove('professional');
+		introText.classList.add('personal');
+		introText.innerHTML = `<div class='intro-content fade-in'>${
+			personalQuotes[Math.floor(Math.random() * personalQuotes.length)]
+		}</div>`;
 		// heart.style.display = 'none';
 		flower.style.display = 'block';
-	} else if (introWrapper.classList.contains('personal')) {
-		introWrapper.classList.remove('personal');
-		introWrapper.classList.add('professional');
-		introWrapper.innerHTML = professionalMain;
+	} else if (introText.classList.contains('personal')) {
+		introText.classList.remove('personal');
+		introText.classList.add('professional');
+		introText.innerHTML = `<div class='intro-content fade-in'>${
+			professionalQuotes[Math.floor(Math.random() * professionalQuotes.length)]
+		}</div>`;
 		// heart.style.display = 'block';
 		flower.style.display = 'none';
 	}
@@ -59,7 +76,6 @@ const copyToClipboard = () => {
 };
 
 //  ***SCROLL BEHAVIOR*** //
-
 // Reveal top nav links when page is scrolled //
 const navLinksWrapper = document.querySelector('.nav-links-wrapper');
 const nav = document.querySelector('nav');
@@ -77,6 +93,7 @@ const revealNav = () => {
 	}
 };
 
+//only on screens larger than standard tablet
 if (screen.width > 768) {
 	window.addEventListener('scroll', revealNav);
 }
