@@ -136,7 +136,7 @@ const changeNavLinkState = () => {
 	navLinks[index].classList.add('active-nav');
 };
 
-window.addEventListener('scroll', changeNavLinkState);
+window.addEventListener('scroll', changeNavLinkState, false);
 
 // hide nav on scroll down / reveal on scroll up
 var prevScrollpos = window.pageYOffset;
@@ -211,3 +211,43 @@ const dragEl = (el) => {
 dragEl(document.getElementById('flower'));
 dragEl(document.getElementById('heart'));
 dragEl(document.getElementById('learn-more'));
+dragEl(document.getElementById('circle-badge'));
+
+//Create circular badge
+const slice = (selector, context) => {
+	context = context || document;
+	const elements = context.querySelectorAll(selector);
+	return Array.prototype.slice.call(elements);
+};
+
+slice('.circular').forEach((el) => {
+	let NS = 'http://www.w3.org/2000/svg';
+
+	let svg = document.createElementNS(NS, 'svg');
+	//make the svg a circle
+	svg.setAttribute('viewBox', '0 0 100 100');
+
+	let circle = document.createElementNS(NS, 'path');
+	// circle.setAttribute('stroke', 'black');
+	circle.setAttribute('fill', 'black');
+	circle.setAttribute('fill-opacity', '.15');
+	circle.setAttribute('d', 'M0,50 a50,50 0 1,1 0,1z');
+	circle.setAttribute('id', 'circle');
+
+	var text = document.createElementNS(NS, 'text');
+	var textPath = document.createElementNS(NS, 'textPath');
+	textPath.setAttributeNS(
+		'http://www.w3.org/1999/xlink',
+		'xlink:href',
+		'#circle',
+	);
+
+	textPath.textContent = el.textContent;
+	text.appendChild(textPath);
+
+	svg.appendChild(circle);
+	svg.appendChild(text);
+
+	el.textContent = '';
+	el.appendChild(svg);
+});

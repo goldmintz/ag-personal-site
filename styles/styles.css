@@ -30,7 +30,7 @@
 
 * {
 	box-sizing: border-box;
-	outline: 1px solid black;
+	/* outline: 1px solid black; */
 }
 
 html,
@@ -351,6 +351,25 @@ input {
 	cursor: pointer;
 }
 
+.circular {
+	width: 10em;
+	height: 10em;
+	font-size: 1em;
+	font-family: Bold;
+
+	/* animation: colorChange 120s linear 1s infinite; */
+}
+
+.circular svg {
+	/* display: block; */
+	overflow: visible;
+	animation: spin 10s linear infinite;
+}
+
+.circular text {
+	fill: var(--mainText);
+}
+
 .intro {
 	display: flex;
 	flex: 1;
@@ -358,14 +377,6 @@ input {
 	/* ensure copy/content doesn't overflow and push sibling (social-links) */
 	max-height: 35em;
 }
-
-/* .intro.professional {
-	cursor: url('/assets/cursor_daisy.png'), pointer;
-}
-
-.intro.personal {
-	cursor: url('/assets/cursor_daisy.png'), pointer;
-} */
 
 .intro-content {
 	margin-top: auto;
