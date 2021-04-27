@@ -30,7 +30,7 @@
 
 * {
 	box-sizing: border-box;
-	/* outline: 1px solid black; */
+	outline: 1px solid black;
 }
 
 html,
@@ -313,6 +313,7 @@ input {
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 6em);
+	min-width: 100%;
 	font-size: 16px;
 	margin-top: 5em;
 	padding: 0 3em;
@@ -376,8 +377,7 @@ input {
 	display: flex;
 	flex: 1;
 	align-items: flex-end;
-	/* ensure copy/content doesn't overflow and push sibling (social-links) */
-	max-height: 35em;
+	/* max-height: 35em; */
 }
 
 .intro-content {
@@ -386,12 +386,7 @@ input {
 	line-height: 0.9;
 	font-family: Bold;
 	max-height: 100%;
-	width: 100%;
 	color: var(--mainText);
-}
-
-.intro-content p:first-of-type {
-	margin-bottom: 0.25em;
 }
 
 .intro-closing-wrapper {
@@ -400,6 +395,7 @@ input {
 	align-items: center;
 	margin-top: 3em;
 	justify-content: space-between;
+	width: 100%;
 }
 
 #view-more {
@@ -1082,6 +1078,8 @@ footer {
 	.page-wrapper {
 		width: 100%;
 		overflow-x: hidden;
+		padding: 1em;
+		font-size: 16px;
 	}
 
 	.section-header {
@@ -1090,25 +1088,34 @@ footer {
 
 	/* LANDING SECTION */
 
-	.landing-wrapper {
-		height: unset;
-		padding: unset;
-	}
-
 	#heart,
 	#flower,
-	#learn-more {
+	#view-more,
+	.circular {
 		display: none;
 	}
 
+	.landing-wrapper {
+		height: auto;
+		align-items: center;
+		margin-top: 7em;
+	}
+
 	.intro {
-		margin: 2em 0em;
-		justify-content: center;
-		max-height: 80vh;
+		height: 100%;
+		width: 100%;
+	}
+
+	/* .intro-content {
+	} */
+
+	.intro-closing-wrapper {
+		display: none;
 	}
 
 	.intro-content {
 		font-size: 3em;
+		margin: unset;
 	}
 
 	.social-links-wrapper {
@@ -1120,13 +1127,13 @@ footer {
 		height: unset;
 		padding: unset;
 		margin: unset;
+		font-size: 0.75em;
 	}
 
 	.experience-cols {
 		flex-direction: column;
 		margin: 0;
 		line-height: 1.6;
-		/* font-size: 0.75em; */
 		padding: unset;
 	}
 

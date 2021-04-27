@@ -9,34 +9,35 @@ const flower = document.getElementById('flower');
 const personalQuotes = [
 	`Ash is a henkeeper of four chunky Chicago chickens.`,
 	`Ash is a fan of bucket hats and crocs in summer.`,
-	'Personal quote 3',
-	'Personal quote 4',
-	'Personal quote 5',
-	'Personal quote 6',
+	`Personal quote 3`,
+	`Personal quote 4`,
+	`Personal quote 5`,
+	`Personal quote 6`,
 ];
 const professionalQuotes = [
 	`Ash is a multi-disciplinary developer based in Chicago`,
-	'Ash wants you to check out her GitHub',
-	'Professional quote 3',
-	'Professional quote 4',
-	'Professional quote 5',
-	'Professional quote 6',
+	`Ash wants you to check out her GitHub`,
+	`Professional quote 3`,
+	`Professional quote 4`,
+	`Professional quote 5`,
+	`Professional quote 6`,
 ];
 const toggleIntroText = () => {
 	if (introText.classList.contains('professional')) {
 		introText.classList.remove('professional');
 		introText.classList.add('personal');
-		introText.innerHTML = `<div class='intro-content fade-in'>${
+		introText.innerHTML = `<div class='intro-content fade-in'><p>${
 			personalQuotes[Math.floor(Math.random() * personalQuotes.length)]
-		}</div>`;
+		}</p></div>`;
+		console.log(introText.innerHTML);
 		// heart.style.display = 'none';
 		flower.style.display = 'block';
 	} else if (introText.classList.contains('personal')) {
 		introText.classList.remove('personal');
 		introText.classList.add('professional');
-		introText.innerHTML = `<div class='intro-content fade-in'>${
+		introText.innerHTML = `<div class='intro-content fade-in'><p>${
 			professionalQuotes[Math.floor(Math.random() * professionalQuotes.length)]
-		}</div>`;
+		}</p></div>`;
 		// heart.style.display = 'block';
 		flower.style.display = 'none';
 	}
