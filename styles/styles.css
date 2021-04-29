@@ -30,7 +30,7 @@
 
 * {
 	box-sizing: border-box;
-	outline: 1px solid black;
+	/* outline: 1px solid black; */
 }
 
 html,
@@ -525,7 +525,7 @@ input {
 .ticker-tape-wrapper {
 	display: table-cell;
 	position: relative;
-	animation: ticker-tape-scrolling 15s infinite linear;
+	animation: ticker-tape-scrolling 90s infinite linear;
 	transform: translate(45deg);
 }
 
@@ -679,25 +679,32 @@ input {
 .summary-content-wrapper {
 	font-size: 1.25em;
 	display: flex;
-	gap: 3em;
+	/* gap: 3em; */
 	line-height: 1.25;
-	height: 50%;
+	height: 40%;
 }
 
 .project-overview-col {
 	font-size: 1.25em;
 	width: 60%;
+	padding-right: 3em;
 }
 
-.project-sh-col {
+.project-img-col {
+	display: flex;
 	width: 40%;
-	margin-top: -5em;
-	margin-bottom: 0;
-	background: url(../assets/images/test_SH.gif);
+	justify-content: center;
+	margin-top: -3em;
+	/* align-items: center; */
+	/* background: url(../assets/images/test_SH.gif);
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
-	height: auto;
+	background-repeat: no-repeat; */
+}
+
+.project-img-col img {
+	object-fit: cover;
+	width: 100%;
 }
 
 .project-details-wrapper {
@@ -705,8 +712,7 @@ input {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	gap: 10em;
-	height: 50%;
+	gap: 6em;
 }
 
 .project-details-col {
@@ -714,7 +720,7 @@ input {
 }
 
 .project-details-col > .section-header {
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 }
 
 .detail-content {

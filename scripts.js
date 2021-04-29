@@ -180,9 +180,12 @@ const techStack = [
 ];
 
 const outerDiv = document.getElementById('ticker-wrapper');
-techStack.forEach((tech) => {
-	outerDiv.innerHTML += `<div class="ticker-tape-item">${tech}</div>`;
-});
+
+for (i = 0; i < 5; i++) {
+	techStack.forEach((tech) => {
+		outerDiv.innerHTML += `<div class="ticker-tape-item">${tech}</div>`;
+	});
+}
 
 // Draggable Elements
 const dragEl = (el) => {
