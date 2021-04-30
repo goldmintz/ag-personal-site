@@ -407,6 +407,7 @@ input {
 
 .social-links-wrapper {
 	display: flex;
+	margin-left: auto;
 	align-self: flex-end;
 	justify-content: space-around;
 	align-items: center;
