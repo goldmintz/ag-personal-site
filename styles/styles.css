@@ -930,8 +930,207 @@ footer {
 }
 
 /* MEDIA QUERIES */
-/* MOBILE & MOST TABLETS */
-@media screen and (max-width: 768px) {
+
+/* TEENY TINY MOBILE */
+@media screen and (max-width: 600px) {
+	nav {
+		padding: unset;
+		padding: 1em;
+	}
+
+	.page-wrapper {
+		padding: unset;
+	}
+
+	.page-wrapper > section {
+		padding: 2em;
+		margin-bottom: 2em;
+		margin-top: 0em;
+	}
+
+	.section-anchor {
+		height: 3em;
+	}
+
+	.section-header {
+		margin-bottom: 2em;
+	}
+
+	p {
+		line-height: 1.25;
+	}
+
+	/* Hamburger Menu - Mobile Only */
+	.burger-wrapper {
+		display: block;
+		position: fixed;
+		top: 1.5em;
+		right: 2em;
+		align-self: center;
+	}
+
+	/* Show menu when toggle is clicked (checkbox is checked) */
+	.toggle:checked ~ .burger-menu {
+		visibility: visible;
+	}
+
+	.toggle:checked ~ .burger-menu > div {
+		transform: scale(1);
+	}
+
+	.burger {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 1.5em;
+		height: 1.5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		z-index: 199;
+	}
+
+	/* Create middle line of hamburger menu */
+	.burger > div {
+		position: relative;
+		width: 100%;
+		height: 0.15em;
+		background-color: var(--mainText);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+	}
+
+	/* Create top and bottom lines in hamburger menu */
+	.burger > div::before,
+	.burger > div::after {
+		content: '';
+		position: absolute;
+		top: -0.5em;
+		width: 100%;
+		height: 0.15em;
+		background-color: inherit;
+	}
+
+	.burger > div::after {
+		top: 0.5em;
+	}
+
+	/* Animate burger toggle */
+	.toggle:checked + .burger > div {
+		transform: rotate(135deg);
+	}
+
+	.toggle:checked + .burger > div::before,
+	.toggle:checked + .burger > div::after {
+		top: 0;
+		transform: rotate(90deg);
+	}
+
+	.burger-menu {
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		overflow: hidden;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	.burger-menu > div {
+		animation: colorChange 120s infinite alternate;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		transform: scale(0);
+		transition: all 0.3s ease;
+	}
+
+	.burger-link-wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 3em;
+	}
+
+	.burger-link {
+		font-size: 3em;
+		padding: 1em;
+		text-transform: uppercase;
+	}
+
+	.burger-link a {
+		height: 100%;
+		width: 100%;
+	}
+
+	/* Intro Section */
+
+	.landing-wrapper {
+		margin-top: 5em !important;
+		height: 100% !important;
+		justify-content: center;
+	}
+
+	.circular {
+		display: none;
+	}
+
+	.intro-content {
+		font-size: 3.5em;
+	}
+
+	.intro-content p {
+		line-height: 1;
+	}
+
+	.intro-closing-wrapper {
+		display: none;
+	}
+
+	/* Experience Section */
+	.experience-wrapper {
+		height: auto;
+		padding: unset;
+		margin-bottom: 7em;
+	}
+
+	.experience-cols {
+		flex-direction: column;
+	}
+
+	#experience-col-2 > article {
+		padding: unset;
+	}
+
+	/* Project Section */
+	.project-prev-wrapper {
+		flex-direction: column;
+		padding: 1em;
+		align-items: flex-start;
+	}
+
+	.project-prev-wrapper > div {
+		text-align: left;
+	}
+
+	/* Contact Section */
+	.contact-row {
+		flex-direction: column-reverse;
+	}
+}
+
+/* MEDIUM (TABLETS) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
 	html {
 		font-size: 16px;
 	}
@@ -943,8 +1142,9 @@ footer {
 		justify-content: flex-start;
 	}
 
-	section {
+	.page-wrapper > section {
 		margin-top: 5em;
+		padding: 3em;
 	}
 
 	.section-header {
@@ -960,8 +1160,6 @@ footer {
 		align-self: center;
 		font-size: 1.25em;
 	}
-
-	/* Show logo on left side of nav  */
 
 	.nav-links-wrapper {
 		display: none;
@@ -1092,6 +1290,10 @@ footer {
 		padding: unset;
 	}
 
+	.section-header::after {
+		width: 50%;
+	}
+
 	/* LANDING SECTION */
 
 	#heart,
@@ -1102,29 +1304,23 @@ footer {
 	}
 
 	.landing-wrapper {
-		height: auto;
-		align-items: center;
-		margin-top: 7em;
+		height: 90vh;
 	}
 
 	.intro {
 		height: 100%;
-		width: 100%;
-	}
-
-	/* .intro-content {
-	} */
-
-	.intro-closing-wrapper {
-		display: none;
+		justify-content: center;
+		align-items: center;
+		padding-top: 5em;
 	}
 
 	.intro-content {
 		font-size: 3em;
 		margin: unset;
+		height: 100%;
 	}
 
-	.social-links-wrapper {
+	.intro-closing-wrapper {
 		display: none;
 	}
 

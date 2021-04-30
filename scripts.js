@@ -146,10 +146,12 @@ const sections = document.querySelectorAll('section');
 const changeNavLinkState = () => {
 	let index = sections.length;
 
-	while (--index && window.scrollY < sections[index].offsetTop) {}
+	if (screen.width > 768) {
+		while (--index && window.scrollY < sections[index].offsetTop) {}
 
-	navLinks.forEach((link) => link.classList.remove('active-nav'));
-	navLinks[index].classList.add('active-nav');
+		navLinks.forEach((link) => link.classList.remove('active-nav'));
+		navLinks[index].classList.add('active-nav');
+	}
 };
 
 window.addEventListener('scroll', changeNavLinkState, false);
