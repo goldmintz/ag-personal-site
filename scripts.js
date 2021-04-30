@@ -294,3 +294,26 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
 slidingEls.forEach((el) => {
 	appearOnScroll.observe(el);
 });
+
+//Populate Project Section
+
+gitHubLinks = [
+	{ title: 'Project 1', link: 'google.com' },
+	{ title: 'Project 2', link: 'poodle.com' },
+	{ title: 'Project 3', link: 'noodle.com' },
+	{ title: 'Project 4', link: 'doodle.com' },
+];
+
+//Replace project modal links with links to GitHub on smaller screens
+if (screen.width < 768) {
+	let modalLinks = document.querySelectorAll('.modal-link');
+	let baseURL = 'http://www.';
+	
+	//make the links open in another tab
+	modalLinks.forEach((link) => link.setAttribute('target', '_blank'));
+
+	//set the href to github link instead of modal
+	for (i = 0; i < modalLinks.length; i++) {
+		modalLinks[i].setAttribute('href', baseURL + gitHubLinks[i].link);
+	}
+}
