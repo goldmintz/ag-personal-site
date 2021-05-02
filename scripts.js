@@ -1,10 +1,9 @@
 //Toggle between professional and personal mode
 const introText = document.querySelector('.intro');
 const landing = document.querySelector('.landing');
+const badge = document.querySelector('.round-badge');
 const heart = document.getElementById('heart');
 const flower = document.getElementById('flower');
-
-//items[Math.floor(Math.random() * items.length)];
 
 const personalQuotes = [
 	`Ash is a henkeeper of four chunky Chicago chickens.`,
@@ -29,9 +28,10 @@ const toggleIntroText = () => {
 		introText.innerHTML = `<div class='intro-content fade-in'><p>${
 			personalQuotes[Math.floor(Math.random() * personalQuotes.length)]
 		}</p></div>`;
-		console.log(introText.innerHTML);
 		// heart.style.display = 'none';
 		flower.style.display = 'block';
+		badge.setAttribute('data-content', 'Keep it professional');
+		badge.style.transform = 'rotate(' + 20 + 'deg)';
 	} else if (introText.classList.contains('personal')) {
 		introText.classList.remove('personal');
 		introText.classList.add('professional');
@@ -40,6 +40,8 @@ const toggleIntroText = () => {
 		}</p></div>`;
 		// heart.style.display = 'block';
 		flower.style.display = 'none';
+		badge.setAttribute('data-content', `Get personal`);
+		badge.style.transform = 'rotate(' + -20 + 'deg)';
 	}
 };
 
@@ -203,7 +205,7 @@ const dragEl = (el) => {
 		pos3 = e.clientX;
 		pos4 = e.clientY;
 		document.onmouseup = closeDragElement;
-		// call function when  cursor moves
+		// call function when cursor moves
 		document.onmousemove = elementDrag;
 	};
 
@@ -229,48 +231,48 @@ const dragEl = (el) => {
 	};
 };
 
-const draggableElements = ['flower', 'circle-badge'];
+const draggableElements = ['flower', 'toggle-badge'];
 draggableElements.forEach((draggableEl) => {
 	return dragEl(document.getElementById(draggableEl));
 });
 
 //Create circular badge
-const slice = (selector, context) => {
-	context = context || document;
-	const elements = context.querySelectorAll(selector);
-	return Array.prototype.slice.call(elements);
-};
+// const slice = (selector, context) => {
+// 	context = context || document;
+// 	const elements = context.querySelectorAll(selector);
+// 	return Array.prototype.slice.call(elements);
+// };
 
-slice('.circular').forEach((el) => {
-	let NS = 'http://www.w3.org/2000/svg';
+// slice('.circular').forEach((el) => {
+// 	let NS = 'http://www.w3.org/2000/svg';
 
-	let svg = document.createElementNS(NS, 'svg');
-	//make the svg a circle
-	svg.setAttribute('viewBox', '0 0 100 100');
-	let circle = document.createElementNS(NS, 'path');
-	circle.setAttribute('fill', 'black');
-	circle.setAttribute('fill-opacity', '.15');
-	circle.setAttribute('d', 'M0,50 a50,50 0 1,1 0,1z');
-	circle.setAttribute('id', 'circle');
+// 	let svg = document.createElementNS(NS, 'svg');
+// 	//make the svg a circle
+// 	svg.setAttribute('viewBox', '0 0 100 100');
+// 	let circle = document.createElementNS(NS, 'path');
+// 	circle.setAttribute('fill', 'black');
+// 	circle.setAttribute('fill-opacity', '.15');
+// 	circle.setAttribute('d', 'M0,50 a50,50 0 1,1 0,1z');
+// 	circle.setAttribute('id', 'circle');
 
-	// Make text around circle
-	let outertText = document.createElementNS(NS, 'text');
-	let outerTextPath = document.createElementNS(NS, 'textPath');
-	outerTextPath.setAttributeNS(
-		'http://www.w3.org/1999/xlink',
-		'xlink:href',
-		'#circle',
-	);
-	outerTextPath.textContent = el.textContent;
-	outertText.appendChild(outerTextPath);
+// 	// Make text around circle
+// 	let outertText = document.createElementNS(NS, 'text');
+// 	let outerTextPath = document.createElementNS(NS, 'textPath');
+// 	outerTextPath.setAttributeNS(
+// 		'http://www.w3.org/1999/xlink',
+// 		'xlink:href',
+// 		'#circle',
+// 	);
+// 	outerTextPath.textContent = el.textContent;
+// 	outertText.appendChild(outerTextPath);
 
-	// Put it all together
-	svg.appendChild(circle);
-	svg.appendChild(outertText);
+// 	// Put it all together
+// 	svg.appendChild(circle);
+// 	svg.appendChild(outertText);
 
-	el.textContent = '';
-	el.appendChild(svg);
-});
+// 	el.textContent = '';
+// 	el.appendChild(svg);
+// });
 
 const slidingEls = document.querySelectorAll('.slide-in');
 const appearOptions = {
@@ -308,7 +310,7 @@ gitHubLinks = [
 if (screen.width < 768) {
 	let modalLinks = document.querySelectorAll('.modal-link');
 	let baseURL = 'http://www.';
-	
+
 	//make the links open in another tab
 	modalLinks.forEach((link) => link.setAttribute('target', '_blank'));
 

@@ -79,13 +79,17 @@
 					click to learn more
 				</div> -->
 
-				<!-- Toggle between professional and personal content -->
-				<div
-					class="circular draggable"
-					id="circle-badge"
-					onclick="toggleIntroText()"
-				>
-					circular text goes here and here
+				<div class="badge-wrapper fade-in draggable">
+					<div
+						id="toggle-badge"
+						class="round-badge professional"
+						data-content="Get personal"
+					>
+						<div class="badge-border">
+							<!-- span creates a touch point in middle of circle to trigger toggle function (I know it's hacky!) -->
+							<button id="dummy-span" onclick="toggleIntroText()"></button>
+						</div>
+					</div>
 				</div>
 
 				<div class="intro fade-in professional">
@@ -95,9 +99,6 @@
 				</div>
 
 				<div class="intro-closing-wrapper">
-					<!-- <div id="view-more" class="bounce">
-						<a href="#experience">☟</a>
-					</div> -->
 					<div class="social-links-wrapper">
 						<div class="social-link bump">
 							<a href="https://github.com/goldmintz" target="_blank">github</a>
@@ -291,7 +292,10 @@
 				</div>
 			</section>
 		</div>
-		<footer class="footer-wrapper">footer here!</footer>
+		<footer class="footer-wrapper">
+			<div id="footer-img">✿</div>
+			<div>hi, I am footer.</div>
+		</footer>
 		<script src="scripts.js"></script>
 	</body>
 </html>
