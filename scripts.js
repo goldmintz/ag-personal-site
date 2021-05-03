@@ -30,7 +30,8 @@ const toggleIntroText = () => {
 		}</p></div>`;
 		// heart.style.display = 'none';
 		flower.style.display = 'block';
-		badge.setAttribute('data-content', 'Keep it professional');
+
+		badge.setAttribute('data-content', `Keep it Professional`);
 		badge.style.transform = 'rotate(' + 20 + 'deg)';
 	} else if (introText.classList.contains('personal')) {
 		introText.classList.remove('personal');
@@ -40,7 +41,7 @@ const toggleIntroText = () => {
 		}</p></div>`;
 		// heart.style.display = 'block';
 		flower.style.display = 'none';
-		badge.setAttribute('data-content', `Get personal`);
+		badge.setAttribute('data-content', `Wanna get Personal?`);
 		badge.style.transform = 'rotate(' + -20 + 'deg)';
 	}
 };
