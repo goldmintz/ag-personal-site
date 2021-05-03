@@ -111,6 +111,10 @@ li {
 	list-style-type: none;
 }
 
+.intro-flower {
+	font-size: 0.3em;
+}
+
 .smaller {
 	display: inline-block;
 	font-size: 10px;
@@ -151,7 +155,7 @@ li {
 	height: 0.1em;
 	left: 0;
 	bottom: 0;
-	width: 100%;
+	/* width: 100%; */
 	background: var(--mainText);
 }
 
@@ -336,8 +340,8 @@ input {
 .badge-wrapper {
 	position: absolute;
 	z-index: 5;
-	width: 12em;
-	height: 12em;
+	width: 11em;
+	height: 11em;
 	right: 5em;
 	bottom: 7em;
 }
@@ -552,6 +556,10 @@ input {
 	margin-bottom: 0.75em;
 }
 
+.experience-text p:first-of-type {
+	margin-bottom: 1em;
+}
+
 /* TICKER TAPE FEATURE */
 
 .ticker-tape {
@@ -598,6 +606,10 @@ input {
 .projects-wrapper p {
 	font-size: 1.5em;
 	font-family: Regular;
+}
+
+.project-section-intro p {
+	font-size: 1.25em;
 }
 
 .col-wrapper {
