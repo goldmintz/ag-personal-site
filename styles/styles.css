@@ -135,9 +135,24 @@ li {
 }
 
 /* Text Styling */
-mark {
-	color: var(--mainText);
+
+.highlight {
 	background-color: var(--darkenedBG);
+	padding: 0.25em;
+}
+
+.underline {
+	position: relative;
+}
+
+.underline::after {
+	content: '';
+	position: absolute;
+	height: 0.1em;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: var(--mainText);
 }
 
 /* Remove underline from project modal title  */
@@ -320,9 +335,9 @@ input {
 
 .badge-wrapper {
 	position: absolute;
-	z-index: 1;
-	width: 10em;
-	height: 10em;
+	z-index: 5;
+	width: 12em;
+	height: 12em;
 	right: 5em;
 	bottom: 7em;
 }
@@ -330,7 +345,7 @@ input {
 .round-badge {
 	height: 100%;
 	width: 100%;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	font-family: Bold;
 	border-radius: 50%;
 	text-align: center;
@@ -338,7 +353,8 @@ input {
 	overflow: hidden;
 	line-height: 1;
 	transform: rotate(-20deg);
-	background: var(--evenDarkerBG);
+	background: var(--tangerine);
+	color: var(--background);
 	/* transition: all 0.3s ease-in-out; */
 }
 
@@ -350,20 +366,21 @@ input {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
 .round-badge:hover {
-	color: var(--background);
+	color: var(--darkenedBG);
 }
 
 .badge-border {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	border: rgba(0, 0, 0, 0.2) 3px dashed;
+	border: var(--background) 4px dashed;
+
 	animation: spin 10s linear 0s infinite;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	filter: drop-shadow(3px 3px 5px var(--evenDarkerBG));
 }
 
 #dummy-span {
@@ -381,6 +398,10 @@ input {
 	flex: 1;
 	align-items: flex-end;
 	/* max-height: 35em; */
+}
+
+.intro a {
+	font-family: inherit;
 }
 
 .intro-content {
@@ -421,15 +442,6 @@ input {
 	position: relative;
 }
 
-.social-link a,
-#email-link {
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 1em;
-	text-align: right;
-	font-family: Regular;
-}
-
 .social-link.smaller {
 	width: 100%;
 	font-size: 20px;
@@ -440,8 +452,16 @@ input {
 	color: var(--olive);
 }
 
-#email-link::after {
-	/* content: 'copy email'; */
+.social-link a,
+#intro-email-link {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 1em;
+	text-align: right;
+	font-family: Regular;
+}
+
+#intro-email-link::after {
 	content: attr(aria-label);
 	top: 0;
 	left: 50%;
@@ -458,7 +478,27 @@ input {
 	border-bottom: 0.15em solid var(--mainText);
 }
 
-#email-link:hover::after {
+#footer-email-link::after {
+	content: attr(aria-label);
+	top: 0;
+	left: 50%;
+	white-space: nowrap;
+	height: 0.75em;
+	transform: translate(-50%, -125%);
+	background-color: var(--darkenedBG);
+	display: none;
+	position: absolute;
+	text-align: center;
+	z-index: 999;
+	font-size: 0.75em;
+	padding: 0.75em;
+
+	text-transform: lowercase;
+	border-bottom: 0.15em solid var(--mainText);
+}
+
+#intro-email-link:hover::after,
+#footer-email-link:hover::after {
 	display: block;
 }
 
@@ -486,7 +526,7 @@ input {
 
 #experience-col-1 {
 	flex: 2;
-	/* padding-right: 1em; */
+	padding-right: 1em;
 }
 
 #experience-col-2 {
@@ -529,7 +569,7 @@ input {
 .ticker-tape-wrapper {
 	display: table-cell;
 	position: relative;
-	animation: ticker-tape-scrolling 90s infinite linear;
+	animation: ticker-tape-scrolling 300s infinite linear;
 	transform: translate(45deg);
 }
 
@@ -762,6 +802,28 @@ input {
 	font-size: 1.5em;
 }
 
+.contact-col h3 {
+	font-family: Bold;
+	font-size: 0.75em;
+}
+
+.contact-col mark {
+	cursor: pointer;
+	text-transform: lowercase !important;
+}
+
+.contact-col p:first-of-type {
+	margin-bottom: 1em;
+}
+
+.contact-col span::after {
+	position: absolute;
+	content: '';
+	height: 0.25em;
+	background: var(--evenDarkerBG);
+	width: 100%;
+}
+
 #contact-content-col {
 	flex: 2;
 }
@@ -802,6 +864,10 @@ footer.footer-wrapper {
 	width: 100%;
 	height: 100%;
 	flex: 1;
+}
+
+#footer-email-link {
+	cursor: pointer;
 }
 
 /* TRANSITION/TRANSFORM CLASSES */
@@ -1130,6 +1196,10 @@ footer.footer-wrapper {
 		flex-direction: column;
 	}
 
+	#experience-col-1 {
+		padding-right: unset;
+	}
+
 	#experience-col-2 > article {
 		padding: unset;
 	}
@@ -1377,6 +1447,10 @@ footer.footer-wrapper {
 	#experience-col-1 .experience-text,
 	#experience-col-2 .experience-text {
 		outline: none;
+	}
+
+	#experience-col-1 {
+		padding-right: 0;
 	}
 
 	/* TICKER TAPE SECTION */

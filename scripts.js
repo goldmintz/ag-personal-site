@@ -7,20 +7,18 @@ const flower = document.getElementById('flower');
 
 const personalQuotes = [
 	`Ash is a henkeeper of four chunky Chicago chickens.`,
-	`Ash is a fan of bucket hats and crocs in summer.`,
-	`Personal quote 3`,
-	`Personal quote 4`,
-	`Personal quote 5`,
-	`Personal quote 6`,
+	`Ash is a fan of bucket hats and Crocs in summer.`,
+	`Ash hails from the sticky swamps of South Florida.`,
+	`Ash is slowly building the largest collection of Mickey tees.`,
 ];
 const professionalQuotes = [
-	`Ash is a multi-disciplinary developer based in Chicago`,
-	`Ash wants you to check out her GitHub`,
-	`Professional quote 3`,
-	`Professional quote 4`,
-	`Professional quote 5`,
-	`Professional quote 6`,
+	`Ash wants you to check out her <a href='https://github.com/goldmintz' target='_blank' class='underline'>GitHub</a>`,
+	`Ash wants to work with you.`,
+	`Ash wants to know what the stakeholders think.`,
+	`Ash combines the eye of a designer and the mindset of a developer.`,
+	`Ash has made more than 600 GitHub contributions in 2021.`,
 ];
+
 const toggleIntroText = () => {
 	if (introText.classList.contains('professional')) {
 		introText.classList.remove('professional');
@@ -29,9 +27,9 @@ const toggleIntroText = () => {
 			personalQuotes[Math.floor(Math.random() * personalQuotes.length)]
 		}</p></div>`;
 		// heart.style.display = 'none';
-		flower.style.display = 'block';
+		// flower.style.display = 'block';
 
-		badge.setAttribute('data-content', `Keep it Professional`);
+		badge.setAttribute('data-content', `keep it professional`);
 		badge.style.transform = 'rotate(' + 20 + 'deg)';
 	} else if (introText.classList.contains('personal')) {
 		introText.classList.remove('personal');
@@ -40,16 +38,18 @@ const toggleIntroText = () => {
 			professionalQuotes[Math.floor(Math.random() * professionalQuotes.length)]
 		}</p></div>`;
 		// heart.style.display = 'block';
-		flower.style.display = 'none';
-		badge.setAttribute('data-content', `Wanna get Personal?`);
+		// flower.style.display = 'none';
+		badge.setAttribute('data-content', `get personal`);
 		badge.style.transform = 'rotate(' + -20 + 'deg)';
 	}
 };
 
 // COPY EMAIL TO CLIPBOARD
 
-const copyToClipboard = () => {
-	const emailLink = document.getElementById('email-link');
+const copyToClipboard = (clickedId) => {
+	const emailLink = document.getElementById(clickedId);
+
+	console.log(clickedId);
 
 	try {
 		//create a temporary element and add email as value
@@ -175,13 +175,21 @@ window.onscroll = () => {
 
 // Populate Tech Stack Ticker
 const techStack = [
-	'Full-stack',
+	'Full-stack Development',
 	'ReactJS',
-	'CSS & SaSS',
-	'Responsive',
-	'Wireframing',
-	'Collaboration',
-	'MongoDB',
+	'HTML Javascript & CSS',
+	'Platform-Focused Design',
+	'Wireframing & Prototyping',
+	'Presentation Design and Delivery',
+	'Cross-Discipline Collaboration',
+	'Compelling Narratives',
+	'Usability & Unit Testing',
+	'Atomic Design',
+	'Stakeholder Buy-In',
+	'Team Leadership',
+	'Product Lifecycle Stewardship',
+	'Requirement Gathering & Management',
+	'Accessible & Inclusive Design',
 ];
 
 const outerDiv = document.getElementById('ticker-wrapper');

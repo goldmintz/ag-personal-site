@@ -83,7 +83,7 @@
 					<div
 						id="toggle-badge"
 						class="round-badge professional"
-						data-content="Get personal"
+						data-content="get personal"
 					>
 						<div class="badge-border">
 							<!-- span creates a touch point in middle of circle to trigger toggle function (I know it's hacky!) -->
@@ -106,12 +106,10 @@
 						<div class="social-link smaller">⚘</div>
 						<div
 							class="social-link bump tooltip"
-							id="email-link"
-							onclick="copyToClipboard()"
+							id="intro-email-link"
+							onclick="copyToClipboard(id)"
 							aria-label="click to copy"
 						>
-							<!-- href="mailto:agoldmintz@gmail.com?subject=Hello from your site!" -->
-
 							email
 						</div>
 						<div class="social-link smaller">⚘</div>
@@ -132,32 +130,35 @@
 					<article class="experience-content-col" id="experience-col-1">
 						<div class="experience-text">
 							<p>
-								Here's where I talk about my value prop, experience, and what I
-								am looking for. Lorem ipsum dolor sit amet consectetur
-								adipisicing elit.
+								For nearly 10 years, I've served as the linchpin between users,
+								designers, developers, and the business. I've had the pleasure
+								of collaborating with clients ranging from start-ups to Fortune
+								100 companies.
 							</p>
 							<br />
 							<p>
-								Molestiae tempora iste non incidunt magnam porro pariatur
-								accusamus minima rerum et vero ipsam similique error laborum
-								autem repudiandae, architecto placeat. Ratione?
+								I believe
+								<span class="highlight"
+									>cross-discipline collaboration, effective communication,
+									united vision, and departmental expertise </span
+								>are key components to a successful product design and launch.
 							</p>
 							<br />
 							<p>
-								Molestiae tempora iste non incidunt magnam porro pariatur
-								accusamus minima rerum.
+								What My Skills Are Molestiae tempora iste non incidunt magnam
+								porro pariatur accusamus minima rerum.
 							</p>
 						</div>
 					</article>
 
 					<article class="experience-content-col" id="experience-col-2">
 						<div class="experience-text slide-in from-right">
-							<h4>subheading</h4>
+							<h4>Design & Code</h4>
 							<p>
-								Here's where I talk about my value prop, experience, and what I
-								am looking for. Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Molestiae tempora iste non incidunt magnam
-								porro pariatur accusamus. loooook?
+								Over the course of the pandemic, I taught myself full-stack
+								development with an emphasis on ReactJS. This combination of
+								design experience with hands-on development positions me as an
+								even more empathetic advocate.
 							</p>
 						</div>
 					</article>
@@ -174,7 +175,7 @@
 				</div>
 				<!-- End Ticker Tape Feature -->
 
-				<h1 class="section-header">Select Coding Projects</h1>
+				<h1 class="section-header">Coding Sketchbook</h1>
 
 				<p>intro to projects?</p>
 				<div class="projects-list-col">
@@ -278,11 +279,23 @@
 				<div class="contact-row">
 					<div class="contact-col" id="contact-content-col">
 						<article>
-							<!-- <h3>Goodbye!</h3> -->
+							<h3>Goodbye!</h3>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Cupiditate quisquam dignissimos voluptatum iusto delectus quae
-								consequuntur odio explicabo tempora soluta!
+								If I've piqued your interest,
+								<span
+									class="social-link bump tooltip highlight"
+									id="footer-email-link"
+									onclick="copyToClipboard(id)"
+									aria-label="click to copy"
+								>
+									reach out</span
+								>
+								and let me know how I can help with your next product launch.
+							</p>
+
+							<p>
+								'Not working on anything? I'm always open to meeting new people
+								and learning about the expanding opportunities in tech.
 							</p>
 						</article>
 					</div>
@@ -294,7 +307,7 @@
 		</div>
 		<footer class="footer-wrapper">
 			<div id="footer-img">✿</div>
-			<div>hi, I am footer.</div>
+			<div>This site was hand-designed and coded with ☕ and ♡ by me.</div>
 		</footer>
 		<script src="scripts.js"></script>
 	</body>
