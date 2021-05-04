@@ -345,6 +345,7 @@ input {
 	height: 11em;
 	right: 5em;
 	bottom: 7em;
+	border-radius: 50%;
 }
 
 .round-badge {
@@ -358,7 +359,9 @@ input {
 	overflow: hidden;
 	line-height: 1;
 	transform: rotate(-20deg);
-	background: var(--tangerine);
+	/* background: var(--tangerine); */
+	background: var(--mainText);
+
 	color: var(--background);
 	/* transition: all 0.3s ease-in-out; */
 }
@@ -372,9 +375,9 @@ input {
 	transform: translate(-50%, -50%);
 }
 
-.round-badge:hover {
+/* .round-badge:hover {
 	color: var(--mainText);
-}
+} */
 
 .badge-border {
 	width: 100%;
