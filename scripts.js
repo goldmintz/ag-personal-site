@@ -115,18 +115,19 @@ const closeMenu = () => {
 
 // Toggle Body Scroll When Lightbox is Open (otherwise double scrollbars)
 const modalLink = document.querySelectorAll('.modal-link');
+const root = document.getElementsByTagName('html')[0]; //add to HTML instead of body (was too buggy)
 
 const hideBodyScroll = () => {
-	document.body.classList.add('hide-scroll');
+	root.classList.add('hide-scroll');
 };
 
 const returnBodyScroll = () => {
-	document.body.classList.remove('hide-scroll');
+	root.classList.remove('hide-scroll');
 };
 
-for (let i = 0, a; (a = modalLink[i]); i++) {
-	a.addEventListener('click', hideBodyScroll, false);
-}
+modalLink.forEach((link) =>
+	link.addEventListener('click', hideBodyScroll, false),
+);
 
 // Prevent refresh when user closes modal (otherwise, user is brought to top of page)
 const closeModal = document.querySelectorAll('.close-modal');
@@ -179,6 +180,7 @@ const techStack = [
 	'ReactJS',
 	'HTML Javascript & CSS',
 	'Platform-Focused Design',
+	'GitHub and Version Control',
 	'Wireframing & Prototyping',
 	'Presentation Design and Delivery',
 	'Cross-Discipline Collaboration',
@@ -244,44 +246,6 @@ const draggableElements = ['flower', 'toggle-badge'];
 draggableElements.forEach((draggableEl) => {
 	return dragEl(document.getElementById(draggableEl));
 });
-
-//Create circular badge
-// const slice = (selector, context) => {
-// 	context = context || document;
-// 	const elements = context.querySelectorAll(selector);
-// 	return Array.prototype.slice.call(elements);
-// };
-
-// slice('.circular').forEach((el) => {
-// 	let NS = 'http://www.w3.org/2000/svg';
-
-// 	let svg = document.createElementNS(NS, 'svg');
-// 	//make the svg a circle
-// 	svg.setAttribute('viewBox', '0 0 100 100');
-// 	let circle = document.createElementNS(NS, 'path');
-// 	circle.setAttribute('fill', 'black');
-// 	circle.setAttribute('fill-opacity', '.15');
-// 	circle.setAttribute('d', 'M0,50 a50,50 0 1,1 0,1z');
-// 	circle.setAttribute('id', 'circle');
-
-// 	// Make text around circle
-// 	let outertText = document.createElementNS(NS, 'text');
-// 	let outerTextPath = document.createElementNS(NS, 'textPath');
-// 	outerTextPath.setAttributeNS(
-// 		'http://www.w3.org/1999/xlink',
-// 		'xlink:href',
-// 		'#circle',
-// 	);
-// 	outerTextPath.textContent = el.textContent;
-// 	outertText.appendChild(outerTextPath);
-
-// 	// Put it all together
-// 	svg.appendChild(circle);
-// 	svg.appendChild(outertText);
-
-// 	el.textContent = '';
-// 	el.appendChild(svg);
-// });
 
 const slidingEls = document.querySelectorAll('.slide-in');
 const appearOptions = {
