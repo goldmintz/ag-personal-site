@@ -145,6 +145,11 @@ li {
 	padding: 0.25em;
 }
 
+/* only change to indicate clickable link */
+a.highlight:hover {
+	background-color: var(--evenDarkerBG);
+}
+
 .underline {
 	position: relative;
 }
@@ -714,12 +719,16 @@ input {
 	font-size: 1em;
 }
 
+.close-modal.close-x {
+	font-size: 2em;
+	text-align: center;
+}
+
 /* Content inside div */
 .modal-wrapper {
 	transition: top 1s;
 	animation: colorChange 120s infinite alternate;
 	height: 100vh;
-
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
 	scrollbar-width: none; /* Firefox */
 }
@@ -734,7 +743,7 @@ input {
 	height: 100%;
 	flex-direction: column;
 	padding: 3em 5em;
-	margin-top: 5em;
+	margin-top: 3em;
 }
 
 .modal-title.section-header {
@@ -747,14 +756,29 @@ input {
 	display: flex;
 	flex: 1;
 	line-height: 1.25;
+	gap: 2em;
 }
 
 .project-overview-col {
 	display: flex;
+	flex-direction: column;
 	flex: 1;
 	font-size: 1.25em;
 	/* width: 60%; */
-	padding-right: 3em;
+	margin-bottom: 1em;
+	gap: 1em;
+}
+
+.project-links {
+	margin-top: auto;
+	font-size: 0.75em;
+	display: flex;
+	gap: 2em;
+	justify-content: flex-start;
+}
+
+.project-links a {
+	padding: 0.5em;
 }
 
 .project-img-col {
@@ -771,7 +795,7 @@ input {
 }
 
 .project-details-wrapper {
-	margin-top: 3em;
+	margin-top: 1.5em;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
