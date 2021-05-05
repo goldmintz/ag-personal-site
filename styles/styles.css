@@ -840,6 +840,16 @@ input {
 	list-style: none;
 }
 
+.detail-content ul li:before {
+	content: '\2014';
+	position: absolute;
+	margin-left: -20px;
+}
+
+.detail-content li {
+	padding-left: 2em;
+}
+
 .modal:target > div {
 	top: 0;
 }
