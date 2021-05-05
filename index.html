@@ -35,7 +35,9 @@
 								</div>
 
 								<div class="burger-link">
-									<a href="/">resume</a>
+									<a href="/PDF/AGoldmintz_Resume.pdf" target="_blank"
+										>resume</a
+									>
 								</div>
 							</div>
 						</div>
@@ -135,10 +137,10 @@
 					<article class="experience-content-col" id="experience-col-1">
 						<div class="experience-text">
 							<p>
-								For nearly 10 years, I've served as the linchpin between users,
-								designers, developers, and the business. I've had the pleasure
-								of collaborating with clients ranging from start-ups to Fortune
-								100 companies.
+								For nearly 10 years, I've served as the linchpin connecting
+								users, designers, developers, and the business. I've designed
+								interfaces for complex analytic dashboards and automated grills
+								for clients ranging from startups to Fortune 100 companies.
 							</p>
 
 							<p>
@@ -148,22 +150,36 @@
 									united vision, and departmental expertise </span
 								>are key components to a successful product design and launch.
 							</p>
+
+							<p>
+								'Want to work together? I am currently open to a full-time,
+								team-based position that will allow me to flex my both my
+								<span class="highlight">design strategy and development</span>
+								skills.
+							</p>
 						</div>
 					</article>
 
-					<article class="experience-content-col" id="experience-col-2">
+					<aside class="experience-content-col" id="experience-col-2">
 						<div class="experience-text slide-in from-right">
-							<h4>Design & Code</h4>
-							<p>
-								I recently learned full-stack development with an emphasis on
-								React.
-							</p>
-							<p>
-								I am currently on the search for a full-time, team-based
-								position that will allow me to flex my development skills.
-							</p>
+							<h4 class="underline">Design & Code</h4>
+							<p>I couple design intentions with full-stack development.</p>
+
+							<ul aria-label="Tech:">
+								<li>HTML, CSS, Javascript (ES6)</li>
+								<li>ReactJS & Redux</li>
+								<li>Node & Express</li>
+								<li>MongoDB & Firebase</li>
+							</ul>
+
+							<ul aria-label="Experience Design:">
+								<li>Requirement Management</li>
+								<li>Technical Documentation</li>
+								<li>Wireframing & Prototyping</li>
+								<li>Acceptance Testing</li>
+							</ul>
 						</div>
-					</article>
+					</aside>
 				</div>
 			</section>
 			<!-- End Experience Section -->
@@ -211,17 +227,7 @@
 
 					<div class="project-prev-wrapper">
 						<div>
-							<!-- <a href="#project-1" class="modal-link"> -->
-							<div class="project-prev-title slide">Virtual Vacation</div>
-							<!-- </a> -->
-						</div>
-						<div class="project-prev-tagline">coming soon</div>
-						<div class="project-prev-stack">React, HTML Audio, CSS</div>
-					</div>
-
-					<div class="project-prev-wrapper">
-						<div>
-							<a href="#project-1" class="modal-link">
+							<a href="#personal-portfolio" class="modal-link">
 								<div class="project-prev-title slide">
 									Personal Portfolio
 								</div></a
@@ -234,10 +240,28 @@
 					</div>
 				</div>
 
+				<div class="project-prev-wrapper">
+					<div>
+						<!-- <a href="#virtual-vacation" class="modal-link"> -->
+						<a
+							href="https://github.com/goldmintz/virtual-vacation"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<div class="project-prev-title slide">Virtual Vacation</div>
+						</a>
+						<!-- </a> -->
+					</div>
+					<div class="project-prev-tagline"><em>coming soon</em></div>
+					<div class="project-prev-stack">
+						<em>React, HTML Audio, CSS</em>
+					</div>
+				</div>
+
 				<!-- End Project Prev List -->
 
 				<!-- Begin Modals -->
-				<!-- Begin Project 1 Modal -->
+				<!-- Begin Sprouts Project Modal -->
 				<div id="sprouts" class="modal">
 					<!-- Modal Content -->
 					<div class="modal-controls">
@@ -278,7 +302,7 @@
 									</article>
 									<div class="project-img-col">
 										<img
-											src="/assets/images/sprouts.gif"
+											src="/assets/images/screenshots/sprouts.gif"
 											alt="website screenshots"
 										/>
 									</div>
@@ -318,9 +342,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- End Project 1 Modal -->
+				<!-- End Sprouts Project Modal -->
 
-				<!-- Begin Project 2 Modal -->
+				<!-- Begin Critterpedia Modal -->
 				<div id="critterpedia" class="modal">
 					<!-- Modal Content -->
 					<div class="modal-controls">
@@ -358,7 +382,7 @@
 									</article>
 									<div class="project-img-col">
 										<img
-											src="/assets/images/critterpedia.gif"
+											src="/assets/images/screenshots/critterpedia.gif"
 											alt="website screenshots"
 										/>
 									</div>
@@ -398,7 +422,88 @@
 						</div>
 					</div>
 				</div>
-				<!-- End Project 2 Modal -->
+				<!-- End Critterpedia Modal -->
+
+				<!-- Begin Portfolio Modal -->
+				<div id="personal-portfolio" class="modal">
+					<!-- Modal Content -->
+					<div class="modal-controls">
+						<div class="logo modal-logo">
+							<a href="/" class="close-modal"
+								>a<span id="dot">.</span>g<span class="daisy">✿</span>ldmintz</a
+							>
+						</div>
+						<a href="/" class="close-modal close-x">X</a>
+					</div>
+					<div class="modal-wrapper">
+						<div class="modal-main-content">
+							<h1 class="modal-title section-header">Personal Portfolio</h1>
+							<div class="modal-project-summary-wrapper">
+								<div class="summary-content-wrapper">
+									<article class="project-overview-col">
+										Here's the description for my portfolio site
+										<div class="project-links">
+											<a
+												href="https://github.com/goldmintz/critterpedia"
+												target="_blank"
+												rel="noopener noreferrer"
+												class="highlight"
+												>GitHub</a
+											>
+
+											<a
+												href="https://goldmintz.github.io/critterpedia/"
+												target="_blank"
+												rel="noopener noreferrer"
+												class="highlight"
+												>Live Site</a
+											>
+										</div>
+									</article>
+									<div class="project-img-col">
+										<img
+											src="/assets/images/screenshots/critterpedia.gif"
+											alt="website screenshots"
+										/>
+									</div>
+								</div>
+
+								<div class="project-details-wrapper">
+									<div class="project-details-col">
+										<div class="section-header">approach</div>
+										<div class="detail-content">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Voluptas eligendi unde ullam dolorem, perferendis
+											inventore iusto reiciendis impedit architecto quidem.
+										</div>
+									</div>
+
+									<div class="project-details-col">
+										<div class="section-header">observations</div>
+										<div class="detail-content">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Voluptas eligendi unde ullam dolorem, perferendis
+											inventore iusto reiciendis impedit architecto quidem.
+										</div>
+									</div>
+
+									<div class="project-details-col">
+										<div class="section-header">tech stack</div>
+										<div class="detail-content">
+											<ul>
+												<li>react</li>
+												<li>other tech</li>
+												<li>some other tool</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Portfolio Modal -->
+
 				<!-- End Modals -->
 			</section>
 
@@ -438,8 +543,8 @@
 		<footer class="footer-wrapper">
 			<div id="footer-img">✿</div>
 			<p>This site was hand-designed and coded with ☕ and ♡ by me.</p>
-			<br />
-			<p>100% library and package free.</p>
+			<!-- <br /> -->
+			<p>100% dependency and package free.</p>
 		</footer>
 		<script src="scripts.js"></script>
 	</body>

@@ -8,15 +8,16 @@ const flower = document.getElementById('flower');
 const personalQuotes = [
 	`Ash is a henkeeper of four chunky chickens<span class='intro-flower'>✿</span>`,
 	`Ash pronounces "orange" as "ahhhrnge"<span class='intro-flower'>✿</span>`,
-	`Ash hails from the sticky swamps of South Florida<span class='intro-flower'>✿</span>`,
+	`Ash hails from the sticky swamps of Florida<span class='intro-flower'>✿</span>`,
 	`Ash is president of the Sweet Potato Jones fan club<span class='intro-flower'>✿</span>`,
 ];
 const professionalQuotes = [
-	`Ash wants you to check out her <a href='https://github.com/goldmintz' target='_blank' class='underline'>GitHub</a><span class='intro-flower'>✿</span>`,
+	`Ash wants you to check out her <a href='https://github.com/goldmintz' target='_blank' class='highlight'>GitHub</a><span class='intro-flower'>✿</span>`,
 	`Ash wants to work with you<span class='intro-flower'>✿</span>`,
 	`Ash wants to know what the stakeholders think<span class='intro-flower'>✿</span>`,
+	`Ash believes 'perfect' is the enemy of 'good'<span class='intro-flower'>✿</span>`,
 	`Ash combines the eye of a designer with the mindset of a developer<span class='intro-flower'>✿</span>`,
-	`Ash has made more than 600 GitHub contributions in 2021<span class='intro-flower'>✿</span>`,
+	`Ash has made more than 600 GitHub contributions this year<span class='intro-flower'>✿</span>`,
 ];
 
 const toggleIntroText = () => {
@@ -184,7 +185,6 @@ const techStack = [
 	'Wireframing & Prototyping',
 	'Presentation Design and Delivery',
 	'Cross-Discipline Collaboration',
-	'Compelling Narratives',
 	'Usability & Unit Testing',
 	'Atomic Design',
 	'Stakeholder Buy-In',
