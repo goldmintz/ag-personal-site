@@ -273,22 +273,24 @@ slidingEls.forEach((el) => {
 //Populate Project Section
 
 gitHubLinks = [
-	{ title: 'Project 1', link: 'google.com' },
-	{ title: 'Project 2', link: 'poodle.com' },
-	{ title: 'Project 3', link: 'noodle.com' },
-	{ title: 'Project 4', link: 'doodle.com' },
+	{ title: 'Sprouts', link: 'https://github.com/goldmintz/ecommerce' },
+	{ title: 'Critterpedia', link: 'https://github.com/goldmintz/critterpedia' },
+	{ title: 'Portfolio', link: 'https://github.com/goldmintz/ag-personal-site' },
+	{
+		title: 'Virtual Vacation',
+		link: 'https://github.com/goldmintz/virtual-vacation',
+	},
 ];
 
 //Replace project modal links with links to GitHub on smaller screens
 if (screen.width < 768) {
 	let modalLinks = document.querySelectorAll('.modal-link');
-	let baseURL = 'http://www.';
 
 	//make the links open in another tab
 	modalLinks.forEach((link) => link.setAttribute('target', '_blank'));
 
 	//set the href to github link instead of modal
 	for (i = 0; i < modalLinks.length; i++) {
-		modalLinks[i].setAttribute('href', baseURL + gitHubLinks[i].link);
+		modalLinks[i].setAttribute('href', gitHubLinks[i].link);
 	}
 }
